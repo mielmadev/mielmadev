@@ -1,16 +1,16 @@
-## Hi there 👋
+#  Elizabeth Marañon
 
-<!--
-**mielmadev/mielmadev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+¡Bienvenido/a a mi perfil de GitHub!
 
-Here are some ideas to get you started:
+## 🌐 Proyecto destacado
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+[KOBA - Web interactiva](https://mielmadev.github.io/koba/)
+
+## 📄 CV Demo
+
+[Ver mi currículum interactivo (demo)](https://mielmadev.github.io/cv-demo-html-css-js/)
+
+
+---
+
+✨ Desarrolladora web apasionada por el diseño y la tecnología.
