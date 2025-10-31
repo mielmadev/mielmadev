@@ -1,0 +1,204 @@
+:root {
+  /* Notas */
+  --nota-bg: #f1f8ff66;
+  --nota-text: #b6dbff;
+  --nota-border: #0366d6;
+
+  --nota-consejo-bg: #22c55e1a;
+  --nota-consejo-text: #4ade80;
+  --nota-consejo-border: #22c55e;
+
+  --nota-advertencia-bg: #fff8c566;
+  --nota-advertencia-text: #ffe066;
+  --nota-advertencia-border: #ffd33d;
+
+  --nota-importante-bg: #ffeee066;
+  --nota-importante-text: #ffb3b3;
+  --nota-importante-border: #cb2431;
+
+  --nota-codepen-bg: #f472b61a;
+  --nota-codepen-text: #f472b6;
+  --nota-codepen-border: #ec4899;
+
+  /* Encabezados */
+  --h1-color: #f472b6;
+  --h2-color: #fb923c;
+  --h3-color: #22c55e;
+  --h4-color: #a78bfa;
+  --h5-color: #94a3b8;
+  --h6-color: #b0bec7;
+
+  /* Código */
+  --code-bg: #232a34;
+  --code-text: #7dd3a9;
+  --pre-bg: #232a34;
+  --pre-text: #e5e7eb;
+  --precode-text: #fef9c3;
+
+  /* Colores base del tema */
+  --body-bg: #181c23;
+  --body-text: #e5e7eb;
+  --link-color: #4a90e2;
+  --link-hover-color: #5ba0f2;
+  --focus-color: #60c5f7;
+
+  /* Espaciado y diseño */
+  --border-radius: 6px;
+  --shadow-light: 0 2px 4px #0000001a;
+  --shadow-medium: 0 4px 8px #00000026;
+
+  /* Transiciones */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+
+  /* Tablas */
+  --table-bg: #232a34;
+  --table-border: #374151;
+  --table-text: #d1d5db;
+  --table-alt-bg: #262d38;
+  --table-header-bg: #2d3542;
+  --table-header-text: #e0e0e0;
+}
+
+html {
+  font-size: 67.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: var(--body-text);
+  position: relative;
+  background-image: url("../imagenes/logo-horizontal-1332x869-webp.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: var(--body-bg);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: #000000bf;
+  z-index: 1;
+  pointer-events: none;
+}
+
+main,
+header,
+footer {
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: var(--h1-color);
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--h2-color);
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: var(--h3-color);
+}
+
+h4 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+  color: var(--h4-color);
+}
+
+h5 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+  color: var(--h5-color);
+}
+
+h6 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--h6-color);
+}
+
+/* Párrafos */
+p {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+ul,
+ol {
+  margin-left: 2em;
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  /* ≈16px */
+}
+
+li {
+  margin-bottom: 0.6em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.5rem;
+  /* ≈16px */
+  background: color-mix(in srgb, var(--table-bg) 40%, transparent);
+  color: var(--table-text);
+}
+
+th,
+td {
+  padding: 0.75em 1em;
+  border: 1px solid var(--table-border);
+  text-align: left;
+}
+
+th {
+  background: color-mix(in srgb, var(--table-header-bg) 50%, transparent);
+  color: var(--table-header-text);
+  font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+  background: color-mix(in srgb, var(--table-alt-bg) 40%, transparent);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+a:hover,
+a:focus {
+  color: var(--link-hover-color);
+}
+
+a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+}

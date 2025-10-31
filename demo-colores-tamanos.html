@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo de Colores y Tamaños de Encabezados</title>
+    <link rel="stylesheet" href="estilos/base.css" />
+    <link rel="stylesheet" href="estilos/globales.css" />
+  </head>
+  <body>
+    <main
+      style="
+        padding: 2rem;
+        max-width: 700px;
+        margin: auto;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 1rem;
+      ">
+      <h1>Encabezado H1</h1>
+      <h2>Encabezado H2</h2>
+      <h3>Encabezado H3</h3>
+      <h4>Encabezado H4</h4>
+      <h5>Encabezado H5</h5>
+      <h6>Encabezado H6</h6>
+      <p>Este es un párrafo de ejemplo. <a href="#">Enlace de ejemplo</a></p>
+      <ul>
+        <li>Elemento de lista 1</li>
+        <li>Elemento de lista 2</li>
+      </ul>
+      <ol>
+        <li>Elemento de lista ordenada 1</li>
+        <li>Elemento de lista ordenada 2</li>
+      </ol>
+      <hr />
+      <table>
+        <thead>
+          <tr>
+            <th>Columna 1</th>
+            <th>Columna 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dato 1</td>
+            <td>Dato 2</td>
+          </tr>
+          <tr>
+            <td>Dato 3</td>
+            <td>Dato 4</td>
+          </tr>
+        </tbody>
+      </table>
+      <form style="margin-top: 2rem">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" /><br /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" /><br /><br />
+        <label for="mensaje">Mensaje:</label><br />
+        <textarea id="mensaje" name="mensaje"></textarea><br /><br />
+        <button type="submit">Enviar</button>
+      </form>
+      <pre
+        style="
+          background: var(--pre-bg);
+          color: var(--pre-text);
+          padding: 1em;
+          border-radius: 6px;
+          margin-top: 2rem;
+        "><code style="color: var(--code-text); background: var(--code-bg);">// Ejemplo de código
+const saludo = "Hola mundo";
+</code></pre>
+      <div style="margin-top: 2rem">
+        <div
+          style="
+            background: var(--nota-bg);
+            color: var(--nota-text);
+            border: 2px solid var(--nota-border);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+          ">
+          Nota informativa
+        </div>
+        <div
+          style="
+            background: var(--nota-consejo-bg);
+            color: var(--nota-consejo-text);
+            border: 2px solid var(--nota-consejo-border);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+          ">
+          Nota consejo
+        </div>
+        <div
+          style="
+            background: var(--nota-advertencia-bg);
+            color: var(--nota-advertencia-text);
+            border: 2px solid var(--nota-advertencia-border);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+          ">
+          Nota advertencia
+        </div>
+        <div
+          style="
+            background: var(--nota-importante-bg);
+            color: var(--nota-importante-text);
+            border: 2px solid var(--nota-importante-border);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+          ">
+          Nota importante
+        </div>
+        <div
+          style="
+            background: var(--nota-codepen-bg);
+            color: var(--nota-codepen-text);
+            border: 2px solid var(--nota-codepen-border);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+          ">
+          Nota codepen
+        </div>
+      </div>
+      <div style="margin-top: 2rem">
+        <span style="color: var(--resultado-color)"
+          >Ejemplo resultado (var(--resultado-color))</span
+        ><br />
+        <span style="color: var(--codigo-util-color)"
+          >Ejemplo código util (var(--codigo-util-color))</span
+        >
+      </div>
+    </main>
+  </body>
+</html>

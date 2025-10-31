@@ -1,12 +1,12 @@
-#  Elizabeth Marañon
+#  Elizabeth Marañón
 
 ¡Bienvenido/a a mi perfil de GitHub!
 
-## 🌐 Proyecto destacado
+## 🌐 Proyecto React
 
 [KOBA - Web interactiva](https://mielmadev.github.io/koba/)
 
-## 📄 CV Demo
+## 📄 CV Demo (html, css, js)
 
 [Ver mi currículum interactivo (demo)](https://mielmadev.github.io/cv-demo-html-css-js/)
 
