@@ -8,15 +8,10 @@
     <link rel="stylesheet" href="estilos/globales.css" />
   </head>
   <body>
-    <main
-      style="
-        padding: 2rem;
-        max-width: 700px;
-        margin: auto;
-        background: rgba(0, 0, 0, 0.1);
-        border-radius: 1rem;
-      ">
-      <h1>Encabezado H1</h1>
+    <header>
+      <h1>Encabezdo H1 dentro de header</h1>
+    </header>
+    <main>
       <h2>Encabezado H2</h2>
       <h3>Encabezado H3</h3>
       <h4>Encabezado H4</h4>
@@ -31,7 +26,8 @@
         <li>Elemento de lista ordenada 1</li>
         <li>Elemento de lista ordenada 2</li>
       </ol>
-      <hr />
+      <blockquote>Esto es una cita de ejemplo usando blockquote.</blockquote>
+      <p>Texto con <mark>resaltado usando mark</mark> en la frase.</p>
       <table>
         <thead>
           <tr>
@@ -50,7 +46,7 @@
           </tr>
         </tbody>
       </table>
-      <form style="margin-top: 2rem">
+      <form>
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" /><br /><br />
         <label for="email">Email:</label>
@@ -59,80 +55,19 @@
         <textarea id="mensaje" name="mensaje"></textarea><br /><br />
         <button type="submit">Enviar</button>
       </form>
-      <pre
-        style="
-          background: var(--pre-bg);
-          color: var(--pre-text);
-          padding: 1em;
-          border-radius: 6px;
-          margin-top: 2rem;
-        "><code style="color: var(--code-text); background: var(--code-bg);">// Ejemplo de código
-const saludo = "Hola mundo";
+      <code>const saludo = "Hola mundo";</code>
+    <br>
+      <pre><code>const saludo = "Hola mundo";
+        if(true){
+          console.log(saludo);
+        }
 </code></pre>
-      <div style="margin-top: 2rem">
-        <div
-          style="
-            background: var(--nota-bg);
-            color: var(--nota-text);
-            border: 2px solid var(--nota-border);
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-          ">
-          Nota informativa
-        </div>
-        <div
-          style="
-            background: var(--nota-consejo-bg);
-            color: var(--nota-consejo-text);
-            border: 2px solid var(--nota-consejo-border);
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-          ">
-          Nota consejo
-        </div>
-        <div
-          style="
-            background: var(--nota-advertencia-bg);
-            color: var(--nota-advertencia-text);
-            border: 2px solid var(--nota-advertencia-border);
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-          ">
-          Nota advertencia
-        </div>
-        <div
-          style="
-            background: var(--nota-importante-bg);
-            color: var(--nota-importante-text);
-            border: 2px solid var(--nota-importante-border);
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-          ">
-          Nota importante
-        </div>
-        <div
-          style="
-            background: var(--nota-codepen-bg);
-            color: var(--nota-codepen-text);
-            border: 2px solid var(--nota-codepen-border);
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-          ">
-          Nota codepen
-        </div>
-      </div>
-      <div style="margin-top: 2rem">
-        <span style="color: var(--resultado-color)"
-          >Ejemplo resultado (var(--resultado-color))</span
-        ><br />
-        <span style="color: var(--codigo-util-color)"
-          >Ejemplo código util (var(--codigo-util-color))</span
-        >
+      <div>
+        <section class="nota nota-informativa">Nota informativa</section>
+        <section class="nota nota-consejo">Nota consejo</section>
+        <section class="nota nota-advertencia">Nota advertencia</section>
+        <section class="nota nota-importante">Nota importante</section>
+        <section class="nota nota-codepen">Nota codepen</section>
       </div>
     </main>
   </body>
