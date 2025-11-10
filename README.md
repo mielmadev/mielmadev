@@ -1,4 +1,15 @@
-#  Elizabeth Marañón
+# Elizabeth Marañón
+
+## 🥝 Proyecto www.fruteriamejia.es
+
+[www.fruteriamejia.es](https://www.fruteriamejia.es)
+
+Sitio web desarrollado con **HTML**, **CSS**, **JavaScript**, **PHP** y **MySQL**.
+
+- **Diseño responsivo:** Adaptado a cualquier dispositivo, garantizando una experiencia óptima en móviles, tablets y ordenadores.
+- **Accesibilidad:** Cumple buenas prácticas para que cualquier persona pueda navegar y comprar fácilmente.
+- **Usabilidad:** Navegación intuitiva, estructura clara y tiempos de carga optimizados.
+- **Código modular:** Separación de estilos, scripts y componentes para facilitar el mantenimiento y la escalabilidad.
 
 ¡Bienvenido/a a mi perfil de GitHub!
 
@@ -9,7 +20,6 @@
 ## 📄 CV Demo (html, css, js)
 
 [Ver mi currículum interactivo (demo)](https://mielmadev.github.io/cv-demo-html-css-js/)
-
 
 ---
 
