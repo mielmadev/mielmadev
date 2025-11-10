@@ -1,4 +1,7 @@
+
 # Elizabeth Marañón
+
+¡Bienvenido/a a mi perfil de GitHub!
 
 ## 🥝 Proyecto www.fruteriamejia.es
 
@@ -10,8 +13,6 @@ Sitio web desarrollado con **HTML**, **CSS**, **JavaScript**, **PHP** y **MySQL*
 - **Accesibilidad:** Cumple buenas prácticas para que cualquier persona pueda navegar y comprar fácilmente.
 - **Usabilidad:** Navegación intuitiva, estructura clara y tiempos de carga optimizados.
 - **Código modular:** Separación de estilos, scripts y componentes para facilitar el mantenimiento y la escalabilidad.
-
-¡Bienvenido/a a mi perfil de GitHub!
 
 ## 🌐 Proyecto React
 
