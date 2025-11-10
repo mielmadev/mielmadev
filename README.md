@@ -2,7 +2,9 @@
 
 ¡Bienvenido/a a mi perfil de GitHub!
 
-## 🥝 Proyecto [www.fruteriamejia.es](https://www.fruteriamejia.es)
+## 🥝 Proyecto Frutería Mejia
+
+[www.fruteriamejia.es](https://www.fruteriamejia.es)
 
 Sitio web desarrollado con **HTML**, **CSS**, **JavaScript**, **PHP** y **MySQL**.
 
