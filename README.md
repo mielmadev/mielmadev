@@ -17,10 +17,18 @@ Sitio web desarrollado con **HTML**, **CSS**, **JavaScript**, **PHP** y **MySQL*
 
 [KOBA - Web interactiva](https://mielmadev.github.io/koba/)
 
+## 🎬 Efecto Cortina y Transiciones tipo Video
+
+[Ver efecto cortina en publicaciones web](https://mielmadev.github.io/Cortina/): una técnica visual para transiciones fluidas y atractivas entre contenidos, simulando el cambio de escena como en los videos.
+
+Este efecto es ideal para destacar publicaciones, presentaciones o cualquier contenido donde la transición visual sea clave para captar la atención del usuario.
+
+> 💡 **Promoción:** Si buscas mejorar la experiencia visual de tus proyectos web con transiciones modernas y llamativas, ¡contáctame para implementarlo en tu sitio!
+
 ## 📄 CV Demo (html, css, js)
 
 [Ver mi currículum interactivo (demo)](https://mielmadev.github.io/cv-demo-html-css-js/)
 
----
+----
 
 ✨ Desarrolladora web apasionada por el diseño y la tecnología.
