@@ -56,7 +56,7 @@ body {
 
   /* Background */
   background-color: var(--body-bg);
-  background-image: url('/imagenes/logo-horizontal-1332x674-webp.webp'); 
+  background-image: url('imagenes/logo-horizontal-1332x674-webp.webp');  
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
