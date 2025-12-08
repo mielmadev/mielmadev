@@ -1,5 +1,17 @@
 /* Variables CSS */
 :root {
+  /* Paleta personalizada */
+  --azul-celeste: #3084F2;
+  --azul-marino: #023373;
+  --gris-pizarra: #595857;
+  --gris-carbon: #252526;
+  --gris-taupe: #8C8B88;
+  --berenjena: #491F73;
+  --morado: #56308C;
+  --negro: #0D0D0D;
+  --fucsia: #BF2195;
+  --rosa: #D948C1;
+  --violeta-medio: #6537A6;
   /* Notas */
   --nota-bg: rgba(241, 248, 255, 0.4);
   --nota-text: #b6dbff;
@@ -59,6 +71,7 @@
   /* Mejorado para accesibilidad */
 
   /* Espaciado y diseño */
+
   --border-radius: 6px;
   --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
   --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -96,7 +109,6 @@ body {
   margin: 0 3rem;
   padding: 0;
   background-color: var(--body-bg);
-  background-image: url(/imagenes/logo-horizontal-1332x869-webp.webp);
   background-size: cover;
   background-position: center;
   color: var(--body-text);
