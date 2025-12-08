@@ -50,8 +50,7 @@ body {
   text-align: justify;
 
   /* Background */
-  background-image: url('../imagenes/logo-horizontal-1332x674-webp.webp');
-  background-repeat: no-repeat;
+    background-image: url('../imagenes/logo-vertical-sin-letras-1364x1440-webp.webp');  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -192,7 +191,6 @@ h6 {
 /* Tableta */
 @media (max-width: 768px) {
   body {
-    background-image: url('../imagenes/logo-vertical-sin-letras-1364x1440-webp.webp');
     margin: 0 2rem;
     font-size: 1.4rem;
     line-height: 1.6;
