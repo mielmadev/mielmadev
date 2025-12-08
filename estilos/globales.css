@@ -12,84 +12,22 @@
   --fucsia: #BF2195;
   --rosa: #D948C1;
   --violeta-medio: #6537A6;
-  /* Notas */
-  --nota-bg: rgba(241, 248, 255, 0.4);
-  --nota-text: #b6dbff;
-  --nota-border: #0366d6;
+  --blanco: aliceblue;
 
-  --nota-consejo-bg: rgba(34, 197, 94, 0.1);
-  /* Coherente con H3 */
-  --nota-consejo-text: #4ade80;
-  /* Tono más claro del H3 */
-  --nota-consejo-border: #22c55e;
-  /* Mismo que H3 para coherencia */
+  --body-bg: var(--blanco);
+  --body-text: var(--gris-carbon);
+  --h1-color: var(--berenjena);
+  --h2-color: var(--azul-celeste);
+  --h3-color: var(--fucsia);
+  --h4-color: var(--morado);
+  --h5-color: var(--gris-pizarra);
+  --h6-color: var(--gris-taupe);
 
-  --nota-advertencia-bg: rgba(255, 248, 197, 0.4);
-  --nota-advertencia-text: #ffe066;
-  --nota-advertencia-border: #ffd33d;
-
-  --nota-importante-bg: rgba(255, 238, 240, 0.4);
-  --nota-importante-text: #ffb3b3;
-  --nota-importante-border: #cb2431;
-
-  --nota-codepen-bg: rgba(244, 114, 182, 0.1);
-  /* Coherente con H1 */
-  --nota-codepen-text: #f472b6;
-  /* Mismo que H1 para coherencia */
-  --nota-codepen-border: #ec4899;
-  /* Tono más oscuro del H1 */
-
-  /* Encabezados */
-  --h1-color: #f472b6;
-  /* Rosa - Mayor jerarquía */
-  --h2-color: #fb923c;
-  /* Naranja - Segunda jerarquía */
-  --h3-color: #22c55e;
-  /* Verde - Diferenciado de enlaces */
-  --h4-color: #a78bfa;
-  /* Violeta - Complementario */
-  --h5-color: #94a3b8;
-  /* Gris azulado - Neutro */
-  --h6-color: #b0bec7;
-  /* Gris claro - Menor jerarquía */
-
-  /* Código */
-  --code-bg: #232a34;
-  --code-text: #7dd3a9;
-  --pre-bg: #232a34;
-  --pre-text: #e5e7eb;
-  --precode-text: #fef9c3;
-
-  /* Colores base del tema */
-  --body-bg: #181c23;
-  --body-text: #e5e7eb;
-  --link-color: #4a90e2;
-  /* Mejorado para accesibilidad */
-  --link-hover-color: #5ba0f2;
-  /* Mejorado para accesibilidad */
-  --focus-color: #60c5f7;
-  /* Mejorado para accesibilidad */
-
-  /* Espaciado y diseño */
-
-  --border-radius: 6px;
-  --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.15);
-
-  /* Transiciones */
-  --transition-fast: 0.2s ease;
-  --transition-medium: 0.3s ease;
-
-  /* Tablas */
-  --table-bg: #232a34;
-  --table-border: #374151;
-  --table-text: #d1d5db;
-  --table-alt-bg: #262d38;
-  --table-header-bg: #2d3542;
-  --table-header-text: #e0e0e0;
+  --link-color: var(--azul-celeste);
+  --link-hover-color: var(--azul-marino);
+  --link-transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ===== Reset y normalización ===== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -102,34 +40,27 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  text-align: justify;
-  font-size: 1.6rem;
-  line-height: 1.8;
+  /* Layout & Box Model */
+  position: relative;
   margin: 0 3rem;
   padding: 0;
-  background-color: var(--body-bg);
-  background-size: cover;
-  background-position: center;
+
+  /* Typography */
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.8;
   color: var(--body-text);
-  position: relative;
+  text-align: justify;
+
+  /* Background */
+  background-color: var(--body-bg);
+  background-position: center;
+  background-size: cover;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: var(--body-bg);
-  opacity: 0.6;
-  z-index: 0;
-  pointer-events: none;
-}
-
-main,
-header,
-footer {
-  position: relative;
-  z-index: 2;
+*:focus {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 2px;
 }
 
 img {
@@ -141,43 +72,12 @@ a {
   color: var(--link-color);
   text-decoration: none;
   font-size: 1.4rem;
-  transition: var(--transition-fast);
+  transition: var(--link-transition);
 }
 
 a:hover,
 a:focus {
   color: var(--link-hover-color);
-  text-decoration: underline;
-}
-
-/* ===== Elementos de texto ===== */
-p,
-li,
-strong,
-em,
-label,
-caption,
-figcaption,
-dt,
-dd {
-  color: var(--body-text);
-}
-
-/* ===== Elementos de formulario ===== */
-input,
-button,
-select,
-textarea {
-  color: var(--body-text);
-}
-
-blockquote {
-  font-style: italic;
-}
-
-small {
-  font-size: 1.2rem;
-  /* 12px */
 }
 
 /* ===== Listas ===== */
@@ -210,200 +110,81 @@ h6 {
 
 h1 {
   color: var(--h1-color);
-  font-size: 3.2rem;
+  font-size: 3.6rem;
   line-height: 1.2;
 }
 
 h2 {
   color: var(--h2-color);
-  font-size: 2.8rem;
+  font-size: 2.7rem;
   line-height: 1.25;
 }
 
 h3 {
   color: var(--h3-color);
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 1.3;
 }
 
 h4 {
   color: var(--h4-color);
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.35;
 }
 
 h5 {
   color: var(--h5-color);
-  font-size: 1.8rem;
+  font-size: 1.13rem;
   line-height: 1.4;
 }
 
 h6 {
   color: var(--h6-color);
-  font-size: 1.6rem;
+  font-size: 0.85rem;
   line-height: 1.45;
 }
 
-* code {
-  font-size: 1em;
-}
-
-/* ===== Tipografía y código (bloques) ===== */
-code {
-  background-color: var(--code-bg);
-  color: var(--code-text);
-  font-family: "Fira Mono", "Consolas", monospace;
-}
-
-pre {
-  /* El pre se comportará como inline-block para que su ancho lo defina el contenido */
-  display: inline-block;
-  color: var(--pre-text);
-  background-color: var(--pre-bg);
-  border-radius: 6px;
-  padding: 1em;
-  white-space: pre;
-  /* preservar saltos y espacios */
-  max-width: 100%;
-  /* no exceder el contenedor/pantalla */
-  overflow-x: auto;
-  /* permitir scroll si el texto es más largo */
-  box-sizing: border-box;
-}
-
-pre code {
-  background-color: transparent;
-  color: var(--precode-text);
-  display: block;
-  /* asegurar que ocupa todo el pre */
-  white-space: pre;
-  /* coincidir con el comportamiento de pre */
-}
-
-/* ===== Tablas (genéricas) ===== */
-table {
-  width: auto;
-  /* ancho según contenido */
-  max-width: 100%;
-  /* no exceder el ancho del contenedor/pantalla */
-  border-collapse: collapse;
-  margin: 2em 0;
-  background-color: var(--table-bg);
-  table-layout: auto;
-  /* calcular columnas en base al contenido */
-  border: 1.5px solid var(--table-border);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(253, 0, 198, 0.08);
-  overflow: hidden;
-}
-
-th {
-  border: 1px solid var(--table-border);
-  padding: 0.5em;
-  background-color: var(--table-header-bg);
-  color: var(--table-header-text);
-  font-weight: bold;
-  border-bottom: 1.5px solid var(--table-border);
-  white-space: normal;
-  /* permitir wrap dentro de las celdas */
-  overflow-wrap: anywhere;
-  /* forzar quiebre en palabras largas si es necesario */
-}
-
-td {
-  border: 1px solid var(--table-border);
-  padding: 0.5em;
-  background-color: var(--table-bg);
-  color: var(--table-text);
-  white-space: normal;
-  /* permitir wrap dentro de las celdas */
-  overflow-wrap: anywhere;
-  /* forzar quiebre en palabras largas si es necesario */
-}
-
-tr:nth-child(even) td {
-  background-color: var(--table-alt-bg);
-}
-
-/* ===== Componentes / Estilos propios ===== */
-/* Notas: por defecto se comportan como inline-block (shrink-to-fit) */
-.nota,
-.nota-consejo,
-.nota-advertencia,
-.nota-importante,
-.nota-codepen {
-  display: inline-block;
-  /* ancho determinado por el contenido */
-  padding: 0.6em 0.8em;
-  /* padding más compacto para notas en línea */
-  border-radius: 6px;
-  margin: 0.5em 0.5em 0.5em 0;
-  /* separación ligera entre elementos */
-  max-width: 100%;
-  /* no salgan del contenedor en pantallas pequeñas */
-  white-space: normal;
-  overflow-wrap: anywhere;
-  /* permitir quiebre en palabras largas */
-}
-
-.nota {
-  background-color: var(--nota-bg);
-  color: var(--nota-text);
-  border-left: 4px solid var(--nota-border);
-}
-
-.nota-consejo {
-  background-color: var(--nota-consejo-bg);
-  color: var(--nota-consejo-text);
-  border-left: 4px solid var(--nota-consejo-border);
-}
-
-.nota-advertencia {
-  background-color: var(--nota-advertencia-bg);
-  color: var(--nota-advertencia-text);
-  border-left: 4px solid var(--nota-advertencia-border);
-}
-
-.nota-importante {
-  background-color: var(--nota-importante-bg);
-  color: var(--nota-importante-text);
-  border-left: 4px solid var(--nota-importante-border);
-}
-
-.nota-codepen {
-  background-color: var(--nota-codepen-bg);
-  color: var(--nota-codepen-text);
-  border-left: 4px solid var(--nota-codepen-border);
-}
-
-/* ===== Utilidades / Clases personalizadas ===== */
-.oculto {
+.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip-path: inset(50%);
+  clip-path: inset(50%);/**/
   border: 0;
 }
 
-
-/* ===== Estados de foco y accesibilidad ===== */
-*:focus {
-  outline: 2px solid var(--focus-color);
-  outline-offset: 2px;
-}
-
-input:focus,
-textarea:focus,
-select:focus,
-button:focus {
-  outline: 2px solid var(--link-color);
-  outline-offset: 2px;
-}
-
 /* ===== Media queries responsivas ===== */
+/* Móvil */
+@media (max-width: 480px) {
+  body {
+    margin: 0 1rem;
+    font-size: 1.3rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.13rem;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: 0.85rem;
+  }
+
+
+}
+
+/* Tableta */
 @media (max-width: 768px) {
   body {
     margin: 0 2rem;
@@ -412,15 +193,49 @@ button:focus {
   }
 
   h1 {
-    font-size: 2.8rem;
+    font-size: 2.7rem;
   }
 
   h2 {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 
   h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.13rem;
+  }
+
+  h5 {
+    font-size: 0.85rem;
+  }
+
+  h6 {
+    font-size: 0.75rem;
+  }
+
+}
+
+/* Escritorio grande */
+@media (min-width: 1200px) {
+  body {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 4rem;
+  }
+
+  h1 {
+    font-size: 4.2rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
   }
 
   h4 {
@@ -428,60 +243,10 @@ button:focus {
   }
 
   h5 {
-    font-size: 1.6rem;
+    font-size: 1.35rem;
   }
 
   h6 {
-    font-size: 1.4rem;
-  }
-
-  pre {
-    padding: 0.8em;
-    font-size: 1.3rem;
-  }
-
-  .nota,
-  .nota-consejo,
-  .nota-advertencia,
-  .nota-importante,
-  .nota-codepen {
-    display: block;
-    margin: 0.5em 0;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    margin: 0 1rem;
-    font-size: 1.3rem;
-  }
-
-  h1 {
-    font-size: 2.4rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  h3 {
-    font-size: 1.8rem;
-  }
-
-  table {
-    font-size: 1.2rem;
-  }
-
-  th,
-  td {
-    padding: 0.3em;
-  }
-}
-
-@media (min-width: 1200px) {
-  body {
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 0 4rem;
+    font-size: 1rem;
   }
 }
