@@ -1,30 +1,27 @@
 /* Variables CSS */
 :root {
-  /* Paleta personalizada */
-  --azul-celeste: #3084F2;
-  --azul-marino: #023373;
-  --gris-pizarra: #595857;
+  /* Paleta principal del logo */
+  --negro: #292421;
   --gris-carbon: #252526;
-  --gris-taupe: #8C8B88;
-  --berenjena: #491F73;
-  --morado: #56308C;
-  --negro: #0D0D0D;
-  --fucsia: #BF2195;
-  --rosa: #D948C1;
-  --violeta-medio: #6537A6;
-  --blanco: aliceblue;
+  --morado-oscuro: #5e366e;
+  --violeta-profundo: #3d224e;
+  --azul-acero: #223a5e;
+  --azul-medianoche: #191970;
+  --rosa-fucsia-oscuro: #a23e6e;
+  --blanco: #f5f5f5;
 
-  --body-bg: var(--blanco);
-  --body-text: var(--gris-carbon);
-  --h1-color: var(--berenjena);
-  --h2-color: var(--azul-celeste);
-  --h3-color: var(--fucsia);
-  --h4-color: var(--morado);
-  --h5-color: var(--gris-pizarra);
-  --h6-color: var(--gris-taupe);
+  /* Variables de uso */
+  --body-bg: var(--negro);
+  --body-text: var(--blanco);
+  --h1-color: var(--morado-oscuro);
+  --h2-color: var(--azul-acero);
+  --h3-color: var(--rosa-fucsia-oscuro);
+  --h4-color: var(--violeta-profundo);
+  --h5-color: var(--azul-medianoche);
+  --h6-color: var(--gris-carbon);
 
-  --link-color: var(--azul-celeste);
-  --link-hover-color: var(--azul-marino);
+  --link-color: var(--rosa-fucsia-oscuro);
+  --link-hover-color: var(--azul-acero);
   --link-transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -42,8 +39,13 @@ html {
 body {
   /* Layout & Box Model */
   position: relative;
-  margin: 0 3rem;
-  padding: 0;
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url('');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 
   /* Typography */
   font-family: "Montserrat", sans-serif;
@@ -54,8 +56,10 @@ body {
 
   /* Background */
   background-color: var(--body-bg);
-  background-position: center;
+  background-image: url('/imagenes/logo-horizontal-1332x674-webp.webp');
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 *:focus {
@@ -109,8 +113,13 @@ h6 {
 }
 
 h1 {
-  color: var(--h1-color);
-  font-size: 3.6rem;
+  font-family: 'Metal Mania', 'Cinzel', serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  color: var(--morado-oscuro);
+  letter-spacing: 0.08rem;
+  text-align: center;
+  text-shadow: 0 4px 32px var(--blanco), 0 2px 12px var(--blanco), 0 0 2px var(--blanco), 0 0 1px var(--blanco), 0 1px 0 rgba(0, 0, 0, .53);
   line-height: 1.2;
 }
 
@@ -151,7 +160,8 @@ h6 {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip-path: inset(50%);/**/
+  clip-path: inset(50%);
+  /**/
   border: 0;
 }
 
@@ -187,6 +197,7 @@ h6 {
 /* Tableta */
 @media (max-width: 768px) {
   body {
+    background-image: url('/imagenes/logo-vertical-sin-letras-1364x1440-webp.webp');
     margin: 0 2rem;
     font-size: 1.4rem;
     line-height: 1.6;
