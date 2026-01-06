@@ -1,28 +1,28 @@
 /* Variables CSS */
 :root {
   /* Paleta principal del logo */
-  --negro: #292421;
-  --gris-carbon: #252526;
-  --morado-oscuro: #5e366e;
-  --violeta-profundo: #3d224e;
-  --azul-acero: #223a5e;
-  --azul-medianoche: #191970;
-  --rosa-fucsia-oscuro: #a23e6e;
-  --blanco: #f5f5f5;
-  --fucsia: #7C4DA8;
+  --negro: #18181a;
+  --gris-tribal: #b7c6c9;
+  --azul-electrico: #1e6cff;
+  --azul-claro: #7ee6f9;
+  --rosa-mielma: #e94bb4;
+  --blanco: #ffffff;
+  --morado-etiquetas: #a77ac4;
 
   /* Variables de uso */
   --body-bg: var(--negro);
   --body-text: var(--blanco);
-  --h1-color: var(--morado-oscuro);
-  --h2-color: var(--azul-acero);
-  --h3-color: var(--rosa-fucsia-oscuro);
-  --h4-color: var(--violeta-profundo);
-  --h5-color: var(--azul-medianoche);
-  --h6-color: var(--gris-carbon);
+  --h1-color: var(--morado-etiquetas);
+  --h2-color: var(--azul-claro);
+  --h3-color: var(--rosa-mielma);
+  --h4-color: var(--gris-tribal);
+  --h5-color: var(--azul-electrico);
+  --h6-color: var(--gris-tribal);
 
-  --link-color: var(--rosa-fucsia-oscuro);
-  --link-hover-color: var(--azul-acero);
+  --focus-color: #7ee6f9;
+
+  --link-color: var(--rosa-mielma);
+  --link-hover-color: var(--azul-electrico);
   --link-transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -51,7 +51,7 @@ body {
   text-align: justify;
 
   /* Background */
-background: var(--body-bg);
+  background: var(--body-bg);
 }
 
 
@@ -107,12 +107,11 @@ h6 {
 
 h1 {
   font-family: 'Metal Mania', 'Cinzel', serif;
+  color: var(--h1-color);
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 700;
-  color: var(--morado-oscuro);
   letter-spacing: 0.08rem;
   text-align: center;
-  text-shadow: 0 4px 32px var(--blanco), 0 2px 12px var(--blanco), 0 0 2px var(--blanco), 0 0 1px var(--blanco), 0 1px 0 rgba(0, 0, 0, .53);
   line-height: 1.2;
 }
 
