@@ -51,10 +51,9 @@ body {
   text-align: justify;
 
   /* Background */
-background: #292421;
-  background: radial-gradient(circle, rgba(41, 36, 33, 1) 40%, rgba(124, 77, 168, 1) 50%, rgba(41, 36, 33, 1) 75%, rgba(124, 77, 168, 1) 100%);
-
+background: var(--body-bg);
 }
+
 
 *:focus {
   outline: 2px solid var(--focus-color);
