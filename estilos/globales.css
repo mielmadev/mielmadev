@@ -1,29 +1,35 @@
-/* Variables CSS */
+/* Variables de colores principales */
 :root {
-  /* Paleta principal del logo */
-  --negro: #18181a;
-  --gris-tribal: #b7c6c9;
-  --azul-electrico: #1e6cff;
-  --azul-claro: #7ee6f9;
-  --rosa-mielma: #e94bb4;
+  --rosa: #E261EE;
+  --morado: #490B60;
+  --lavanda: #EAC2F1;
+  --negro: #000000;
   --blanco: #ffffff;
-  --morado-etiquetas: #a77ac4;
-
   /* Variables de uso */
   --body-bg: var(--negro);
   --body-text: var(--blanco);
-  --h1-color: var(--morado-etiquetas);
-  --h2-color: var(--azul-claro);
-  --h3-color: var(--rosa-mielma);
-  --h4-color: var(--gris-tribal);
-  --h5-color: var(--azul-electrico);
-  --h6-color: var(--gris-tribal);
+  --h1-color: var(--lavanda);
+  /* Título principal claro para contraste */
+  --h2-color: var(--rosa);
+  /* Subtítulo vibrante */
+  --h3-color: var(--blanco);
+  /* Título menor, máximo contraste */
+  --h4-color: var(--lavanda);
+  /* Detalle suave */
+  --h5-color: var(--rosa);
+  /* Detalle vibrante */
+  --h6-color: var(--lavanda);
+  /* Detalle suave */
 
-  --focus-color: #7ee6f9;
+  --focus-color: var(--rosa);
 
-  --link-color: var(--rosa-mielma);
-  --link-hover-color: var(--azul-electrico);
+  --link-color: var(--lavanda);
+  /* Enlaces claros sobre fondo oscuro */
+  --link-hover-color: var(--rosa);
+  /* Hover vibrante */
   --link-transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --active-fondo: var(--blanco);
+  --active-color: var(--morado);
 }
 
 * {
