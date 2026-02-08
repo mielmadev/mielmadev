@@ -1,86 +1,156 @@
-/* Variables de colores principales */
+/* ========================================
+   VARIABLES CSS - Accesibilidad AAA + Marca Propia
+   ======================================== */
+
 :root {
-  --rosa: #E261EE;
-  --morado: #490B60;
-  --lavanda: #EAC2F1;
-  --negro: #000000;
-  --blanco: #ffffff;
-  /* Variables de uso */
-  --body-bg: var(--negro);
-  --body-text: var(--blanco);
-  --h1-color: var(--lavanda);
-  /* Título principal claro para contraste */
-  --h2-color: var(--rosa);
-  /* Subtítulo vibrante */
-  --h3-color: var(--blanco);
-  /* Título menor, máximo contraste */
-  --h4-color: var(--lavanda);
-  /* Detalle suave */
-  --h5-color: var(--rosa);
-  /* Detalle vibrante */
-  --h6-color: var(--lavanda);
-  /* Detalle suave */
+  /* ===== 1. COLORES BASE (Logo) - Solo 5 colores ===== */
+  --negro: #120813;
+  --morado: #78278b;
+  --rosa: #c45bd4;
+  --rosa-claro: #e58df1;
+  --rosa-muy-claro: #f8d8f0;
+  --blanco: #e8e1e9;
+
+  /* ===== 2. COLORES - TEMA OSCURO (Predeterminado) ===== */
+  --fondo: var(--negro);
+  --light-fondo: var(--rosa-muy-claro);
+  --texto: var(--blanco);
+  --light-text: var(--negro);
+  --titulo-color: var(--rosa);
+  --light-titulo: var(--morado);
+  /*Del h1 al h3*/
+  --subtitulo-color: var(--morado);
+  --light-subtitulo: var(--morado);
+  /* Subtítulos H4-H6 sobre negro */
+
+  --link-color: var(--rosa);
+  --light-link: var(--negro);
+  --link-hover-color: var(--rosa-claro);
+  --light-link-hover: var(--morado);
+  --link-active-color: var(--morado);
+  --light-link-active: var(--rosa);
 
   --focus-color: var(--rosa);
-
-  --link-color: var(--lavanda);
-  /* Enlaces claros sobre fondo oscuro */
-  --link-hover-color: var(--rosa);
-  /* Hover vibrante */
+  --light-focus: var(--morado);
   --link-transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  --active-fondo: var(--blanco);
   --active-color: var(--morado);
+
+  /* ===== 3. COLORES - TEMA CLARO ===== */
+  /* Variables light- declaradas junto a sus equivalentes oscuras */
+
+  /* ===== 4. TIPOGRAFÍA ===== */
+  --font-main: "Montserrat", sans-serif;
+  --font-titulo: "Metal Mania", system-ui;
+  --font-titulo-alt: "Cinzel", serif;
+
+  --font-size-root: 62.5%;
+  --font-size: 1.6rem;
+  --font-size-small: 1.4rem;
+
+  --line-height: 1.8;
+  /*interlineado*/
+  --line-height-heading: 1.2;
+
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* ===== 5. ESPACIADOS ===== */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+
+  /* ===== 6. BORDERS Y RADIOS ===== */
+  --border-width: 1px;
+  --border-width-focus: 2px;
+  --outline-offset: 2px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+
+  /* ===== 7. BREAKPOINTS (Media Queries) ===== */
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-large: 1200px;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* ========================================
+   ESTILOS BASE - Organizados por Secciones
+   ======================================== */
 
-/* ===== Elementos base ===== */
+/* ===== Elementos Base ===== */
 html {
-  font-size: 62.5%;
+  font-size: var(--font-size-root);
+  font-family: var(--font-main);
+  line-height: var(--line-height);
+  color: var(--texto);
 }
 
 body {
-  /* Layout & Box Model */
   position: relative;
   min-height: 100vh;
-  width: 100vw;
-
-  /* Typography */
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.6rem;
-  line-height: 1.8;
-  color: var(--body-text);
+  width: 100%;
+  font-size: var(--font-size);
   text-align: justify;
-
-  /* Background */
-  background: var(--body-bg);
+  background: var(--fondo);
 }
 
+/* ===== Tema Claro - Variables ===== */
+.light {
+  --fondo: var(--light-fondo);
+  --texto: var(--light-text);
+  --titulo-color: var(--light-titulo);
+  --subtitulo-color: var(--light-subtitulo);
+
+  --link-color: var(--light-link);
+  --link-hover-color: var(--light-link-hover);
+  --link-active-color: var(--light-link-active);
+  --focus-color: var(--light-focus);
+}
 
 *:focus {
-  outline: 2px solid var(--focus-color);
-  outline-offset: 2px;
+  outline: var(--border-width-focus) solid var(--focus-color);
+  outline-offset: var(--outline-offset);
 }
 
+/* ===== Imágenes ===== */
 img {
   max-width: 100%;
   height: auto;
 }
 
+/* ===== Enlaces ===== */
 a {
   color: var(--link-color);
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: var(--font-size-small);
   transition: var(--link-transition);
+  cursor: pointer;
 }
 
 a:hover,
 a:focus {
   color: var(--link-hover-color);
+}
+
+a:active {
+  color: var(--link-active-color);
+  position: relative;
+  top: 1px;
+}
+
+.light a {
+  color: var(--link-color);
+}
+
+.light a:hover,
+.light a:focus {
+  color: var(--link-hover-color);
+}
+
+.light a:active {
+  color: var(--link-active-color);
+  position: relative;
+  top: 1px;
 }
 
 /* ===== Listas ===== */
@@ -98,59 +168,170 @@ ol {
   list-style-type: decimal;
 }
 
-/* ===== Tipografía y encabezados ===== */
+/* ===== Títulos ===== */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Metal Mania", system-ui;
-  font-weight: 500;
+  font-family: var(--font-titulo);
+  font-weight: var(--font-weight-medium);
   margin: 0.25em 0;
   padding: 0;
 }
 
 h1 {
-  font-family: 'Metal Mania', 'Cinzel', serif;
-  color: var(--h1-color);
+  font-family: var(--font-titulo-alt);
+  color: var(--titulo-color);
   font-size: clamp(2.5rem, 6vw, 4rem);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.08rem;
   text-align: center;
-  line-height: 1.2;
+  line-height: var(--line-height-heading);
 }
 
 h2 {
-  color: var(--h2-color);
+  color: var(--titulo-color);
   font-size: 2.7rem;
   line-height: 1.25;
 }
 
 h3 {
-  color: var(--h3-color);
+  color: var(--titulo-color);
   font-size: 2rem;
   line-height: 1.3;
 }
 
 h4 {
-  color: var(--h4-color);
+  color: var(--subtitulo-color);
   font-size: 1.5rem;
   line-height: 1.35;
 }
 
 h5 {
-  color: var(--h5-color);
+  color: var(--subtitulo-color);
   font-size: 1.13rem;
   line-height: 1.4;
 }
 
 h6 {
-  color: var(--h6-color);
+  color: var(--subtitulo-color);
   font-size: 0.85rem;
   line-height: 1.45;
 }
 
+/* ===== Párrafos ===== */
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* ===== Botones ===== */
+.btn {
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: var(--morado);
+  color: var(--blanco);
+  border: none;
+  border-radius: var(--border-radius-md, 8px);
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-small);
+  cursor: pointer;
+  transition: var(--link-transition);
+  text-align: center;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--rosa);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  background: var(--active-color);
+  transform: translateY(0);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.light .btn {
+  background: var(--morado);
+  color: var(--blanco);
+}
+
+.light .btn:hover,
+.light .btn:focus {
+  background: var(--rosa-claro);
+  color: var(--negro);
+}
+
+.light .btn:active {
+  background: var(--active-color);
+  color: var(--blanco);
+}
+
+/* ===== Inputs ===== */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: var(--border-width) solid var(--rosa-claro);
+  border-radius: var(--border-radius-sm, 4px);
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: var(--font-main);
+  font-size: var(--font-size);
+  transition: var(--link-transition);
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  border-color: var(--rosa);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--focus-color);
+  box-shadow: 0 0 0 3px rgba(196, 91, 212, 0.2);
+}
+
+input:active,
+textarea:active,
+select:active {
+  border-color: var(--active-color);
+}
+
+.light input,
+.light textarea,
+.light select {
+  border-color: var(--negro);
+}
+
+.light input:hover,
+.light textarea:hover,
+.light select:hover {
+  border-color: var(--morado);
+}
+
+.light input:focus,
+.light textarea:focus,
+.light select:focus {
+  border-color: var(--focus-color);
+  box-shadow: 0 0 0 3px rgba(120, 39, 139, 0.2);
+}
+
+.light input:active,
+.light textarea:active,
+.light select:active {
+  border-color: var(--active-color);
+}
+
+/* ===== Accesibilidad ===== */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -159,13 +340,15 @@ h6 {
   margin: -1px;
   overflow: hidden;
   clip-path: inset(50%);
-  /**/
   border: 0;
 }
 
-/* ===== Media queries responsivas ===== */
-/* Móvil */
-@media (max-width: 480px) {
+/* ========================================
+   MEDIA QUERIES RESPONSIVAS
+   ======================================== */
+
+/* ===== Móvil ===== */
+@media (max-width: var(--breakpoint-mobile)) {
   body {
     margin: 0 1rem;
     font-size: 1.3rem;
@@ -188,12 +371,10 @@ h6 {
   h6 {
     font-size: 0.85rem;
   }
-
-
 }
 
-/* Tableta */
-@media (max-width: 768px) {
+/* ===== Tableta ===== */
+@media (max-width: var(--breakpoint-tablet)) {
   body {
     margin: 0 2rem;
     font-size: 1.4rem;
@@ -223,11 +404,10 @@ h6 {
   h6 {
     font-size: 0.75rem;
   }
-
 }
 
-/* Escritorio grande */
-@media (min-width: 1200px) {
+/* ===== Escritorio Grande ===== */
+@media (min-width: var(--breakpoint-large)) {
   body {
     margin: 0 auto;
     max-width: 1200px;

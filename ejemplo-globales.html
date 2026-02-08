@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo de Estilos Globales</title>
+    <link rel="stylesheet" href="estilos/globales.css" />
+    <style>
+      .example-container {
+        padding: var(--spacing-md);
+        background-color: var(--fondo);
+        color: var(--texto);
+        font-family: var(--font-main);
+      }
+
+      .example-container h1 {
+        color: var(--titulo-color);
+      }
+
+      .example-container h2 {
+        color: var(--titulo-color);
+      }
+
+      .example-container h3 {
+        color: var(--titulo-color);
+      }
+      .example-container h4{
+        color: var(--subtitulo-color);
+      }
+
+      .example-container a {
+        color: var(--link-color);
+      }
+
+      .example-container a:hover {
+        color: var(--link-hover-color);
+      }
+
+      .example-container ul {
+        color: var(--texto);
+      }
+
+      .example-container ol {
+        color: var(--texto);
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="document.body.classList.toggle('light')">
+      Toggle Light Mode
+    </button>
+
+    <div class="example-container">
+      <h1>Ejemplo de Títulos</h1>
+      <h2>Subtítulo H2</h2>
+      <h3>Subtítulo H3</h3>
+      <h4>Subtítulo H4</h4>
+      <p>
+        Este es un párrafo de ejemplo para mostrar los estilos globales
+        aplicados al texto. El color del texto y el fondo están definidos en las
+        variables CSS.
+      </p>
+      <ul>
+        <li>Elemento de lista 1</li>
+        <li>Elemento de lista 2</li>
+      </ul>
+      <ol>
+        <li>Elemento ordenado 1</li>
+        <li>Elemento ordenado 2</li>
+      </ol>
+      <a href="#">Este es un enlace de ejemplo</a>
+    </div>
+  </body>
+</html>
