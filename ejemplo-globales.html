@@ -4,71 +4,77 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejemplo de Estilos Globales</title>
+    <link rel="stylesheet" href="estilos/base.css" />
     <link rel="stylesheet" href="estilos/globales.css" />
-    <style>
-      .example-container {
-        padding: var(--spacing-md);
-        background-color: var(--fondo);
-        color: var(--texto);
-        font-family: var(--font-main);
-      }
-
-      .example-container h1 {
-        color: var(--titulo-color);
-      }
-
-      .example-container h2 {
-        color: var(--titulo-color);
-      }
-
-      .example-container h3 {
-        color: var(--titulo-color);
-      }
-      .example-container h4{
-        color: var(--subtitulo-color);
-      }
-
-      .example-container a {
-        color: var(--link-color);
-      }
-
-      .example-container a:hover {
-        color: var(--link-hover-color);
-      }
-
-      .example-container ul {
-        color: var(--texto);
-      }
-
-      .example-container ol {
-        color: var(--texto);
-      }
-    </style>
   </head>
   <body>
-    <button onclick="document.body.classList.toggle('light')">
-      Toggle Light Mode
-    </button>
-
-    <div class="example-container">
-      <h1>Ejemplo de Títulos</h1>
-      <h2>Subtítulo H2</h2>
-      <h3>Subtítulo H3</h3>
-      <h4>Subtítulo H4</h4>
-      <p>
-        Este es un párrafo de ejemplo para mostrar los estilos globales
-        aplicados al texto. El color del texto y el fondo están definidos en las
-        variables CSS.
-      </p>
-      <ul>
-        <li>Elemento de lista 1</li>
-        <li>Elemento de lista 2</li>
-      </ul>
-      <ol>
-        <li>Elemento ordenado 1</li>
-        <li>Elemento ordenado 2</li>
-      </ol>
-      <a href="#">Este es un enlace de ejemplo</a>
+        <button id="toggle-theme" style="position:fixed;top:1rem;right:1rem;z-index:1000;">Cambiar tema</button>
+        <script>
+          document.getElementById('toggle-theme').onclick = function() {
+            document.body.classList.toggle('light');
+          };
+        </script>
+    <div class="demo-tema">
+      <h2>Tema Oscuro (por defecto)</h2>
+      <div class="demo-bloque">
+        <h1>Ejemplo de Título</h1>
+        <h2>Subtítulo H2</h2>
+        <h3>Subtítulo H3</h3>
+        <h4>Subtítulo H4</h4>
+        <p>Este es un párrafo de ejemplo para mostrar los estilos globales aplicados al texto. El color del texto y el fondo están definidos en las variables CSS.</p>
+        <ul>
+          <li>Elemento de lista 1</li>
+          <li>Elemento de lista 2</li>
+        </ul>
+        <ol>
+          <li>Elemento ordenado 1</li>
+          <li>Elemento ordenado 2</li>
+        </ol>
+        <a href="#">Este es un enlace de ejemplo</a>
+        <hr />
+        <h5>Subtítulo H5</h5>
+        <h6>Subtítulo H6</h6>
+        <button class="btn">Botón primario</button>
+        <button class="btn" disabled>Botón deshabilitado</button>
+        <input type="text" placeholder="Input de texto" />
+        <textarea placeholder="Textarea de ejemplo"></textarea>
+        <select>
+          <option>Opción 1</option>
+          <option>Opción 2</option>
+        </select>
+        <span class="sr-only">Texto solo para lectores de pantalla</span>
+      </div>
+    </div>
+    <div class="demo-tema light">
+      <h2>Tema Claro (.light)</h2>
+      <div class="demo-bloque">
+        <h1>Ejemplo de Título</h1>
+        <h2>Subtítulo H2</h2>
+        <h3>Subtítulo H3</h3>
+        <h4>Subtítulo H4</h4>
+        <p>Este es un párrafo de ejemplo para mostrar los estilos globales aplicados al texto. El color del texto y el fondo están definidos en las variables CSS.</p>
+        <ul>
+          <li>Elemento de lista 1</li>
+          <li>Elemento de lista 2</li>
+        </ul>
+        <ol>
+          <li>Elemento ordenado 1</li>
+          <li>Elemento ordenado 2</li>
+        </ol>
+        <a href="#">Este es un enlace de ejemplo</a>
+        <hr />
+        <h5>Subtítulo H5</h5>
+        <h6>Subtítulo H6</h6>
+        <button class="btn">Botón primario</button>
+        <button class="btn" disabled>Botón deshabilitado</button>
+        <input type="text" placeholder="Input de texto" />
+        <textarea placeholder="Textarea de ejemplo"></textarea>
+        <select>
+          <option>Opción 1</option>
+          <option>Opción 2</option>
+        </select>
+        <span class="sr-only">Texto solo para lectores de pantalla</span>
+      </div>
     </div>
   </body>
 </html>

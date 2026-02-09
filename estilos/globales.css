@@ -3,71 +3,66 @@
    ======================================== */
 
 :root {
-  /* ===== 1. COLORES BASE (Logo) - Solo 5 colores ===== */
+
+  /* ===== COLORES BASE (Logo) ===== */
   --negro: #120813;
   --morado: #78278b;
   --rosa: #c45bd4;
-  --rosa-claro: #e58df1;
+  --rosita: #e58df1;
   --rosa-muy-claro: #f8d8f0;
   --blanco: #e8e1e9;
+  --gris: #222;
 
-  /* ===== 2. COLORES - TEMA OSCURO (Predeterminado) ===== */
+  /* ===== COLORES TEMA OSCURO ===== */
   --fondo: var(--negro);
-  --light-fondo: var(--rosa-muy-claro);
   --texto: var(--blanco);
-  --light-text: var(--negro);
   --titulo-color: var(--rosa);
-  --light-titulo: var(--morado);
-  /*Del h1 al h3*/
-  --subtitulo-color: var(--morado);
-  --light-subtitulo: var(--morado);
-  /* Subtítulos H4-H6 sobre negro */
+  --light-fondo: var(--rosita);
+  --light-titulo: var(--gris);
+  --light-text: var(--negro);
 
-  --link-color: var(--rosa);
-  --light-link: var(--negro);
-  --link-hover-color: var(--rosa-claro);
-  --light-link-hover: var(--morado);
-  --link-active-color: var(--morado);
-  --light-link-active: var(--rosa);
+  /* ===== ENLACES ===== */
+  --link-color: var(--morado);
+  --link-hover-color: var(--rosa);
+  --light-link: var(--morado);
+  --light-link-hover: var(--rosa);
 
-  --focus-color: var(--rosa);
-  --light-focus: var(--morado);
+  /* ===== BOTONES ===== */
+  --btn-hover-bg: var(--rosa);
+  --light-btn-hover-bg: var(--rosita);
+  --active-color: var(--negro);
+
+  /* ===== FOCUS Y TRANSICIÓN ===== */
+  --focus-color: var(--morado);
   --link-transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  --active-color: var(--morado);
 
-  /* ===== 3. COLORES - TEMA CLARO ===== */
-  /* Variables light- declaradas junto a sus equivalentes oscuras */
-
-  /* ===== 4. TIPOGRAFÍA ===== */
+  /* ===== TIPOGRAFÍA ===== */
   --font-main: "Montserrat", sans-serif;
-  --font-titulo: "Metal Mania", system-ui;
-  --font-titulo-alt: "Cinzel", serif;
-
+  --font-titulo: "Cinzel", serif;
+  --font-subtitulo: "Beth Ellen", cursive;
   --font-size-root: 62.5%;
   --font-size: 1.6rem;
   --font-size-small: 1.4rem;
-
+  --letter-spacing: 0.08rem;
   --line-height: 1.8;
-  /*interlineado*/
   --line-height-heading: 1.2;
-
   --font-weight-medium: 500;
   --font-weight-bold: 700;
 
-  /* ===== 5. ESPACIADOS ===== */
+  /* ===== ESPACIADOS ===== */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
 
-  /* ===== 6. BORDERS Y RADIOS ===== */
+  /* ===== BORDES Y RADIOS ===== */
   --border-width: 1px;
   --border-width-focus: 2px;
   --outline-offset: 2px;
   --border-radius-sm: 4px;
   --border-radius-md: 8px;
 
-  /* ===== 7. BREAKPOINTS (Media Queries) ===== */
+  /* ===== BREAKPOINTS ===== */
   --breakpoint-mobile: 480px;
   --breakpoint-tablet: 768px;
   --breakpoint-large: 1200px;
@@ -82,7 +77,6 @@ html {
   font-size: var(--font-size-root);
   font-family: var(--font-main);
   line-height: var(--line-height);
-  color: var(--texto);
 }
 
 body {
@@ -92,19 +86,13 @@ body {
   font-size: var(--font-size);
   text-align: justify;
   background: var(--fondo);
+  color: var(--texto);
 }
 
 /* ===== Tema Claro - Variables ===== */
 .light {
-  --fondo: var(--light-fondo);
-  --texto: var(--light-text);
-  --titulo-color: var(--light-titulo);
-  --subtitulo-color: var(--light-subtitulo);
-
-  --link-color: var(--light-link);
-  --link-hover-color: var(--light-link-hover);
-  --link-active-color: var(--light-link-active);
-  --focus-color: var(--light-focus);
+  background: var(--light-fondo);
+  color: var(--light-text);
 }
 
 *:focus {
@@ -117,6 +105,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 
 /* ===== Enlaces ===== */
 a {
@@ -133,22 +122,22 @@ a:focus {
 }
 
 a:active {
-  color: var(--link-active-color);
+  color: var(--active-color);
   position: relative;
   top: 1px;
 }
 
 .light a {
-  color: var(--link-color);
+  color: var(--light-link);
 }
 
 .light a:hover,
 .light a:focus {
-  color: var(--link-hover-color);
+  color: var(--light-link-hover);
 }
 
 .light a:active {
-  color: var(--link-active-color);
+  color: var(--light-active-color);
   position: relative;
   top: 1px;
 }
@@ -177,46 +166,49 @@ h5,
 h6 {
   font-family: var(--font-titulo);
   font-weight: var(--font-weight-medium);
+  color: var(--titulo-color);
   margin: 0.25em 0;
   padding: 0;
 }
 
+.light h1,
+.light h2,
+.light h3,
+.light h4,
+.light h5,
+.light h6 {
+  color: var(--light-titulo);
+}
+
 h1 {
-  font-family: var(--font-titulo-alt);
-  color: var(--titulo-color);
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: var(--font-weight-bold);
-  letter-spacing: 0.08rem;
+  letter-spacing: var(--letter-spacing);
   text-align: center;
   line-height: var(--line-height-heading);
 }
 
 h2 {
-  color: var(--titulo-color);
   font-size: 2.7rem;
   line-height: 1.25;
 }
 
 h3 {
-  color: var(--titulo-color);
   font-size: 2rem;
   line-height: 1.3;
 }
 
 h4 {
-  color: var(--subtitulo-color);
   font-size: 1.5rem;
   line-height: 1.35;
 }
 
 h5 {
-  color: var(--subtitulo-color);
   font-size: 1.13rem;
   line-height: 1.4;
 }
 
 h6 {
-  color: var(--subtitulo-color);
   font-size: 0.85rem;
   line-height: 1.45;
 }
@@ -234,7 +226,6 @@ p {
   color: var(--blanco);
   border: none;
   border-radius: var(--border-radius-md, 8px);
-  font-family: var(--font-main);
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-small);
   cursor: pointer;
@@ -244,7 +235,7 @@ p {
 
 .btn:hover,
 .btn:focus {
-  background: var(--rosa);
+  background: var(--btn-hover-bg);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -262,7 +253,7 @@ p {
 
 .light .btn:hover,
 .light .btn:focus {
-  background: var(--rosa-claro);
+  background: var(--light-btn-hover-bg);
   color: var(--negro);
 }
 
@@ -277,7 +268,7 @@ textarea,
 select {
   width: 100%;
   padding: var(--spacing-sm);
-  border: var(--border-width) solid var(--rosa-claro);
+  border: var(--border-width) solid var(--rosita);
   border-radius: var(--border-radius-sm, 4px);
   background: var(--fondo);
   color: var(--texto);

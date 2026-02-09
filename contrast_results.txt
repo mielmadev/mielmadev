@@ -1,8 +1,0 @@
-Background: #ffffff, Text: #120813, Contrast Ratio: 19.63
-Background: #ffffff, Text: #c45bd4, Contrast Ratio: 3.62
-Background: #ffffff, Text: #78278b, Contrast Ratio: 8.53
-Background: #ffffff, Text: #e8e1e9, Contrast Ratio: 1.28
-Background: #fce8f6, Text: #120813, Contrast Ratio: 16.84
-Background: #fce8f6, Text: #c45bd4, Contrast Ratio: 3.11
-Background: #fce8f6, Text: #78278b, Contrast Ratio: 7.32
-Background: #fce8f6, Text: #e8e1e9, Contrast Ratio: 1.10
