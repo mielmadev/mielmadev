@@ -82,13 +82,17 @@ html {
 body {
   position: relative;
   min-height: 100vh;
-  margin-right: 10%;
-  margin-left: 10%;
   font-size: var(--font-size);
   text-align: justify;
   background: var(--fondo);
   color: var(--texto);
   overflow-x: hidden;
+}
+
+article {
+  margin-right: 10%;
+  margin-left: 10%;
+
 }
 
 /* ===== Tema Claro - Variables ===== */

@@ -1,0 +1,31 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.diploma {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.diploma-img {
+    width: 100%;
+    max-width: 50px;
+    height: auto;
+}
+
+.diploma-nombre {
+display: flex;
+align-items: center;
+}
+
