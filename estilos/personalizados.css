@@ -39,7 +39,7 @@
 
 }
 
-.diploma-img {
+.diploma-imagen {
     width: 100%;
     max-width: 50px;
     height: auto;
@@ -48,4 +48,27 @@
 .diploma-nombre {
     display: flex;
     align-items: center;
+}
+
+/* Efecto hover y aviso para diplomas */
+.visor-imagen {
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.visor-imagen:hover, .visor-imagen:focus {
+  transform: scale(1.08);
+  box-shadow: 0 0 12px #0006;
+  z-index: 2;
+}
+.visor-aviso {
+  position: absolute;
+  padding: 0.4em 1em;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px #0002;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0.98;
+  border: 1px solid #e0e0e0;
 }
