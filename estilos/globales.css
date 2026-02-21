@@ -104,17 +104,13 @@ article {
     padding: 16px 40px;
     background: linear-gradient(135deg, #a78bfa 0%, #f472b6 100%);
     text-decoration: none;
-    border-radius: 12px;
+    border-radius: 25px 0 25px 0;
     transition: all 0.3s ease;
     box-shadow: 0 4px 20px rgba(167, 139, 250, 0.3);
     border: none;
     cursor: pointer;
 }
 
-.light:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(167, 139, 250, 0.5);
-}
 
 *:focus {
   outline: var(--border-width-focus) solid var(--focus-color);
