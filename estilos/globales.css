@@ -97,8 +97,23 @@ article {
 
 /* ===== Tema Claro - Variables ===== */
 .light {
-  background: var(--light-fondo);
+  background: var(--rosa-muy-claro);
+  border-bottom: 1px solid rgba(100, 100, 150, 0.3);
+  box-shadow: inset 0 -10px 40px rgba(100, 100, 150, 0.2);
   color: var(--light-text);
+    padding: 16px 40px;
+    background: linear-gradient(135deg, #a78bfa 0%, #f472b6 100%);
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(167, 139, 250, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.light:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(167, 139, 250, 0.5);
 }
 
 *:focus {
