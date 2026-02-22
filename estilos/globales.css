@@ -63,9 +63,7 @@
   --border-radius-md: 8px;
 
   /* ===== BREAKPOINTS ===== */
-  --breakpoint-mobile: 480px;
-  --breakpoint-tablet: 768px;
-  --breakpoint-large: 1200px;
+  /* Eliminadas variables, usar valores fijos en media queries */
 }
 
 /* ========================================
@@ -111,10 +109,18 @@ body {
 
 /* ===== Imágenes ===== */
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
+/* Logo fijo en encabezado */
+.logo img {
+  min-height: 150px;
+  max-height: 150px;
+  height: 150px;
+  width: auto;
+  object-fit: contain;
+}
 
 /* ===== Enlaces ===== */
 a {
@@ -133,6 +139,7 @@ a:focus {
 a:active {
   color: var(--active-color);
   position: relative;
+  top: 1px;
 }
 
 .light a {
@@ -175,6 +182,7 @@ h6 {
   font-weight: var(--font-weight-medium);
   color: var(--titulo-color);
   padding: 0;
+  hyphens: auto; /* Permite dividir palabras largas en móviles con guiones */
 }
 
 .light h1,
@@ -196,12 +204,14 @@ h1 {
 
 h2 {
   margin-top: 3rem;
+  margin-bottom: 1rem;
   font-size: 2.7rem;
   line-height: 1.25;
 }
 
 h3 {
-  margin-top: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   font-size: 2rem;
   line-height: 1.3;
 }
@@ -346,90 +356,52 @@ select:active {
    MEDIA QUERIES RESPONSIVAS
    ======================================== */
 
-/* ===== Móvil ===== */
-@media (max-width: var(--breakpoint-mobile)) {
-  body {
-    font-size: 1.3rem;
-  }
-
+/* ===== Escritorio Grande ===== */
+@media (min-width: 1200px) {
   h1 {
-    font-size: 2rem;
+    font-size: 4.2rem;
+    line-height: 1.2;
   }
-
   h2 {
-    font-size: 1.5rem;
+    font-size: 3.2rem;
+    line-height: 1.2;
   }
-
   h3 {
-    font-size: 1.13rem;
-  }
-
-  h4,
-  h5,
-  h6 {
-    font-size: 0.85rem;
+    font-size: 2.4rem;
+    line-height: 1.2;
   }
 }
 
 /* ===== Tableta ===== */
-@media (max-width: var(--breakpoint-tablet)) {
-  body {
-    font-size: 1.4rem;
-    line-height: 1.6;
-  }
-
+@media (max-width: 768px) {
   h1 {
-    font-size: 2.7rem;
+    font-size: 3rem;
+    line-height: 1.3;
   }
-
   h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    line-height: 1.3;
   }
-
   h3 {
-    font-size: 1.5rem;
-  }
-
-  h4 {
-    font-size: 1.13rem;
-  }
-
-  h5 {
-    font-size: 0.85rem;
-  }
-
-  h6 {
-    font-size: 0.75rem;
+    font-size: 1.7rem;
+    line-height: 1.3;
   }
 }
 
-/* ===== Escritorio Grande ===== */
-@media (min-width: var(--breakpoint-large)) {
-  body {
-    max-width: 1200px;
-  }
 
+/* ===== Móvil ===== */
+@media (max-width: 480px) {
   h1 {
-    font-size: 4.2rem;
+    font-size: 2.25rem ;
+    line-height: 1.2;
+    word-break: break-word;
   }
-
   h2 {
-    font-size: 3.2rem;
-  }
-
-  h3 {
-    font-size: 2.4rem;
-  }
-
-  h4 {
     font-size: 1.8rem;
+    line-height: 1.3;
   }
-
-  h5 {
-    font-size: 1.35rem;
-  }
-
-  h6 {
-    font-size: 1rem;
+  h3 {
+    font-size: 1.3rem;
+    line-height: 1.3;
   }
 }
