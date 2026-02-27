@@ -77,3 +77,19 @@
     border: 1px solid #e0e0e0;
 }
 
+.proyecto-tarjeta {
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s cubic-bezier(0.4,0,0.2,1);
+    box-shadow: 0 2px 12px rgba(167,139,250,0.10);
+    cursor: pointer;
+}
+/* Efecto solo si NO hay foco visible */
+.proyecto-tarjeta:hover {
+    transform: scale(1.03) translateY(-4px) rotate(-2deg);
+    box-shadow: 0 8px 32px 0 rgba(167,139,250,0.25), 0 1.5px 8px 0 rgba(244,114,182,0.15);
+    z-index: 2;
+}
+.proyecto-tarjeta:focus-within, .proyecto-tarjeta:focus-visible {
+    transform: scale(1.03) translateY(-4px);
+    box-shadow: 0 8px 32px 0 rgba(167,139,250,0.25), 0 1.5px 8px 0 rgba(244,114,182,0.15);
+    z-index: 2;
+}
