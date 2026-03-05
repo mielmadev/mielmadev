@@ -32,6 +32,12 @@
     overflow: hidden;
 }
 
+.menu-principal a.active {
+    color: var(--rosa);
+    font-weight: bold;
+    border-bottom: 2px solid var(--morado);
+    background: var(--rosa-muy-claro);
+}
 
 .diploma {
     display: flex;

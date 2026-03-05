@@ -35,8 +35,8 @@
           <li><a href="../index.html">Inicio</a></li>
           <li><a href="proyectos.html">Proyectos</a></li>
           <li><a href="titulaciones.html">Titulaciones</a></li>
-          <li><a href="desarrolladores.html">Desarrolladores</a></li>
           <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="desarrolladores.html" class="active">Desarrolladores</a></li>
         </ul>
       </nav>
     </header>
@@ -44,18 +44,28 @@
       <section role="region" id="listado-documentos">
         <h2>Documentación y buenas prácticas</h2>
         <ul>
-          <li><a href="#" onclick="mostrarDocumento('../documentacion/role-aria.html'); return false;">Roles ARIA en HTML</a></li>
-          <li><a href="#" onclick="mostrarDocumento('guia-etiquetas.html'); return false;">Guía de etiquetas semánticas</a></li>
-          <li><a href="#" onclick="mostrarDocumento('accesibilidad.html'); return false;">Accesibilidad web básica</a></li>
-          <li><a href="#" onclick="mostrarDocumento('convenciones-codigo.html'); return false;">Convenciones de código y estilo</a></li>
-          <li><a href="#" onclick="mostrarDocumento('checklist.html'); return false;">Checklist de revisión</a></li>
+          <li>
+            <a
+              href="#"
+              onclick="
+                mostrarDocumento('../documentacion/role-aria.html');
+                return false;
+              "
+              >Roles ARIA en HTML</a
+            >
+          </li>
         </ul>
-        <p>Esta sección irá creciendo con más recursos y documentación útil para desarrolladores y colaboradores.</p>
+        <p>
+          Esta sección irá creciendo con más recursos y documentación útil para
+          desarrolladores y colaboradores.
+        </p>
       </section>
 
-      <section role="region" id="visor-documento" style="display:none;">
-        <button onclick="volverAlListado()" style="margin-bottom:1em;">Volver al listado</button>
-        <iframe id="iframe-doc" src="" width="100%" height="600" style="border:1px solid #ccc;"></iframe>
+      <section role="region" id="visor-documento" style="display: none">
+        <button onclick="volverAlListado()" style="margin-bottom: 1em">
+          Volver al listado
+        </button>
+        <iframe id="iframe-doc" src="" width="100%" height="600"></iframe>
       </section>
     </main>
 
@@ -70,17 +80,6 @@
     <script src="../script/year.js"></script>
     <script src="../script/centrar-foco-tabulador.js"></script>
     <script src="../script/menu-hamburguesa.js"></script>
-      <script>
-        function mostrarDocumento(ruta) {
-          document.getElementById('listado-documentos').style.display = 'none';
-          document.getElementById('visor-documento').style.display = 'block';
-          document.getElementById('iframe-doc').src = ruta;
-        }
-        function volverAlListado() {
-          document.getElementById('visor-documento').style.display = 'none';
-          document.getElementById('listado-documentos').style.display = 'block';
-          document.getElementById('iframe-doc').src = '';
-        }
-      </script>
+    <script src="../script/visor-documentacion.js"></script>
   </body>
 </html>
