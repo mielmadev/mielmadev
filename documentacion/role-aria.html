@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentación: roles ARIA en HTML</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="../estilos/base.css" />
+    <link rel="stylesheet" href="../estilos/globales.css" />
+    <link rel="stylesheet" href="../estilos/personalizados.css" />
+    <link rel="stylesheet" href="../estilos/menu-hamburguesa.css" />
+    <link rel="stylesheet" href="../estilos/documentacion.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Cinzel:wght@400..900&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <header class="light encabezado-documentacion" role="banner">
+      <h1>Roles ARIA</h1>
+    </header>
+    <main class="contenido-documentacion" role="main">
+      <section role="region">
+        <h2>¿Qué es ARIA?</h2>
+        <p>
+          ARIA (Accessible Rich Internet Applications) es un conjunto de
+          atributos que mejoran la accesibilidad web, permitiendo que
+          tecnologías de asistencia (como lectores de pantalla) comprendan mejor
+          la función y estructura de los elementos HTML.
+        </p>
+      </section>
+      <section role="region">
+        <h2>¿Por qué usar roles ARIA?</h2>
+        <ul>
+          <li>Mejora la accesibilidad para personas con discapacidad.</li>
+          <li>
+            Facilita la navegación y comprensión de la estructura de la web por
+            tecnologías de asistencia.
+          </li>
+          <li>
+            Refuerza la semántica y compatibilidad en navegadores y lectores de
+            pantalla antiguos.
+          </li>
+        </ul>
+      </section>
+      <section role="region">
+        <h2>Roles ARIA más utilizados</h2>
+        <dl class="roles-aria-keyvalor">
+          <dt>Encabezado principal del sitio</dt>
+          <dd><code>&lt;header role="banner"&gt;...&lt;/header&gt;</code></dd>
+          <dt>Navegación principal</dt>
+          <dd><code>&lt;nav role="navigation"&gt;...&lt;/nav&gt;</code></dd>
+          <dt>Contenido principal</dt>
+          <dd><code>&lt;main role="main"&gt;...&lt;/main&gt;</code></dd>
+          <dt>Información de la página (footer)</dt>
+          <dd>
+            <code>&lt;footer role="contentinfo"&gt;...&lt;/footer&gt;</code>
+          </dd>
+          <dt>Sección importante con título</dt>
+          <dd><code>&lt;section role="region"&gt;...&lt;/section&gt;</code></dd>
+          <dt>Artículo independiente</dt>
+          <dd>
+            <code>&lt;article role="article"&gt;...&lt;/article&gt;</code>
+          </dd>
+          <dt>Contenido complementario (barras laterales, widgets)</dt>
+          <dd>
+            <code>&lt;aside role="complementary"&gt;...&lt;/aside&gt;</code>
+          </dd>
+          <dt>Formulario</dt>
+          <dd><code>&lt;form role="form"&gt;...&lt;/form&gt;</code></dd>
+          <dt>Ventana modal o diálogo</dt>
+          <dd><code>&lt;div role="dialog"&gt;...&lt;/div&gt;</code></dd>
+          <dt>Zona de búsqueda</dt>
+          <dd><code>&lt;form role="search"&gt;...&lt;/form&gt;</code></dd>
+        </dl>
+      </section>
+      <section role="region">
+        <h2>¿Cómo usar los roles ARIA?</h2>
+        <ul>
+          <li>
+            Puedes añadir el atributo <strong>role</strong> a las etiquetas
+            semánticas de HTML5 para reforzar la accesibilidad.
+          </li>
+          <li>
+            No hay problema en usar roles ARIA junto con etiquetas como
+            &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;footer&gt;,
+            &lt;section&gt;, &lt;article&gt;.
+          </li>
+          <li>Ver ejemplos en la lista de roles ARIA más utilizados arriba.</li>
+        </ul>
+      </section>
+      <section role="region">
+        <h2>Roles ARIA avanzados</h2>
+        <dl class="roles-aria-keyvalor">
+          <dt>Alerta</dt>
+          <dd><code>&lt;div role="alert"&gt;...&lt;/div&gt;</code></dd>
+          <dt>Tooltip</dt>
+          <dd><code>&lt;div role="tooltip"&gt;...&lt;/div&gt;</code></dd>
+          <dt>Tablist</dt>
+          <dd><code>&lt;div role="tablist"&gt;...&lt;/div&gt;</code></dd>
+          <dt>Tab</dt>
+          <dd><code>&lt;div role="tab"&gt;...&lt;/div&gt;</code></dd>
+          <dt>Tree</dt>
+          <dd><code>&lt;ul role="tree"&gt;...&lt;/ul&gt;</code></dd>
+          <dt>Grid</dt>
+          <dd><code>&lt;table role="grid"&gt;...&lt;/table&gt;</code></dd>
+          <dt>Menu</dt>
+          <dd><code>&lt;ul role="menu"&gt;...&lt;/ul&gt;</code></dd>
+        </dl>
+      </section>
+      <section role="region">
+        <h2>Recursos y documentación oficial</h2>
+        <ul>
+          <li>
+            <a href="https://www.w3.org/TR/wai-aria/#roles" target="_blank"
+              >Lista completa de roles ARIA (W3C)</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://developer.mozilla.org/es/docs/Web/Accessibility/ARIA/Roles"
+              target="_blank"
+              >Guía de roles ARIA en MDN</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
