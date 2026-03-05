@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proyectos - MielmaDev</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="../estilos/base.css" />
     <link rel="stylesheet" href="../estilos/globales.css" />
     <link rel="stylesheet" href="../estilos/personalizados.css" />
@@ -16,9 +16,11 @@
       rel="stylesheet" />
   </head>
   <body>
-    <header class="light encabezado-principal">
+    <header class="light encabezado-principal" role="banner">
       <section class="logo">
-        <img src="../imagenes/mielma_transparente.webp" alt="" />
+        <img
+          src="../imagenes/mielma_transparente.webp"
+          alt="Logo Mielma Developer" />
       </section>
       <h1>Mielma Developer</h1>
       <div class="hamburguesa-contenedor">
@@ -28,7 +30,8 @@
           <span class="linea"></span>
         </button>
       </div>
-      <nav class="menu-principal">
+      <nav class="menu-principal" role="navigation">
+        >
         <ul>
           <li><a href="../index.html">Inicio</a></li>
           <li><a href="proyectos.html">Proyectos</a></li>
@@ -38,9 +41,9 @@
         </ul>
       </nav>
     </header>
-    <main class="contenido-principal">
+    <main class="contenido-principal" role="main">
       <section class="proyectos-lista">
-        <article class="proyecto-tarjeta light">
+        <article role="article" class="proyecto-tarjeta light">
           <h2>🥝 www.fruteriamejia.es</h2>
           <p>
             Sitio web desarrollado con <strong>HTML</strong>,
@@ -57,7 +60,7 @@
           >
         </article>
 
-        <article class="proyecto-tarjeta light">
+        <article role="article" class="proyecto-tarjeta light">
           <h2>🌐 KOBA - Web interactiva</h2>
           <p>Proyecto realizado con <strong>React</strong>.</p>
           <a
@@ -69,7 +72,7 @@
           >
         </article>
 
-        <article class="proyecto-tarjeta light">
+        <article role="article" class="proyecto-tarjeta light">
           <h2>📄 CV Demo (html, css, js)</h2>
           <p>
             Currículum interactivo con <strong>HTML</strong>,
@@ -85,7 +88,7 @@
         </article>
       </section>
     </main>
-    <footer class="pie-pagina light">
+    <footer class="pie-pagina light" role="contentinfo">
       <p>
         &copy; <span id="year"></span> Mielma Developer. Todos los derechos
         reservados.<br />
