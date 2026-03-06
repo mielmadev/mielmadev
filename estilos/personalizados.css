@@ -1,8 +1,8 @@
 .encabezado-principal {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    align-items: stretch;
+    justify-content: flex-start;
     height: 150px;
     position: fixed;
     top: 0;
@@ -11,18 +11,20 @@
     z-index: 1000;
 }
 
-
-.contenido-principal {
-    padding-top: 3rem;
-    margin-top: 150px;
-    margin-right: 10%;
-    margin-left: 10%;
-
+.encabezado-contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 100%;
 }
-.header-h2 {
-    margin-top: 0;
 
+.encabezado-contenido h1 {
+    margin: 0 0 1rem 0;
+    text-align: center;
 }
+
 .logo {
     flex-basis: 150px;
     flex-shrink: 0;
@@ -32,11 +34,90 @@
     overflow: hidden;
 }
 
+.menu-principal {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+    padding-bottom: 0;
+    margin-right: 2.5rem;
+}
+
+.menu-principal ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-principal li {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-principal a {
+    color: var(--morado);
+    font-weight: 500;
+    font-size: 1.15rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 8px rgba(120, 39, 139, 0.07);
+    position: relative;
+}
+
+.menu-principal a:hover,
+.menu-principal a:focus {
+    background: var(--rosa-muy-claro);
+    color: var(--morado);
+    box-shadow: 0 4px 16px rgba(196, 91, 212, 0.15);
+    outline: none;
+}
+
 .menu-principal a.active {
     color: var(--rosa);
     font-weight: bold;
-    border-bottom: 2px solid var(--morado);
     background: var(--rosa-muy-claro);
+    border-bottom: 2px solid var(--morado);
+    box-shadow: 0 6px 24px rgba(196, 91, 212, 0.18);
+}
+
+@media (max-width: 768px) {
+    .encabezado-principal {
+        flex-direction: row;
+        height: auto;
+        position: static;
+    }
+
+    .encabezado-contenido {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        height: auto;
+    }
+
+    .menu-principal {
+        width: auto;
+    }
+
+    .menu-principal ul {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+}
+
+.header-h2 {
+    margin-top: 0;
+
 }
 
 .diploma {
@@ -84,18 +165,35 @@
 }
 
 .proyecto-tarjeta {
-    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s cubic-bezier(0.4,0,0.2,1);
-    box-shadow: 0 2px 12px rgba(167,139,250,0.10);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 12px rgba(167, 139, 250, 0.10);
     cursor: pointer;
 }
+
 /* Efecto solo si NO hay foco visible */
 .proyecto-tarjeta:hover {
     transform: scale(1.03) translateY(-4px) rotate(-2deg);
-    box-shadow: 0 8px 32px 0 rgba(167,139,250,0.25), 0 1.5px 8px 0 rgba(244,114,182,0.15);
+    box-shadow: 0 8px 32px 0 rgba(167, 139, 250, 0.25), 0 1.5px 8px 0 rgba(244, 114, 182, 0.15);
     z-index: 2;
 }
-.proyecto-tarjeta:focus-within, .proyecto-tarjeta:focus-visible {
+
+.proyecto-tarjeta:focus-within,
+.proyecto-tarjeta:focus-visible {
     transform: scale(1.03) translateY(-4px);
-    box-shadow: 0 8px 32px 0 rgba(167,139,250,0.25), 0 1.5px 8px 0 rgba(244,114,182,0.15);
+    box-shadow: 0 8px 32px 0 rgba(167, 139, 250, 0.25), 0 1.5px 8px 0 rgba(244, 114, 182, 0.15);
     z-index: 2;
+}
+
+.contenido-principal {
+    padding-top: 3rem;
+    margin-top: 150px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+@media (max-width: 768px) {
+    .contenido-principal {
+        margin-top: 0;
+        padding-top: 1.5rem;
+    }
 }
