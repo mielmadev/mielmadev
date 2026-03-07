@@ -11,7 +11,7 @@
   100% { transform: translateY(0) scale(1); }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .hamburguesa-contenedor {
     position: static;
     flex-basis: 50px;
