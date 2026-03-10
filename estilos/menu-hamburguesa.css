@@ -63,4 +63,21 @@
     width: 100%;
     background: var(--blanco);
   }
+    .encabezado-contenido {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .encabezado-contenido h1 {
+      order: 1;
+      margin-bottom: 0;
+      text-align: center;
+    }
+    .menu-principal {
+      order: 2;
+    }
+    .hamburguesa-contenedor {
+      order: 3;
+      margin-left: 1rem;
+    }
 }
