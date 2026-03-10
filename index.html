@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="estilos/globales.css" />
     <link rel="stylesheet" href="estilos/personalizados.css" />
     <link rel="stylesheet" href="estilos/menu-hamburguesa.css" />
+    <!-- Preconnect para optimizar carga de fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,28 +17,53 @@
       rel="stylesheet" />
   </head>
   <body>
-    <header class="light encabezado-principal" role="banner">
-      <section class="logo">
-        <img src="images/mielma_logo.webp" alt="Logo Mielma Developer" />
-      </section>
+    
+    <!-- ✅ SKIP LINK: Accesibilidad para teclado
+         Permite saltar directamente al contenido principal sin tabular por todo el menú
+         Visible solo al enfocar con la tecla Tab -->
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- ============================================
+         HEADER PRINCIPAL
+         ============================================ -->
+    <header class="light encabezado-principal">
+      
+      <!-- ✅ LOGO: Envuelto en enlace (UX estándar: clic = ir al inicio)
+           width/height evita CLS (Core Web Vitals) -->
+      <div class="logo">
+        <a href="index.html" aria-label="Mielma Developer - Ir al inicio">
+          <img src="images/mielma_logo.webp" alt="Logo Mielma Developer" width="150" height="50" />
+        </a>
+      </div>
+      
       <div class="encabezado-contenido">
+        <!-- H1 principal del sitio (solo en la página de inicio) -->
         <h1>
           Mielma<br />
           <span class="h1-segundo-trozo">Desarrolladora Web</span>
         </h1>
+        
+        <!-- ✅ BOTÓN HAMBURGUESA: ARIA completo para accesibilidad
+             aria-expanded: cambia con JS (true/false)
+             aria-controls: referencia el ID del menú que controla -->
         <div class="hamburguesa-contenedor">
-          <button class="menu-hamburguesa" aria-label="Abrir menú">
+          <button 
+            class="menu-hamburguesa" 
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="menu-principal">
             <span class="linea"></span>
             <span class="linea"></span>
             <span class="linea"></span>
           </button>
         </div>
-        <nav
-          class="menu-principal"
-          role="navigation"
-          aria-label="Menú principal">
+        
+        <!-- ✅ NAVEGACIÓN: ID para aria-controls + aria-label descriptivo
+             id y class pueden tener el mismo nombre (buena práctica en proyectos pequeños) -->
+        <nav id="menu-principal" class="menu-principal" aria-label="Menú principal">
           <ul>
-            <li><a href="index.html" class="active">Inicio</a></li>
+            <!-- ✅ aria-current="page": marca la página actual para lectores de pantalla -->
+            <li><a href="index.html" class="active" aria-current="page">Inicio</a></li>
             <li><a href="paginas/proyectos.html">Proyectos</a></li>
             <li><a href="paginas/titulaciones.html">Titulaciones</a></li>
             <li><a href="paginas/contacto.html">Contacto</a></li>
@@ -46,23 +72,38 @@
         </nav>
       </div>
     </header>
-    <main class="contenido-principal" role="main">
-      <header>
-        <h2 class="header-h2">Miren Elizabeth Marañón</h2>
-        <p>Desarrollo web, marketing digital y gestión de redes sociales</p>
 
-        <p>
+    <!-- ============================================
+         CONTENIDO PRINCIPAL
+         ============================================ -->
+    <!-- ✅ MAIN: ID para el skip-link + clase para CSS -->
+    <main id="contenido-principal" class="contenido-principal">
+      
+      <!-- ✅ SECCIÓN INTRO: Cambiado de <header> a <section>
+           Solo debe haber un <header> principal por documento
+           aria-labelledby referencia el ID del h2 para navegación por landmarks -->
+      <section class="intro-perfil" aria-labelledby="titulo-perfil">
+        <h2 id="titulo-perfil">Miren Elizabeth Marañón</h2>
+        <p class="subtitulo">Desarrollo web, marketing digital y gestión de redes sociales</p>
+        <p class="descripcion">
           Creo presencia digital para negocios locales y emprendedores. Diseño
           páginas web modernas y gestiono redes sociales para que tu negocio
           conecte con su comunidad, crezca en internet y atraiga más clientes a
           tu tienda física.
         </p>
-      </header>
+      </section>
 
-      <section role="region">
-        <h2>¿Para qué tipo de negocios?</h2>
+      <!-- ============================================
+           SECCIÓN: TIPOS DE NEGOCIOS
+           ============================================ -->
+      <!-- ✅ Cada sección tiene aria-labelledby + id en el h2
+           Esto permite a los lectores de pantalla navegar por landmarks -->
+      <section aria-labelledby="titulo-negocios">
+        <h2 id="titulo-negocios">¿Para qué tipo de negocios?</h2>
 
-        <article role="article">
+        <!-- ✅ ARTICLE: Contenido independiente y autónomo
+             No necesita role="article" (es implícito en HTML5) -->
+        <article>
           <h3>Comercios y hostelería</h3>
           <p>
             Fruterías, panaderías, bares, cafeterías, restaurantes y pequeños
@@ -71,7 +112,7 @@
           </p>
         </article>
 
-        <article role="article">
+        <article>
           <h3>Servicios y profesionales</h3>
           <p>
             Peluquerías, esteticistas, talleres, autónomos y profesionales que
@@ -80,7 +121,7 @@
           </p>
         </article>
 
-        <article role="article">
+        <article>
           <h3>Artesanos y productores</h3>
           <p>
             Elaboradores de productos únicos (quesos, pan, cerámica, joyería)
@@ -88,7 +129,7 @@
           </p>
         </article>
 
-        <article role="article">
+        <article>
           <h3>Creativos y artistas</h3>
           <p>
             Músicos, fotógrafos, pintores y creadores que necesitan portfolio
@@ -96,7 +137,7 @@
           </p>
         </article>
 
-        <article role="article">
+        <article>
           <h3>Formación y educación</h3>
           <p>
             Academias, profesores y centros educativos que buscan atraer nuevos
@@ -110,15 +151,18 @@
         </p>
       </section>
 
-      <section role="region">
-        <h2>Mis servicios</h2>
+      <!-- ============================================
+           SECCIÓN: SERVICIOS
+           ============================================ -->
+      <section aria-labelledby="titulo-servicios">
+        <h2 id="titulo-servicios">Mis servicios</h2>
 
-        <article role="article">
+        <article>
           <h3>Página web profesional</h3>
           <p>Tu proyecto en internet: moderno, rápido y adaptable a móviles.</p>
         </article>
 
-        <article role="article">
+        <article>
           <h3>Gestión de redes sociales</h3>
           <p>
             Contenido regular, interacción con seguidores y crecimiento
@@ -126,7 +170,7 @@
           </p>
         </article>
 
-        <article role="article">
+        <article>
           <h3>Community Manager</h3>
           <p>
             Construyo y cuido tu comunidad online para generar conexión
@@ -134,7 +178,7 @@
           </p>
         </article>
 
-        <article role="article">
+        <article>
           <h3>Estrategia digital</h3>
           <p>
             Planifico tu presencia en internet con objetivos claros y medibles.
@@ -142,10 +186,13 @@
         </article>
       </section>
 
-      <section role="region">
-        <h2>Proyectos destacados</h2>
+      <!-- ============================================
+           SECCIÓN: PROYECTOS DESTACADOS
+           ============================================ -->
+      <section aria-labelledby="titulo-proyectos">
+        <h2 id="titulo-proyectos">Proyectos destacados</h2>
 
-        <article role="article">
+        <article>
           <h3>Frutería Mejía</h3>
           <p>
             Web para comercio local de productos frescos y latinos. Diseño
@@ -153,7 +200,7 @@
           </p>
         </article>
 
-        <article role="article">
+        <article>
           <h3>Redhill Language School</h3>
           <p>
             Gestión de redes sociales para academia de inglés. Contenido
@@ -161,15 +208,24 @@
           </p>
         </article>
       </section>
+
     </main>
-    <footer class="pie-pagina light" role="contentinfo">
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <!-- ✅ FOOTER: Sin role="contentinfo" (es implícito en HTML5) -->
+    <footer class="pie-pagina light">
       <p>
-        &copy; <span id="year"></span> Mielma Developer. Todos los derechos
-        reservados.<br />
+        &copy; <span id="year"></span> Mielma Developer. Todos los derechos reservados.<br />
         <a href="paginas/aviso-legal.html">Aviso legal</a> |
         <a href="paginas/politica-privacidad.html">Política de privacidad</a>
       </p>
     </footer>
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
     <script src="script/centrar-foco-tabulador.js"></script>
     <script src="script/year.js"></script>
     <script src="script/menu-hamburguesa.js"></script>
