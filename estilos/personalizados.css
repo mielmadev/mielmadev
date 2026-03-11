@@ -1,5 +1,5 @@
 .encabezado-principal {
-    border: red 2px solid;
+    /*border: red 2px solid;*/
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -13,7 +13,7 @@
 }
 
 .encabezado-contenido {
-    border: red 2px solid;
+    /*border: red 2px solid;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,7 +37,7 @@
 }
 
 .menu-principal {
-    border: red 2px solid;
+    /*border: red 2px solid;*/
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
