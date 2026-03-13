@@ -10,27 +10,52 @@
     <link rel="stylesheet" href="../estilos/menu-hamburguesa.css" />
   </head>
   <body>
-    <header class="light encabezado-principal" role="banner">
-      <section class="logo">
-        <img src="../images/mielma_logo.webp" alt="Logo Mielma Developer" />
-      </section>
-      <h1>Mielma Developer</h1>
-      <div class="hamburguesa-contenedor">
-        <button class="menu-hamburguesa" aria-label="Abrir menú">
-          <span class="linea"></span>
-          <span class="linea"></span>
-          <span class="linea"></span>
-        </button>
+    <!-- ============================================
+         HEADER PRINCIPAL
+         ============================================ -->
+    <header class="light encabezado-principal">
+      <div class="logo">
+        <a href="../index.html" aria-label="Mielma Developer - Ir al inicio">
+          <img
+            src="../images/mielma_logo.webp"
+            alt="Logo Mielma Developer"
+            width="150"
+            height="150" />
+        </a>
       </div>
-      <nav class="menu-principal" role="navigation">
-        <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="proyectos.html">Proyectos</a></li>
-          <li><a href="titulaciones.html">Titulaciones</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="desarrolladores.html">Desarrolladores</a></li>
-        </ul>
-      </nav>
+
+      <div class="encabezado-contenido">
+        <h1>
+          Mielma<br />
+          <span class="h1-segundo-trozo">Desarrolladora Web</span>
+        </h1>
+
+        <div class="hamburguesa-contenedor">
+          <button
+            class="menu-hamburguesa"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="menu-principal">
+            <span class="linea"></span>
+            <span class="linea"></span>
+            <span class="linea"></span>
+          </button>
+        </div>
+
+        <nav
+          class="menu-principal"
+          role="navigation"
+          aria-label="Menú principal"
+          id="menu-principal">
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="titulaciones.html">Titulaciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="desarrolladores.html">Desarrolladores</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="contenido-principal" role="main">
       <h1>Política de Privacidad</h1>
