@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Documentación: roles ARIA en HTML</title>
+    <title>Guía de Roles ARIA | Mielma Developer</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
     <link rel="stylesheet" href="../estilos/base.css" />
     <link rel="stylesheet" href="../estilos/globales.css" />
@@ -17,11 +17,54 @@
       rel="stylesheet" />
   </head>
   <body>
-    <header class="light encabezado-documentacion" role="banner">
-      <h1>Roles ARIA</h1>
+    <header class="light encabezado-principal">
+      <div class="logo">
+        <a href="../index.html" aria-label="Mielma Developer - Ir al inicio">
+          <img
+            src="../images/mielma_logo.webp"
+            alt="Logo Mielma Developer"
+            width="150"
+            height="150" />
+        </a>
+      </div>
+
+      <div class="encabezado-contenido">
+        <h1>
+          Mielma<br />
+          <span class="h1-segundo-trozo">Desarrolladora Web</span>
+        </h1>
+
+        <div class="hamburguesa-contenedor">
+          <button
+            class="menu-hamburguesa"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="menu-principal">
+            <span class="linea"></span>
+            <span class="linea"></span>
+            <span class="linea"></span>
+          </button>
+        </div>
+
+        <nav
+          class="menu-principal"
+          role="navigation"
+          aria-label="Menú principal"
+          id="menu-principal">
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../paginas/proyectos.html">Proyectos</a></li>
+            <li><a href="../paginas/titulaciones.html">Titulaciones</a></li>
+            <li><a href="../paginas/contacto.html">Contacto</a></li>
+            <li>
+              <a href="../paginas/desarrolladores.html" class="active">Desarrolladores</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <main class="contenido-documentacion" role="main">
-      <section role="region">
+    <main class="contenido-documentacion">
+      <section>
         <h2>¿Qué es ARIA?</h2>
         <p>
           ARIA (Accessible Rich Internet Applications) es un conjunto de
@@ -30,7 +73,7 @@
           la función y estructura de los elementos HTML.
         </p>
       </section>
-      <section role="region">
+      <section>
         <h2>¿Por qué usar roles ARIA?</h2>
         <ul>
           <li>Mejora la accesibilidad para personas con discapacidad.</li>
@@ -44,7 +87,7 @@
           </li>
         </ul>
       </section>
-      <section role="region">
+      <section>
         <h2>Roles ARIA más utilizados</h2>
         <dl class="roles-aria-keyvalor">
           <dt>Encabezado principal del sitio</dt>
@@ -75,7 +118,7 @@
           <dd><code>&lt;form role="search"&gt;...&lt;/form&gt;</code></dd>
         </dl>
       </section>
-      <section role="region">
+      <section>
         <h2>¿Cómo usar los roles ARIA?</h2>
         <ul>
           <li>
@@ -90,7 +133,7 @@
           <li>Ver ejemplos en la lista de roles ARIA más utilizados arriba.</li>
         </ul>
       </section>
-      <section role="region">
+      <section>
         <h2>Roles ARIA avanzados</h2>
         <dl class="roles-aria-keyvalor">
           <dt>Alerta</dt>
@@ -109,7 +152,7 @@
           <dd><code>&lt;ul role="menu"&gt;...&lt;/ul&gt;</code></dd>
         </dl>
       </section>
-      <section role="region">
+      <section>
         <h2>Recursos y documentación oficial</h2>
         <ul>
           <li>
@@ -126,6 +169,21 @@
           </li>
         </ul>
       </section>
+      <footer class="pie-pagina light" role="contentinfo">
+        <p>
+          &copy; <span id="year"></span> Mielma Developer. Todos los derechos
+          reservados.
+        </p>
+        <p>
+          <a href="paginas/aviso-legal.html">Aviso legal</a> |
+          <a href="paginas/politica-privacidad.html">Política de privacidad</a>
+        </p>
+      </footer>
+
+      <script src="../script/centrar-foco-tabulador.js"></script>
+      <script src="../script/visor-pdf.js"></script>
+      <script src="../script/year.js"></script>
+      <script src="../script/menu-hamburguesa.js"></script>
     </main>
   </body>
 </html>
