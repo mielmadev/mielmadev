@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="estilos/globales.css" />
     <link rel="stylesheet" href="estilos/personalizados.css" />
     <link rel="stylesheet" href="estilos/menu-hamburguesa.css" />
-    <!-- Preconnect para optimizar carga de fuentes -->
+    <!-- [SEO][UX]: Preconnect optimiza la carga de fuentes externas, mejorando el rendimiento y la experiencia de usuario. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,39 +22,36 @@
       rel="stylesheet" />
   </head>
   <body>
-    <!-- ✅ SKIP LINK: Accesibilidad para teclado
-         Permite saltar directamente al contenido principal sin tabular por todo el menú
-         Visible solo al enfocar con la tecla Tab -->
+    <!-- [A11y][AA]: Skip link permite a usuarios de teclado saltar directamente al contenido principal, cumpliendo WCAG 2.2 AA. Mejora la accesibilidad y la experiencia de usuario. Visible solo al usar Tab. -->
     <a href="#contenido-principal" class="skip-link"
       >Saltar al contenido principal</a
     >
 
-    <!-- ============================================
-         HEADER PRINCIPAL
-         ============================================ -->
+    <!-- [A11y][SEO]: <header> define el encabezado principal, aporta semántica nativa y mejora la estructura para buscadores. -->
     <header class="light encabezado-principal">
-      <!-- ✅ LOGO: Envuelto en enlace (UX estándar: clic = ir al inicio)
-           width/height evita CLS (Core Web Vitals) -->
-      <div class="logo">
-        <a href="index.html" aria-label="Mielma Developer - Ir al inicio">
-          <img
-            src="images/mielma_logo.webp"
-            alt="Logo Mielma Developer"
-            width="150"
-            height="150" />
-        </a>
-      </div>
+      <!-- [SEO][UX]: El logo enlazado ayuda a la navegación, refuerza la marca y previene saltos de diseño (CLS). -->
+      <a
+        href="index.html"
+        aria-label="Mielma Developer - Ir al inicio"
+        class="logo">
+        <!-- [A11y][AA]: alt descriptivo para logo, esencial para usuarios de lectores de pantalla. Cumple WCAG 2.2 AA para imágenes. -->
+        <img
+          src="images/mielma_logo.webp"
+          alt="Logo Mielma Developer"
+          width="150"
+          height="150"
+          fetchpriority="high" />
+        <!-- [SEO][UX]: fetchpriority="high" indica al navegador que debe cargar esta imagen lo antes posible. Mejora el LCP (Largest Contentful Paint), una métrica clave de Core Web Vitals, y ayuda a Google a valorar mejor el rendimiento y posicionamiento SEO de la página. -->
+      </a>
 
       <div class="encabezado-contenido">
-        <!-- H1 principal del sitio (solo en la página de inicio) -->
+        <!-- [SEO][A11y][AA]: Solo un H1 por página, define el tema principal. Mejora la jerarquía para buscadores y lectores de pantalla. Cumple WCAG 2.2 AA. -->
         <h1>
           Mielma<br />
           <span class="h1-segundo-trozo">Desarrolladora Web</span>
         </h1>
 
-        <!-- ✅ BOTÓN HAMBURGUESA: ARIA completo para accesibilidad
-             aria-expanded: cambia con JS (true/false)
-             aria-controls: referencia el ID del menú que controla -->
+        <!-- [A11y][AA]: Botón nativo para menú, ARIA solo cuando la semántica nativa es insuficiente. Cumple WCAG 2.2 AA para controles interactivos. -->
         <div class="hamburguesa-contenedor">
           <button
             class="menu-hamburguesa"
@@ -67,14 +64,13 @@
           </button>
         </div>
 
-        <!-- ✅ NAVEGACIÓN: ID para aria-controls + aria-label descriptivo
-             id y class pueden tener el mismo nombre (buena práctica en proyectos pequeños) -->
+        <!-- [A11y][AA]: <nav> ya tiene rol implícito, no añadir role extra. aria-label solo si hay varios menús. Mejora landmarks para navegación accesible. Cumple WCAG 2.2 AA. -->
         <nav
           id="menu-principal"
           class="menu-principal"
           aria-label="Menú principal">
           <ul>
-            <!-- ✅ aria-current="page": marca la página actual para lectores de pantalla -->
+            <!-- [A11y][AA]: aria-current="page" indica la página actual a lectores de pantalla. Cumple WCAG 2.2 AA para navegación. -->
             <li>
               <a href="index.html" class="active" aria-current="page">Inicio</a>
             </li>
@@ -87,14 +83,9 @@
       </div>
     </header>
 
-    <!-- ============================================
-         CONTENIDO PRINCIPAL
-         ============================================ -->
-    <!-- ✅ MAIN: ID para el skip-link + clase para CSS -->
+    <!-- [A11y][AA]: <main> define el contenido principal, facilita landmarks para usuarios de tecnología asistida. Cumple WCAG 2.2 AA. -->
     <main id="contenido-principal" class="contenido-principal">
-      <!-- ✅ SECCIÓN INTRO: Cambiado de <header> a <section>
-           Solo debe haber un <header> principal por documento
-           aria-labelledby referencia el ID del h2 para navegación por landmarks -->
+      <!-- [A11y][AA]: aria-labelledby referencia el ID del h2 para navegación por landmarks. Permite a los lectores de pantalla identificar y saltar directamente a la sección por su título, mejorando la accesibilidad y cumpliendo WCAG 2.2 AA. -->
       <section class="intro-perfil" aria-labelledby="titulo-perfil">
         <h2 id="titulo-perfil">Miren Elizabeth Marañón</h2>
         <p class="subtitulo">
@@ -108,15 +99,11 @@
         </p>
       </section>
 
-      <!-- ============================================
-           SECCIÓN: TIPOS DE NEGOCIOS
-           ============================================ -->
-      <!-- ✅ Cada sección tiene aria-labelledby + id en el h2
-           Esto permite a los lectores de pantalla navegar por landmarks -->
+      <!-- [A11y][AA]: Cada sección tiene aria-labelledby + id en el h2. Permite a los lectores de pantalla navegar por landmarks, cumpliendo WCAG 2.2 AA. -->
       <section aria-labelledby="titulo-negocios">
         <h2 id="titulo-negocios">¿Para qué tipo de negocios?</h2>
 
-        <!-- ✅ ARTICLE: Contenido independiente y autónomo -->
+        <!-- [A11y][AA]: <article> aporta estructura semántica y mejora la navegación por landmarks. Cumple WCAG 2.2 AA. -->
         <article>
           <h3>Comercios y hostelería</h3>
           <p>
@@ -165,9 +152,6 @@
         </p>
       </section>
 
-      <!-- ============================================
-           SECCIÓN: SERVICIOS
-           ============================================ -->
       <section aria-labelledby="titulo-servicios">
         <h2 id="titulo-servicios">Mis servicios</h2>
 
@@ -224,9 +208,7 @@
       </section>
     </main>
 
-    <!-- ============================================
-         FOOTER
-         ============================================ -->
+    <!-- [A11y][AA][UX]: <footer> proporciona información legal y enlaces clave, accesible para todos los usuarios. Cumple WCAG 2.2 AA. -->
     <footer class="pie-pagina light">
       <p>
         &copy; <span id="year"></span> Mielma Developer. Todos los derechos
