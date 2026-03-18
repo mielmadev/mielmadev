@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Documentación: roles ARIA en HTML</title>
+    <title>Guía de Roles ARIA | Mielma Developer</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
     <link rel="stylesheet" href="../estilos/base.css" />
     <link rel="stylesheet" href="../estilos/globales.css" />
@@ -17,11 +17,56 @@
       rel="stylesheet" />
   </head>
   <body>
-    <header class="light encabezado-documentacion" role="banner">
-      <h1>Roles ARIA</h1>
+    <header class="light encabezado-principal">
+      <div class="logo">
+        <a href="../index.html" aria-label="Mielma Developer - Ir al inicio">
+          <img
+            src="../images/mielma_logo.webp"
+            alt="Logo Mielma Developer"
+            width="150"
+            height="150" />
+        </a>
+      </div>
+
+      <div class="encabezado-contenido">
+        <h1>
+          Mielma<br />
+          <span class="h1-segundo-trozo">Desarrolladora Web</span>
+        </h1>
+
+        <div class="hamburguesa-contenedor">
+          <button
+            class="menu-hamburguesa"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="menu-principal">
+            <span class="linea"></span>
+            <span class="linea"></span>
+            <span class="linea"></span>
+          </button>
+        </div>
+
+        <nav
+          class="menu-principal"
+          role="navigation"
+          aria-label="Menú principal"
+          id="menu-principal">
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../paginas/proyectos.html">Proyectos</a></li>
+            <li><a href="../paginas/titulaciones.html">Titulaciones</a></li>
+            <li><a href="../paginas/contacto.html">Contacto</a></li>
+            <li>
+              <a href="../paginas/desarrolladores.html" class="active"
+                >Desarrolladores</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <main class="contenido-documentacion" role="main">
-      <section role="region">
+    <main class="contenido-documentacion">
+      <section>
         <h2>¿Qué es ARIA?</h2>
         <p>
           ARIA (Accessible Rich Internet Applications) es un conjunto de
@@ -30,7 +75,7 @@
           la función y estructura de los elementos HTML.
         </p>
       </section>
-      <section role="region">
+      <section>
         <h2>¿Por qué usar roles ARIA?</h2>
         <ul>
           <li>Mejora la accesibilidad para personas con discapacidad.</li>
@@ -44,38 +89,96 @@
           </li>
         </ul>
       </section>
-      <section role="region">
+      <section>
         <h2>Roles ARIA más utilizados</h2>
-        <dl class="roles-aria-keyvalor">
-          <dt>Encabezado principal del sitio</dt>
-          <dd><code>&lt;header role="banner"&gt;...&lt;/header&gt;</code></dd>
-          <dt>Navegación principal</dt>
-          <dd><code>&lt;nav role="navigation"&gt;...&lt;/nav&gt;</code></dd>
-          <dt>Contenido principal</dt>
-          <dd><code>&lt;main role="main"&gt;...&lt;/main&gt;</code></dd>
-          <dt>Información de la página (footer)</dt>
-          <dd>
-            <code>&lt;footer role="contentinfo"&gt;...&lt;/footer&gt;</code>
-          </dd>
-          <dt>Sección importante con título</dt>
-          <dd><code>&lt;section role="region"&gt;...&lt;/section&gt;</code></dd>
-          <dt>Artículo independiente</dt>
-          <dd>
-            <code>&lt;article role="article"&gt;...&lt;/article&gt;</code>
-          </dd>
-          <dt>Contenido complementario (barras laterales, widgets)</dt>
-          <dd>
-            <code>&lt;aside role="complementary"&gt;...&lt;/aside&gt;</code>
-          </dd>
-          <dt>Formulario</dt>
-          <dd><code>&lt;form role="form"&gt;...&lt;/form&gt;</code></dd>
-          <dt>Ventana modal o diálogo</dt>
-          <dd><code>&lt;div role="dialog"&gt;...&lt;/div&gt;</code></dd>
-          <dt>Zona de búsqueda</dt>
-          <dd><code>&lt;form role="search"&gt;...&lt;/form&gt;</code></dd>
-        </dl>
+        <table class="tabla-roles-aria">
+          <thead>
+            <tr>
+              <th>Etiqueta HTML</th>
+              <th>Ejemplo</th>
+              <th>Rol ARIA</th>
+              <th>¿Implícito?</th>
+              <th>¿Cuándo usar role?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>&lt;header&gt;</td>
+              <td><code>&lt;header role="banner"&gt;...&lt;/header&gt;</code></td>
+              <td>banner</td>
+              <td>✔️</td>
+              <td>No es necesario, salvo casos especiales (varios headers).</td>
+            </tr>
+            <tr>
+              <td>&lt;nav&gt;</td>
+              <td><code>&lt;nav role="navigation"&gt;...&lt;/nav&gt;</code></td>
+              <td>navigation</td>
+              <td>✔️</td>
+              <td>No es necesario, salvo casos especiales.</td>
+            </tr>
+            <tr>
+              <td>&lt;main&gt;</td>
+              <td><code>&lt;main role="main"&gt;...&lt;/main&gt;</code></td>
+              <td>main</td>
+              <td>✔️</td>
+              <td>No es necesario, salvo compatibilidad o varios main.</td>
+            </tr>
+            <tr>
+              <td>&lt;footer&gt;</td>
+              <td><code>&lt;footer role="contentinfo"&gt;...&lt;/footer&gt;</code></td>
+              <td>contentinfo</td>
+              <td>✔️</td>
+              <td>No es necesario, salvo varios footers.</td>
+            </tr>
+            <tr>
+              <td>&lt;section&gt;</td>
+              <td><code>&lt;section role="region"&gt;...&lt;/section&gt;</code></td>
+              <td>region</td>
+              <td>✔️</td>
+              <td>No es necesario, salvo que la sección no tenga título.</td>
+            </tr>
+            <tr>
+              <td>&lt;article&gt;</td>
+              <td><code>&lt;article role="article"&gt;...&lt;/article&gt;</code></td>
+              <td>article</td>
+              <td>✔️</td>
+              <td>No es necesario.</td>
+            </tr>
+            <tr>
+              <td>&lt;aside&gt;</td>
+              <td><code>&lt;aside role="complementary"&gt;...&lt;/aside&gt;</code></td>
+              <td>complementary</td>
+              <td>✔️</td>
+              <td>No es necesario.</td>
+            </tr>
+            <tr>
+              <td>&lt;form&gt;</td>
+              <td><code>&lt;form role="form"&gt;...&lt;/form&gt;</code></td>
+              <td>form</td>
+              <td>✔️</td>
+              <td>No es necesario.</td>
+            </tr>
+            <tr>
+              <td>&lt;div&gt;</td>
+              <td><code>&lt;div role="dialog"&gt;...&lt;/div&gt;</code></td>
+              <td>dialog</td>
+              <td>❌</td>
+              <td>Sí, siempre que sea un diálogo/modal.</td>
+            </tr>
+            <tr>
+              <td>&lt;form&gt;</td>
+              <td><code>&lt;form role="search"&gt;...&lt;/form&gt;</code></td>
+              <td>search</td>
+              <td>❌</td>
+              <td>Sí, para zonas de búsqueda.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="nota-roles-aria">
+          <strong>Nota:</strong> Los roles marcados como  <span class="texto-correcto">implícitos</span> ya están presentes en la etiqueta HTML y no es necesario añadir el atributo <code>role</code>, salvo casos especiales. Los roles <span class="texto-incorrecto">no implícitos</span> deben añadirse manualmente.
+        </p>
       </section>
-      <section role="region">
+      <section>
         <h2>¿Cómo usar los roles ARIA?</h2>
         <ul>
           <li>
@@ -90,26 +193,68 @@
           <li>Ver ejemplos en la lista de roles ARIA más utilizados arriba.</li>
         </ul>
       </section>
-      <section role="region">
+      <section>
         <h2>Roles ARIA avanzados</h2>
-        <dl class="roles-aria-keyvalor">
-          <dt>Alerta</dt>
-          <dd><code>&lt;div role="alert"&gt;...&lt;/div&gt;</code></dd>
-          <dt>Tooltip</dt>
-          <dd><code>&lt;div role="tooltip"&gt;...&lt;/div&gt;</code></dd>
-          <dt>Tablist</dt>
-          <dd><code>&lt;div role="tablist"&gt;...&lt;/div&gt;</code></dd>
-          <dt>Tab</dt>
-          <dd><code>&lt;div role="tab"&gt;...&lt;/div&gt;</code></dd>
-          <dt>Tree</dt>
-          <dd><code>&lt;ul role="tree"&gt;...&lt;/ul&gt;</code></dd>
-          <dt>Grid</dt>
-          <dd><code>&lt;table role="grid"&gt;...&lt;/table&gt;</code></dd>
-          <dt>Menu</dt>
-          <dd><code>&lt;ul role="menu"&gt;...&lt;/ul&gt;</code></dd>
+        <table class="tabla-roles-aria-avanzados">
+          <thead>
+            <tr>
+              <th>Rol ARIA</th>
+              <th>Descripción</th>
+              <th>Ejemplo</th>
+              <th>¿Cuándo usarlo?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>alert</strong></td>
+              <td>Mensaje urgente que requiere atención inmediata (errores, advertencias).</td>
+              <td><code>&lt;div role="alert"&gt;¡Error!&lt;/div&gt;</code></td>
+              <td>Para mostrar mensajes importantes que deben ser leídos por tecnologías de asistencia.</td>
+            </tr>
+            <tr>
+              <td><strong>tooltip</strong></td>
+              <td>Información contextual que aparece al pasar el cursor o enfocar un elemento.</td>
+              <td><code>&lt;div role="tooltip"&gt;Ayuda contextual&lt;/div&gt;</code></td>
+              <td>Para mostrar ayudas o explicaciones breves sobre elementos interactivos.</td>
+            </tr>
+            <tr>
+              <td><strong>tablist</strong></td>
+              <td>Contenedor de pestañas (tabs) en interfaces.</td>
+              <td><code>&lt;div role="tablist"&gt;...&lt;/div&gt;</code></td>
+              <td>Cuando tienes varias pestañas agrupadas.</td>
+            </tr>
+            <tr>
+              <td><strong>tab</strong></td>
+              <td>Pestaña individual dentro de un tablist.</td>
+              <td><code>&lt;div role="tab"&gt;Pestaña 1&lt;/div&gt;</code></td>
+              <td>Para cada pestaña dentro de un tablist.</td>
+            </tr>
+            <tr>
+              <td><strong>tree</strong></td>
+              <td>Estructura jerárquica, como un árbol de directorios.</td>
+              <td><code>&lt;ul role="tree"&gt;...&lt;/ul&gt;</code></td>
+              <td>Para listas o menús jerárquicos.</td>
+            </tr>
+            <tr>
+              <td><strong>grid</strong></td>
+              <td>Tabla interactiva, similar a una hoja de cálculo.</td>
+              <td><code>&lt;table role="grid"&gt;...&lt;/table&gt;</code></td>
+              <td>Para tablas con interacción avanzada (ordenar, editar).</td>
+            </tr>
+            <tr>
+              <td><strong>menu</strong></td>
+              <td>Menú de opciones, normalmente en aplicaciones o widgets.</td>
+              <td><code>&lt;ul role="menu"&gt;...&lt;/ul&gt;</code></td>
+              <td>Para menús personalizados fuera de la navegación principal.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="nota-roles-aria">
+          <strong>Nota:</strong> Los roles avanzados se usan para interfaces ricas e interactivas, y ayudan a tecnologías de asistencia a interpretar correctamente la función de cada elemento.
+        </p>
         </dl>
       </section>
-      <section role="region">
+      <section>
         <h2>Recursos y documentación oficial</h2>
         <ul>
           <li>
@@ -126,6 +271,21 @@
           </li>
         </ul>
       </section>
+      <footer class="pie-pagina light" role="contentinfo">
+        <p>
+          &copy; <span id="year"></span> Mielma Developer. Todos los derechos
+          reservados.
+        </p>
+        <p>
+          <a href="paginas/aviso-legal.html">Aviso legal</a> |
+          <a href="paginas/politica-privacidad.html">Política de privacidad</a>
+        </p>
+      </footer>
+
+      <script src="../script/centrar-foco-tabulador.js"></script>
+      <script src="../script/visor-pdf.js"></script>
+      <script src="../script/year.js"></script>
+      <script src="../script/menu-hamburguesa.js"></script>
     </main>
   </body>
 </html>

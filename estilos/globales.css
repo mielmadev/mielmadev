@@ -389,6 +389,20 @@ select:active {
   border: 0;
 }
 
+/* --- Utilidades de Texto para Documentación --- */
+
+/* Para información correcta, válida o éxito */
+.texto-correcto {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+/* Para información incorrecta, errores o advertencias */
+.texto-incorrecto {
+  color: #c62828;
+  font-weight: 600;
+}
+
 /* ========================================
    MEDIA QUERIES RESPONSIVAS
    ======================================== */
