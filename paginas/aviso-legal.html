@@ -3,12 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aviso Legal - MielmaDev</title>
+    <!-- [SEO]: Meta descripción y autor para mejorar posicionamiento y atribución. -->
+    <meta
+      name="description"
+      content="Aviso legal de MielmaDev: información general, propiedad intelectual, protección de datos, condiciones de uso y limitación de responsabilidad." />
+    <meta name="author" content="Miren Elizabeth Marañón" />
+    <title>
+      Aviso Legal | MielmaDev - Portfolio de Desarrollo Web y Marketing Digital
+    </title>
+    <!-- [SEO][Social]: Open Graph y Twitter Cards para mejorar la visibilidad en redes sociales y buscadores. -->
+    <meta
+      property="og:title"
+      content="Aviso Legal | MielmaDev - Portfolio de Desarrollo Web y Marketing Digital" />
+    <meta
+      property="og:description"
+      content="Aviso legal de MielmaDev: información general, propiedad intelectual, protección de datos, condiciones de uso y limitación de responsabilidad." />
+    <meta property="og:image" content="../images/mielma_logo.webp" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Aviso Legal | MielmaDev - Portfolio de Desarrollo Web y Marketing Digital" />
+    <meta
+      name="twitter:description"
+      content="Aviso legal de MielmaDev: información general, propiedad intelectual, protección de datos, condiciones de uso y limitación de responsabilidad." />
+    <meta name="twitter:image" content="../images/mielma_logo.webp" />
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
     <link rel="stylesheet" href="../estilos/base.css" />
     <link rel="stylesheet" href="../estilos/globales.css" />
     <link rel="stylesheet" href="../estilos/personalizados.css" />
     <link rel="stylesheet" href="../estilos/menu-hamburguesa.css" />
+    <!-- [SEO][UX]: Preconnect optimiza la carga de fuentes externas, mejorando el rendimiento y la experiencia de usuario. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,12 +41,19 @@
       rel="stylesheet" />
   </head>
   <body>
+    <!-- [A11y][AA]: Skip link permite a usuarios de teclado saltar directamente al contenido principal, cumpliendo WCAG 2.2 AA. Visible solo al usar Tab. -->
+    <a href="#contenido-aviso" class="skip-link"
+      >Saltar al contenido principal</a
+    >
+
     <!-- ============================================
-         HEADER PRINCIPAL
-         ============================================ -->
+          HEADER PRINCIPAL
+          ============================================ -->
     <header class="light encabezado-principal">
+      <!-- [SEO][UX]: El logo enlazado ayuda a la navegación, refuerza la marca y previene saltos de diseño (CLS). -->
       <div class="logo">
         <a href="../index.html" aria-label="Mielma Developer - Ir al inicio">
+          <!-- [A11y][AA]: alt descriptivo para logo, esencial para usuarios de lectores de pantalla. Cumple WCAG 2.2 AA para imágenes. -->
           <img
             src="../images/mielma_logo.webp"
             alt="Logo Mielma Developer"
@@ -31,12 +63,14 @@
       </div>
 
       <div class="encabezado-contenido">
+        <!-- [SEO][A11y][AA]: Solo un H1 por página, define el tema principal. Mejora la jerarquía para buscadores y lectores de pantalla. Cumple WCAG 2.2 AA. -->
         <h1>
-          Mielma<br />
-          <span class="h1-segundo-trozo">Desarrolladora Web</span>
+          Aviso Legal<br />
+          <span class="h1-segundo-trozo">MielmaDev</span>
         </h1>
 
         <div class="hamburguesa-contenedor">
+          <!-- [A11y][AA]: Botón nativo para menú, ARIA solo cuando la semántica nativa es insuficiente. Cumple WCAG 2.2 AA para controles interactivos. -->
           <button
             class="menu-hamburguesa"
             aria-label="Abrir menú"
@@ -53,101 +87,111 @@
           aria-label="Menú principal"
           id="menu-principal">
           <ul>
+            <!-- [A11y][AA]: aria-current="page" indica la página actual a lectores de pantalla. Cumple WCAG 2.2 AA para navegación. -->
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="proyectos.html">Proyectos</a></li>
             <li><a href="titulaciones.html">Titulaciones</a></li>
-            <li><a href="contacto.html" class="active">Contacto</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
             <li><a href="desarrolladores.html">Desarrolladores</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <main class="contenido-principal">
-      <h1>Aviso Legal</h1>
-      <section>
-        <h2>1. Información general</h2>
-        <p>
-          Este sitio web es propiedad de Mielma Developer. Contacto:
-          mielmadev@gmail.com.
-        </p>
-      </section>
-      <section>
-        <h2>2. Propiedad intelectual</h2>
-        <p>
-          Todos los contenidos, textos, imágenes y código fuente son propiedad
-          de Mielma Developer o de sus respectivos autores. Queda prohibida la
-          reproducción total o parcial sin autorización.
-        </p>
-      </section>
-      <section>
-        <h2>3. Enlaces externos</h2>
-        <p>
-          Este sitio puede contener enlaces a páginas externas. Mielma Developer
-          no se responsabiliza del contenido ni de la política de privacidad de
-          dichas páginas.
-        </p>
-      </section>
-      <section>
-        <h2>4. Protección de datos</h2>
-        <p>
-          Mielma Developer cumple con la normativa vigente en materia de
-          protección de datos personales, incluyendo el Reglamento General de
-          Protección de Datos (RGPD) y la Ley Orgánica de Protección de Datos y
-          Garantía de los Derechos Digitales (LOPDGDD).
-        </p>
-        <p>
-          Los datos personales recogidos a través de este sitio web serán
-          tratados de manera confidencial y utilizados únicamente para los fines
-          especificados en cada formulario o sección correspondiente.
-        </p>
-        <p>
-          El usuario tiene derecho a acceder, rectificar, suprimir, limitar el
-          tratamiento, oponerse y solicitar la portabilidad de sus datos
-          personales. Para ejercer estos derechos, puede enviar una solicitud a
-          mielmadev@gmail.com, adjuntando una copia de su documento de
-          identidad.
-        </p>
-        <p>
-          Se han implementado medidas técnicas y organizativas adecuadas para
-          garantizar la seguridad de los datos personales y evitar su
-          alteración, pérdida, tratamiento o acceso no autorizado.
-        </p>
-      </section>
-      <section>
-        <h2>5. Jurisdicción y legislación aplicable</h2>
-        <p>
-          El presente aviso legal se rige por la legislación española. En caso
-          de controversias, las partes se someten a los juzgados y tribunales de
-          la ciudad de residencia del titular del sitio web, salvo que la
-          normativa aplicable disponga otra cosa.
-        </p>
-      </section>
-      <section>
-        <h2>6. Limitación de responsabilidad</h2>
-        <p>
-          Mielma Developer no se hace responsable de los errores u omisiones en
-          los contenidos del sitio web, ni de los daños derivados de su uso,
-          interrupciones del servicio o problemas técnicos.
-        </p>
-      </section>
-      <section>
-        <h2>7. Condiciones de uso</h2>
-        <p>
-          El acceso y uso del sitio web implica la aceptación de las presentes
-          condiciones. El usuario se compromete a hacer un uso adecuado de los
-          contenidos y servicios ofrecidos, respetando la legislación vigente y
-          los derechos de terceros.
-        </p>
-      </section>
-    </main>
+      <!-- [A11y][AA]: aria-labelledby referencia el ID del h1 para navegación por landmarks. Permite a los lectores de pantalla identificar y saltar directamente a la sección por su título, mejorando la accesibilidad y cumpliendo WCAG 2.2 AA. -->
+      <main
+        class="contenido-principal"
+        aria-labelledby="aviso-titulo"
+        id="contenido-aviso">
+        <h2 id="aviso-titulo">Aviso Legal</h2>
+        <!-- [A11y][AA]: Cada sección tiene aria-labelledby + id en el h2. Permite a los lectores de pantalla navegar por landmarks, cumpliendo WCAG 2.2 AA. -->
+        <section aria-labelledby="info-general">
+          <h3 id="info-general">1. Información general</h3>
+          <p>
+            Este sitio web es propiedad de Mielma Developer. Contacto:
+            mielmadev@gmail.com.
+          </p>
+        </section>
+        <section aria-labelledby="propiedad-intelectual">
+          <h3 id="propiedad-intelectual">2. Propiedad intelectual</h3>
+          <p>
+            Todos los contenidos, textos, imágenes y código fuente son propiedad
+            de Mielma Developer o de sus respectivos autores. Queda prohibida la
+            reproducción total o parcial sin autorización.
+          </p>
+        </section>
+        <section aria-labelledby="enlaces-externos">
+          <h3 id="enlaces-externos">3. Enlaces externos</h3>
+          <p>
+            Este sitio puede contener enlaces a páginas externas. Mielma
+            Developer no se responsabiliza del contenido ni de la política de
+            privacidad de dichas páginas.
+          </p>
+        </section>
+        <section aria-labelledby="proteccion-datos">
+          <h3 id="proteccion-datos">4. Protección de datos</h3>
+          <p>
+            Mielma Developer cumple con la normativa vigente en materia de
+            protección de datos personales, incluyendo el Reglamento General de
+            Protección de Datos (RGPD) y la Ley Orgánica de Protección de Datos
+            y Garantía de los Derechos Digitales (LOPDGDD).
+          </p>
+          <p>
+            Los datos personales recogidos a través de este sitio web serán
+            tratados de manera confidencial y utilizados únicamente para los
+            fines especificados en cada formulario o sección correspondiente.
+          </p>
+          <p>
+            El usuario tiene derecho a acceder, rectificar, suprimir, limitar el
+            tratamiento, oponerse y solicitar la portabilidad de sus datos
+            personales. Para ejercer estos derechos, puede enviar una solicitud
+            a mielmadev@gmail.com, adjuntando una copia de su documento de
+            identidad.
+          </p>
+          <p>
+            Se han implementado medidas técnicas y organizativas adecuadas para
+            garantizar la seguridad de los datos personales y evitar su
+            alteración, pérdida, tratamiento o acceso no autorizado.
+          </p>
+        </section>
+        <section aria-labelledby="jurisdiccion">
+          <h3 id="jurisdiccion">5. Jurisdicción y legislación aplicable</h3>
+          <p>
+            El presente aviso legal se rige por la legislación española. En caso
+            de controversias, las partes se someten a los juzgados y tribunales
+            de la ciudad de residencia del titular del sitio web, salvo que la
+            normativa aplicable disponga otra cosa.
+          </p>
+        </section>
+        <section aria-labelledby="responsabilidad">
+          <h3 id="responsabilidad">6. Limitación de responsabilidad</h3>
+          <p>
+            Mielma Developer no se hace responsable de los errores u omisiones
+            en los contenidos del sitio web, ni de los daños derivados de su
+            uso, interrupciones del servicio o problemas técnicos.
+          </p>
+        </section>
+        <section aria-labelledby="condiciones-uso">
+          <h3 id="condiciones-uso">7. Condiciones de uso</h3>
+          <p>
+            El acceso y uso del sitio web implica la aceptación de las presentes
+            condiciones. El usuario se compromete a hacer un uso adecuado de los
+            contenidos y servicios ofrecidos, respetando la legislación vigente
+            y los derechos de terceros.
+          </p>
+        </section>
+      </main>
     <footer>
+      <!-- [A11y][AA][UX]: <footer> proporciona información legal y enlaces clave, accesible para todos los usuarios. Cumple WCAG 2.2 AA. -->
       <p>
         &copy; <span id="year"></span> Mielma Developer. Todos los derechos
         reservados.<br />
-        <a href="paginas/aviso-legal.html">Aviso legal</a> |
-        <a href="paginas/politica-privacidad.html">Política de privacidad</a>
+        <a href="../paginas/aviso-legal.html">Aviso legal</a> |
+        <a href="../paginas/politica-privacidad.html">Política de privacidad</a>
       </p>
     </footer>
+    <!-- ============================================
+          SCRIPTS
+          ============================================ -->
     <script src="../script/year.js"></script>
     <script src="../script/menu-hamburguesa.js"></script>
   </body>

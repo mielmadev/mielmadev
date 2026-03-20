@@ -3,12 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proyectos - MielmaDev</title>
+    <!-- [SEO]: Meta descripción y autor para mejorar posicionamiento y atribución. -->
+    <meta
+      name="description"
+      content="Proyectos realizados por MielmaDev: desarrollo web, marketing digital y soluciones creativas para negocios locales." />
+    <meta name="author" content="Miren Elizabeth Marañón" />
+    <title>
+      Proyectos | MielmaDev - Portfolio de Desarrollo Web y Marketing Digital
+    </title>
+    <!-- [SEO][Social]: Open Graph y Twitter Cards para mejorar la visibilidad en redes sociales y buscadores. -->
+    <meta
+      property="og:title"
+      content="Proyectos | MielmaDev - Portfolio de Desarrollo Web y Marketing Digital" />
+    <meta
+      property="og:description"
+      content="Proyectos realizados por MielmaDev: desarrollo web, marketing digital y soluciones creativas para negocios locales." />
+    <meta property="og:image" content="../images/mielma_logo.webp" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Proyectos | MielmaDev - Portfolio de Desarrollo Web y Marketing Digital" />
+    <meta
+      name="twitter:description"
+      content="Proyectos realizados por MielmaDev: desarrollo web, marketing digital y soluciones creativas para negocios locales." />
+    <meta name="twitter:image" content="../images/mielma_logo.webp" />
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
     <link rel="stylesheet" href="../estilos/base.css" />
     <link rel="stylesheet" href="../estilos/globales.css" />
     <link rel="stylesheet" href="../estilos/personalizados.css" />
     <link rel="stylesheet" href="../estilos/menu-hamburguesa.css" />
+    <!-- [SEO][UX]: Preconnect optimiza la carga de fuentes externas, mejorando el rendimiento y la experiencia de usuario. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,12 +41,19 @@
       rel="stylesheet" />
   </head>
   <body>
+    <!-- [A11y][AA]: Skip link permite a usuarios de teclado saltar directamente al contenido principal, cumpliendo WCAG 2.2 AA. Visible solo al usar Tab. -->
+    <a href="#contenido-proyectos" class="skip-link"
+      >Saltar al contenido principal</a
+    >
+
     <!-- ============================================
-         HEADER PRINCIPAL
-         ============================================ -->
+          HEADER PRINCIPAL
+          ============================================ -->
     <header class="light encabezado-principal">
+      <!-- [SEO][UX]: El logo enlazado ayuda a la navegación, refuerza la marca y previene saltos de diseño (CLS). -->
       <div class="logo">
         <a href="../index.html" aria-label="Mielma Developer - Ir al inicio">
+          <!-- [A11y][AA]: alt descriptivo para logo, esencial para usuarios de lectores de pantalla. Cumple WCAG 2.2 AA para imágenes. -->
           <img
             src="../images/mielma_logo.webp"
             alt="Logo Mielma Developer"
@@ -31,12 +63,14 @@
       </div>
 
       <div class="encabezado-contenido">
+        <!-- [SEO][A11y][AA]: Solo un H1 por página, define el tema principal. Mejora la jerarquía para buscadores y lectores de pantalla. Cumple WCAG 2.2 AA. -->
         <h1>
-          Mielma<br />
-          <span class="h1-segundo-trozo">Desarrolladora Web</span>
+          Proyectos realizados<br />
+          <span class="h1-segundo-trozo">MielmaDev</span>
         </h1>
 
         <div class="hamburguesa-contenedor">
+          <!-- [A11y][AA]: Botón nativo para menú, ARIA solo cuando la semántica nativa es insuficiente. Cumple WCAG 2.2 AA para controles interactivos. -->
           <button
             class="menu-hamburguesa"
             aria-label="Abrir menú"
@@ -53,8 +87,13 @@
           aria-label="Menú principal"
           id="menu-principal">
           <ul>
+            <!-- [A11y][AA]: aria-current="page" indica la página actual a lectores de pantalla. Cumple WCAG 2.2 AA para navegación. -->
             <li><a href="../index.html">Inicio</a></li>
-            <li><a href="proyectos.html" class="active">Proyectos</a></li>
+            <li>
+              <a href="proyectos.html" class="active" aria-current="page"
+                >Proyectos</a
+              >
+            </li>
             <li><a href="titulaciones.html">Titulaciones</a></li>
             <li><a href="contacto.html">Contacto</a></li>
             <li><a href="desarrolladores.html">Desarrolladores</a></li>
@@ -63,58 +102,106 @@
       </div>
     </header>
     <main class="contenido-principal">
-      <section class="proyectos-lista">
+      <!-- [A11y][AA]: aria-labelledby referencia el ID del h1 para navegación por landmarks. Permite a los lectores de pantalla identificar y saltar directamente a la sección por su título, mejorando la accesibilidad y cumpliendo WCAG 2.2 AA. -->
+      <section
+        class="proyectos-lista"
+        aria-labelledby="proyectos-titulo"
+        id="contenido-proyectos">
+        <h2 id="proyectos-titulo">Proyectos realizados</h2>
+        <!-- [SEO][UX]: Introducción breve que explica el enfoque y valor de los proyectos. Mejora la confianza y la conversión. -->
+        <p class="intro-proyectos">
+          Estos son algunos de mis trabajos recientes en desarrollo web y
+          soluciones digitales. Cada proyecto está orientado a mejorar la
+          presencia online, la experiencia de usuario y los resultados de
+          negocio de mis clientes.
+        </p>
+        <!-- [A11y][AA]: <article> aporta estructura semántica y mejora la navegación por landmarks. Cumple WCAG 2.2 AA. -->
         <article>
-          <h2>🥝 www.fruteriamejia.es</h2>
+          <h3>🥝 Frutería Mejía — Web y Community Manager</h3>
           <p>
-            Sitio web desarrollado con <strong>HTML</strong>,
-            <strong>CSS</strong>, <strong>JavaScript</strong>,
-            <strong>PHP</strong> y <strong>MySQL</strong>.<br />
-            Diseño responsivo, accesibilidad y alta usabilidad.
+            Diseño responsivo, accesibilidad y alta usabilidad.<br />
+            <em
+              >Ayudó a atraer nuevos clientes al local, comunidad activa y mejor
+              visibilidad online.</em
+            ><br />
+            <em
+              >Además de desarrollar su web, soy Community Manager de Frutería
+              Mejía: gestiono sus redes sociales (Instagram, Facebook y canal de
+              WhatsApp), aplicando buenas prácticas de engagement, SEO, llamadas
+              a la acción (CTA) y atención a la comunidad para potenciar su
+              presencia digital y atraer nuevos clientes.</em
+            ><br />
+            <strong>Tecnologías:</strong> HTML, CSS, JavaScript, PHP, MySQL<br />
+            <!-- [UX][SEO][A11y]: El bio link centraliza todas las redes sociales gestionadas, facilita el acceso y refuerza la transparencia y profesionalidad del portfolio. -->
+            <a
+              href="https://lnk.bio/FruteriaMejia"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Acceder al bio link de Frutería Mejía: redes sociales, canal de WhatsApp y web"
+              class="btn-biolink">
+              Accede a su bio link: redes sociales, canal de WhatsApp y web
+            </a>
           </p>
-          <a
-            href="https://www.fruteriamejia.es"
-            target="_blank"
-            rel="noopener"
-            class="btn-proyecto"
-            >Visitar sitio</a
-          >
+          <!-- ...existing code... -->
         </article>
         <article>
-          <h2>🌐 KOBA - Web interactiva</h2>
-          <p>Proyecto realizado con <strong>React</strong>.</p>
+          <h3>🌐 KOBA - Web interactiva</h3>
+          <p>
+            <em
+              >Web interactiva para una experiencia de usuario dinámica y
+              moderna.</em
+            ><br />
+            <em
+              >Proyecto orientado a mejorar la interacción y la visibilidad
+              online.</em
+            ><br />
+            <strong>Tecnologías:</strong> React, JavaScript, CSS<br />
+          </p>
+          <!-- [A11y][AA][SEO]: Enlace externo con target="_blank", rel="noopener noreferrer" para seguridad y SEO. -->
           <a
             href="https://mielmadev.github.io/koba/"
             target="_blank"
-            rel="noopener"
-            class="btn-proyecto"
+            rel="noopener noreferrer"
+            class="btn-biolink"
             >Ver proyecto</a
           >
         </article>
         <article>
-          <h2>📄 CV Demo (html, css, js)</h2>
+          <h3>📄 CV Demo (html, css, js)</h3>
           <p>
-            Currículum interactivo con <strong>HTML</strong>,
-            <strong>CSS</strong> y <strong>JavaScript</strong>.
+            <em
+              >Herramienta para destacar habilidades y experiencia de forma
+              visual y accesible.</em
+            ><br />
+            <em
+              >Permite mostrar el perfil profesional de manera moderna y fácil
+              de usar.</em
+            ><br />
+            <strong>Tecnologías:</strong> HTML, CSS, JavaScript<br />
           </p>
+          <!-- [A11y][AA][SEO]: Enlace externo con target="_blank", rel="noopener noreferrer" para seguridad y SEO. -->
           <a
             href="https://mielmadev.github.io/cv-demo-html-css-js/"
             target="_blank"
-            rel="noopener"
-            class="btn-proyecto"
+            rel="noopener noreferrer"
+            class="btn-biolink"
             >Ver demo</a
           >
         </article>
       </section>
     </main>
     <footer>
+      <!-- [A11y][AA][UX]: <footer> proporciona información legal y enlaces clave, accesible para todos los usuarios. Cumple WCAG 2.2 AA. -->
       <p>
         &copy; <span id="year"></span> Mielma Developer. Todos los derechos
         reservados.<br />
-        <a href="paginas/aviso-legal.html">Aviso legal</a> |
-        <a href="paginas/politica-privacidad.html">Política de privacidad</a>
+        <a href="../paginas/aviso-legal.html">Aviso legal</a> |
+        <a href="../paginas/politica-privacidad.html">Política de privacidad</a>
       </p>
     </footer>
+    <!-- ============================================
+          SCRIPTS
+          ============================================ -->
     <script src="../script/centrar-foco-tabulador.js"></script>
     <script src="../script/year.js"></script>
     <script src="../script/menu-hamburguesa.js"></script>

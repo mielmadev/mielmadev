@@ -5,10 +5,21 @@
 }
 
 @keyframes menu-rebote {
-  0% { transform: translateY(-20px) scale(0.96); }
-  60% { transform: translateY(8px) scale(1.03); }
-  80% { transform: translateY(-2px) scale(0.98); }
-  100% { transform: translateY(0) scale(1); }
+  0% {
+    transform: translateY(-20px) scale(0.96);
+  }
+
+  60% {
+    transform: translateY(8px) scale(1.03);
+  }
+
+  80% {
+    transform: translateY(-2px) scale(0.98);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+  }
 }
 
 @media (max-width: 768px) {
@@ -22,6 +33,7 @@
     background: transparent;
     z-index: 1100;
   }
+
   .menu-hamburguesa {
     width: 50px;
     height: 50px;
@@ -34,6 +46,7 @@
     cursor: pointer;
     z-index: 1101;
   }
+
   .menu-hamburguesa .linea {
     width: 32px;
     height: 4px;
@@ -43,18 +56,23 @@
     display: block;
     transition: all 0.3s;
   }
+
   .menu-hamburguesa.activo .linea:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
   }
+
   .menu-hamburguesa.activo .linea:nth-child(2) {
     opacity: 0;
   }
+
   .menu-hamburguesa.activo .linea:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
   }
+
   .menu-principal {
     display: none;
   }
+
   .menu-principal.abierto {
     display: block;
     position: absolute;
@@ -62,22 +80,31 @@
     left: 0;
     width: 100%;
     background: var(--blanco);
+    /* Mejora accesibilidad visual */
+    border: 2px solid var(--azul-accesible, #0057b8);
+    box-shadow: 0 0 12px 2px rgba(0, 87, 184, 0.15);
+    outline: 3px solid var(--azul-accesible, #0057b8);
+    outline-offset: -2px;
   }
-    .encabezado-contenido {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .encabezado-contenido h1 {
-      order: 1;
-      margin-bottom: 0;
-      text-align: center;
-    }
-    .menu-principal {
-      order: 2;
-    }
-    .hamburguesa-contenedor {
-      order: 3;
-      margin-left: 1rem;
-    }
+
+  .encabezado-contenido {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .encabezado-contenido h1 {
+    order: 1;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .menu-principal {
+    order: 2;
+  }
+
+  .hamburguesa-contenedor {
+    order: 3;
+    margin-left: 1rem;
+  }
 }

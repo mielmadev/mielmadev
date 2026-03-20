@@ -1,25 +1,34 @@
 # Elizabeth Marañón
 
-## 🥝 Proyecto www.fruteriamejia.es
+✨ Desarrolladora web apasionada por el diseño, la tecnología y la experiencia de usuario.
 
-[www.fruteriamejia.es](https://www.fruteriamejia.es)
+---
 
-Sitio web desarrollado con **HTML**, **CSS**, **JavaScript**, **PHP** y **MySQL**.
+## 🥝 Frutería Mejía — Web y Community Manager
 
-- Diseño **responsivo**: Adaptado a cualquier dispositivo, garantizando una experiencia óptima en móviles, tablets y ordenadores.
-- Enfoque en **accesibilidad**: Cumple buenas prácticas para que cualquier persona pueda navegar y comprar fácilmente.
-- Alta **usabilidad**: Navegación intuitiva, estructura clara y tiempos de carga optimizados.
+[Bio link: redes sociales, WhatsApp y web](https://lnk.bio/FruteriaMejia)
 
-¡Bienvenido/a a mi perfil de GitHub!
+- Diseño responsivo, accesibilidad y alta usabilidad.
+- Gestión integral de redes sociales y canal de WhatsApp como Community Manager.
+- Impacto: aumento de clientes, comunidad activa y mejor visibilidad online.
+- **Tecnologías:** HTML, CSS, JavaScript, PHP, MySQL
 
-## 🌐 Proyecto React
+---
+
+## 🌐 KOBA — Web interactiva
 
 [KOBA - Web interactiva](https://mielmadev.github.io/koba/)
+
+- Web dinámica para mejorar la interacción y la visibilidad online.
+- **Tecnologías:** React, JavaScript, CSS
+
+---
 
 ## 📄 CV Demo (html, css, js)
 
 [Ver mi currículum interactivo (demo)](https://mielmadev.github.io/cv-demo-html-css-js/)
 
----
+- Herramienta visual y accesible para destacar habilidades y experiencia.
+- **Tecnologías:** HTML, CSS, JavaScript
 
-✨ Desarrolladora web apasionada por el diseño y la tecnología.
+---
