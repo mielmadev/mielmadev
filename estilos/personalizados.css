@@ -1,11 +1,11 @@
-/* Bordes de depuración para el encabezado */
+/* Bordes de depuración para el encabezado 
 header>*,
 .encabezado-contenido>*,
 .logo>* {
     border: 2px dashed red !important;
     background: rgba(200, 100, 255, 0.05);
 }
-
+*/
 /* Footer centrado y accesible */
 .footer-centrado {
     height: 100%;
@@ -39,7 +39,7 @@ footer {
     font-size: 1.1rem;
 }
 
-.footer-enlaces .btn-biolink {
+.footer-enlaces .btn-enlaces {
     margin: 0 0.3rem;
     padding: 0.2em 0.7em;
     font-size: 1em;
@@ -62,12 +62,12 @@ footer {
 }
 
 /* Margen superior para el botón bio link */
-.btn-biolink {
+.btn-enlaces {
     margin-top: 1rem;
 }
 
 /* Botón accesible para bio link */
-.btn-biolink {
+.btn-enlaces {
     display: inline-block;
     background: var(--rosa-muy-claro);
     color: var(--morado);
@@ -80,8 +80,8 @@ footer {
     transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
-.btn-biolink:hover,
-.btn-biolink:focus {
+.btn-enlaces:hover,
+.btn-enlaces:focus {
     background: var(--rosita);
     color: var(--negro);
     box-shadow: 0 4px 16px rgba(196, 91, 212, 0.15);
