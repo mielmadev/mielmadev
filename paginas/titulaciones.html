@@ -6,6 +6,7 @@
     <title>Titulaciones - MielmaDev</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
     <link rel="stylesheet" href="../estilos/base.css" />
+    <link rel="stylesheet" href="../estilos/header-footer.css" />
     <link rel="stylesheet" href="../estilos/globales.css" />
     <link rel="stylesheet" href="../estilos/personalizados.css" />
     <link rel="stylesheet" href="../estilos/menu-hamburguesa.css" />
@@ -16,9 +17,12 @@
       rel="stylesheet" />
   </head>
   <body>
-    <!-- ============================================
-         HEADER PRINCIPAL
-         ============================================ -->
+    <!-- [A11y][AA]: Skip link permite a usuarios de teclado saltar directamente al contenido principal, cumpliendo WCAG 2.2 AA. Visible solo al usar Tab. -->
+    <a href="#contenido-principal" class="skip-link"
+      >Saltar al contenido principal</a
+    >
+
+    <!-- [A11y][SEO]: <header> define el encabezado principal, aporta semántica nativa y mejora la estructura para buscadores. -->
     <header class="light encabezado-principal">
       <div class="logo">
         <a href="../index.html" aria-label="Mielma Developer - Ir al inicio">
@@ -62,146 +66,121 @@
         </nav>
       </div>
     </header>
-    <main class="contenido-principal">
-        <header class="diploma">
+    <main id="contenido-principal" class="contenido-principal">
+      <!-- [A11y][AA]: aria-labelledby referencia el ID del h2 para navegación por landmarks. Permite a los lectores de pantalla identificar y saltar directamente a la sección por su título, mejorando la accesibilidad y cumpliendo WCAG 2.2 AA. -->
+      <section aria-labelledby="titulo-titulaciones">
+        <h2 id="titulo-titulaciones">Titulaciones y Certificados</h2>
+
+        <article class="tarjeta light">
+          <h3 class="diploma-nombre">Coding Foundations</h3>
           <img
             src="../images/titulos/Coding-fundations-mini.webp"
             alt="Diploma de Coding Foundations"
             class="diploma-imagen visor-imagen"
             datos-pdf="../images/pdf/Coding-fundations.pdf"
             tabindex="0" />
-          <h2 class="diploma-nombre">Coding Foundations</h2>
-        </header>
+          <p>Bottega University · Coding Bootcamp</p>
+          <p>Octubre 2023 - Diciembre 2023</p>
+          <p>
+            Programa intensivo de fundamentos de programación como base para el
+            desarrollo Full Stack, impartido mediante la plataforma devCamp LMS.
+          </p>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </article>
 
-        <p>Bottega University · Coding Bootcamp</p>
-        <p>Octubre 2023 - Diciembre 2023</p>
-        <p>
-          Programa intensivo de fundamentos de programación como base para el
-          desarrollo Full Stack, impartido mediante la plataforma devCamp LMS.
-        </p>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-        <section>
-          <article>
-            <header class="diploma">
-              <img
-                src="../images/titulos/Coding-fundations-mini.webp"
-                alt="Diploma de Coding Foundations"
-                class="diploma-imagen visor-imagen"
-                datos-pdf="../images/pdf/Coding-fundations.pdf"
-                tabindex="0" />
-              <h2 class="diploma-nombre">Coding Foundations</h2>
-            </header>
-            <p>Bottega University · Coding Bootcamp</p>
-            <p>Octubre 2023 - Diciembre 2023</p>
-            <p>
-              Programa intensivo de fundamentos de programación como base para el
-              desarrollo Full Stack, impartido mediante la plataforma devCamp LMS.
-            </p>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-          </article>
-        </section>
-        <section>
-          <article>
-            <header class="diploma">
-              <img
-                src="../images/titulos/Full-stack-1-mini.webp"
-                alt="Diploma de Desarrollo Full Stack"
-                class="diploma-imagen visor-imagen"
-                datos-pdf="/images/pdf/Full-stack.pdf"
-                tabindex="0" />
-              <h2>Desarrollo Full Stack</h2>
-            </header>
-            <p>Fundación VASS · Bottega University</p>
-            <p>Enero 2024 - Octubre 2024</p>
-            <p>
-              Programa completo de desarrollo Full Stack con JavaScript, Python,
-              React, Node.js, bases de datos SQL/NoSQL y APIs RESTful. Incluye
-              proyecto final integrando frontend y backend.
-            </p>
-            <ul>
-              <li>JavaScript</li>
-              <li>Python</li>
-              <li>React</li>
-              <li>Node.js</li>
-              <li>MongoDB</li>
-              <li>PostgreSQL</li>
-              <li>Git/GitHub</li>
-            </ul>
-          </article>
-        </section>
-        <section>
-          <article>
-            <header class="diploma">
-              <img
-                src="../images/titulos/Ciberseguridad-1-mini.webp"
-                alt="Diploma de Especialización en Ciberseguridad"
-                class="diploma-imagen visor-imagen"
+        <article class="tarjeta light">
+          <h3 class="diploma-nombre">Desarrollo Full Stack</h3>
+          <img
+            src="../images/titulos/Full-stack-1-mini.webp"
+            alt="Diploma de Desarrollo Full Stack"
+            class="diploma-imagen visor-imagen"
+            datos-pdf="../images/pdf/Full-stack.pdf"
+            tabindex="0" />
+          <p>Fundación VASS · Bottega University</p>
+          <p>Enero 2024 - Octubre 2024</p>
+          <p>
+            Programa completo de desarrollo Full Stack con JavaScript, Python,
+            React, Node.js, bases de datos SQL/NoSQL y APIs RESTful. Incluye
+            proyecto final integrando frontend y backend.
+          </p>
+          <ul>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>MongoDB</li>
+            <li>PostgreSQL</li>
+            <li>Git/GitHub</li>
+          </ul>
+        </article>
 
-        <header class="diploma">
+        <article class="tarjeta light">
+          <h3 class="diploma-nombre">Inmersión en Inteligencia Artificial</h3>
           <img
             src="../images/titulos/Inmersion-IA-mini.webp"
             alt="Diploma de Inmersión en Inteligencia Artificial"
             class="diploma-imagen visor-imagen"
-            datos-pdf="/images/pdf/Inmersion-IA.pdf"
+            datos-pdf="../images/pdf/Inmersion-IA.pdf"
             tabindex="0" />
-          <h2>Inmersión en Inteligencia Artificial</h2>
-        </header>
-        <p>Alura · Google Gemini</p>
-        <p>Septiembre 2025</p>
-        <p>
-          Programa intensivo de inmersión en Inteligencia Artificial con Google
-          Gemini, abordando conceptos y aplicaciones prácticas de IA en
-          desarrollo web.
-        </p>
-        <ul>
-          <li>Inteligencia Artificial</li>
-          <li>Google Gemini</li>
-          <li>Notebook LLM</li>
-          <li>IA aplicada al desarrollo</li>
-        </ul>
-      </article>
+          <p>Alura · Google Gemini</p>
+          <p>Septiembre 2025</p>
+          <p>
+            Programa intensivo de inmersión en Inteligencia Artificial con
+            Google Gemini, abordando conceptos y aplicaciones prácticas de IA en
+            desarrollo web.
+          </p>
+          <ul>
+            <li>Inteligencia Artificial</li>
+            <li>Google Gemini</li>
+            <li>Notebook LLM</li>
+            <li>IA aplicada al desarrollo</li>
+          </ul>
+        </article>
 
-        <header class="diploma">
+        <article class="tarjeta light">
+          <h3 class="diploma-nombre">
+            Marketing Online en el Sector de la Consultoría
+          </h3>
           <img
             src="../images/titulos/Marketing-online-1-mini.webp"
             alt="Diploma de Marketing Online en el Sector de la Consultoría"
             class="diploma-imagen visor-imagen"
-            datos-pdf="/images/pdf/Marketing-online.pdf"
+            datos-pdf="../images/pdf/Marketing-online.pdf"
             tabindex="0" />
-          <h2>Marketing Online en el Sector de la Consultoría</h2>
-        </header>
-        <p>IPARTEK · COMM030PO</p>
-        <p>Noviembre 2025 – Diciembre 2025</p>
-        <p>
-          Formación especializada en estrategias digitales para consultoría:
-          SEO/SEM, Social Media Marketing, analítica web y gestión de
-          comunidades. Incluye proyecto práctico de diseño de estrategia SMM
-          completa.
-        </p>
-        <ul>
-          <li>SEO/SEM</li>
-          <li>Social Media Marketing</li>
-          <li>Analítica Web</li>
-          <li>Community Management</li>
-          <li>Web 2.0/3.0</li>
-          <li>CRM</li>
-        </ul>
-      </article>
+          <p>IPARTEK · COMM030PO</p>
+          <p>Noviembre 2025 – Diciembre 2025</p>
+          <p>
+            Formación especializada en estrategias digitales para consultoría:
+            SEO/SEM, Social Media Marketing, analítica web y gestión de
+            comunidades. Incluye proyecto práctico de diseño de estrategia SMM
+            completa.
+          </p>
+          <ul>
+            <li>SEO/SEM</li>
+            <li>Social Media Marketing</li>
+            <li>Analítica Web</li>
+            <li>Community Management</li>
+            <li>Web 2.0/3.0</li>
+            <li>CRM</li>
+          </ul>
+        </article>
+      </section>
     </main>
     <footer>
-      <div class="footer-centrado">
-        <p class="footer-copyright">&copy; <span id="year"></span> Mielma Developer. Todos los derechos reservados.</p>
-        <p class="footer-enlaces">
-          <a href="aviso-legal.html" class="btn-enlaces">Aviso legal</a> |
-          <a href="politica-privacidad.html" class="btn-enlaces">Política de privacidad</a>
-        </p>
-      </div>
+      <p class="footer-copyright">
+        &copy; <span id="year"></span> Mielma Developer. Todos los derechos
+        reservados.
+      </p>
+      <p>
+        <a href="aviso-legal.html" class="btn-enlaces">Aviso legal</a> |
+        <a href="politica-privacidad.html" class="btn-enlaces"
+          >Política de privacidad</a
+        >
+      </p>
     </footer>
 
     <script src="../script/centrar-foco-tabulador.js"></script>

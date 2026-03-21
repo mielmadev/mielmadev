@@ -30,6 +30,7 @@
     <meta name="twitter:image" content="../images/mielma_logo.webp" />
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
     <link rel="stylesheet" href="../estilos/base.css" />
+    <link rel="stylesheet" href="../estilos/header-footer.css" />
     <link rel="stylesheet" href="../estilos/globales.css" />
     <link rel="stylesheet" href="../estilos/personalizados.css" />
     <link rel="stylesheet" href="../estilos/menu-hamburguesa.css" />
@@ -116,7 +117,7 @@
           negocio de mis clientes.
         </p>
         <!-- [A11y][AA]: <article> aporta estructura semántica y mejora la navegación por landmarks. Cumple WCAG 2.2 AA. -->
-        <article>
+        <article class="tarjeta light">
           <h3>🥝 Frutería Mejía — Web y Community Manager</h3>
           <p>
             Se desarrolló una página web moderna y fácil de usar para Frutería
@@ -152,7 +153,7 @@
             Accede a su bio link: redes sociales, canal de WhatsApp y web
           </a>
         </article>
-        <article>
+        <article class="tarjeta light">
           <h3>🌐 KOBA - Web interactiva</h3>
           <p>
             KOBA es una web interactiva pensada para ofrecer una experiencia
@@ -180,7 +181,7 @@
             >Ver proyecto</a
           >
         </article>
-        <article>
+        <article class="tarjeta light">
           <h3>📄 CV Demo (html, css, js)</h3>
           <p>
             CV Demo es una herramienta pensada para que cualquier persona pueda
@@ -210,21 +211,20 @@
     </main>
     <footer>
       <!-- [A11y][AA][UX]: <footer> proporciona información legal y enlaces clave, accesible para todos los usuarios. Cumple WCAG 2.2 AA. -->
-      <div class="footer-centrado">
-        <p class="footer-copyright">
-          &copy; <span id="year"></span> Mielma Developer. Todos los derechos
-          reservados.
-        </p>
-        <p class="footer-enlaces">
-          <a href="../paginas/aviso-legal.html" class="btn-enlaces"
-            >Aviso legal</a
-          >
-          |
-          <a href="../paginas/politica-privacidad.html" class="btn-enlaces"
-            >Política de privacidad</a
-          >
-        </p>
-      </div>
+
+      <p class="footer-copyright">
+        &copy; <span id="year"></span> Mielma Developer. Todos los derechos
+        reservados.
+      </p>
+      <p>
+        <a href="../paginas/aviso-legal.html" class="btn-enlaces"
+          >Aviso legal</a
+        >
+        |
+        <a href="../paginas/politica-privacidad.html" class="btn-enlaces"
+          >Política de privacidad</a
+        >
+      </p>
     </footer>
     <!-- ============================================
           SCRIPTS
