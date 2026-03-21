@@ -1,3 +1,50 @@
+/* Bordes de depuración para el encabezado */
+header>*,
+.encabezado-contenido>*,
+.logo>* {
+    border: 2px dashed red !important;
+    background: rgba(200, 100, 255, 0.05);
+}
+
+/* Footer centrado y accesible */
+.footer-centrado {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 90px;
+    box-sizing: border-box;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 90px;
+    box-sizing: border-box;
+}
+
+.footer-copyright {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+    color: var(--texto);
+}
+
+.footer-enlaces {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.footer-enlaces .btn-biolink {
+    margin: 0 0.3rem;
+    padding: 0.2em 0.7em;
+    font-size: 1em;
+}
+
 .proyectos-lista h2 {
     margin-bottom: 0.2rem;
 }
