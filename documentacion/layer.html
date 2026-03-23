@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¿Qué es @layer en CSS? | Mielma Developer</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../estilos/base.css" />
+    <link rel="stylesheet" href="../estilos/globales.css" />
+    <link rel="stylesheet" href="../estilos/personalizados.css" />
+    <link rel="stylesheet" href="../estilos/menu-hamburguesa.css" />
+    <link rel="stylesheet" href="../estilos/documentacion.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Cinzel:wght@400..900&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <header class="light encabezado-principal">
+      <div class="logo">
+        <a href="../index.html" aria-label="Mielma Developer - Ir al inicio">
+          <img
+            src="../images/mielma_logo.webp"
+            alt="Logo Mielma Developer"
+            width="150"
+            height="150" />
+        </a>
+      </div>
+      <div class="encabezado-contenido">
+        <h1>
+          Mielma<br />
+          <span class="h1-segundo-trozo">Desarrolladora Web</span>
+        </h1>
+        <div class="hamburguesa-contenedor">
+          <button
+            class="menu-hamburguesa"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="menu-principal">
+            <span class="linea"></span>
+            <span class="linea"></span>
+            <span class="linea"></span>
+          </button>
+        </div>
+        <nav
+          class="menu-principal"
+          role="navigation"
+          aria-label="Menú principal"
+          id="menu-principal">
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../paginas/proyectos.html">Proyectos</a></li>
+            <li><a href="../paginas/titulaciones.html">Titulaciones</a></li>
+            <li><a href="../paginas/contacto.html">Contacto</a></li>
+            <li>
+              <a href="../paginas/desarrolladores.html" class="active"
+                >Desarrolladores</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="contenido-documentacion">
+      <section>
+        <h2>¿Qué es <code>@layer</code>?</h2>
+        <p>
+          <code>@layer</code> es una regla de CSS que permite definir
+          <strong>prioridades entre archivos o bloques de estilos</strong> de
+          forma explícita y organizada.
+        </p>
+      </section>
+      <section>
+        <h2>¿Para qué sirve?</h2>
+        <ul>
+          <li>
+            <strong>Controlar qué estilo gana:</strong> Tú decides qué capa
+            tiene más peso, sin depender del orden de carga ni de la
+            especificidad del selector.
+          </li>
+          <li>
+            <strong>Eliminar <code>!important</code>:</strong> Evita tener que
+            usar esa regla "tramposa" para sobrescribir estilos.
+          </li>
+          <li>
+            <strong>Prevenir conflictos:</strong> Funciona como un "seguro" para
+            que, si el proyecto crece o entran más personas, los estilos no se
+            rompan accidentalmente.
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>¿Lo necesitas?</h2>
+        <p>
+          Si tu método actual (orden de carga + selectores específicos) te
+          funciona y no tienes conflictos, <strong>no es obligatorio</strong>.
+          Es una herramienta útil para escalar, pero no cambia la funcionalidad
+          visual de tu web.
+        </p>
+        <p>
+          <strong>En resumen:</strong> Es un organizador de prioridades para CSS
+          a prueba de errores. 🛡️
+        </p>
+      </section>
+      <section>
+        <h2>Ejemplo básico de uso</h2>
+        <pre><code>@layer reset, base, componentes, utilidades;
+
+@layer reset {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@layer base {
+  body {
+    font-family: system-ui;
+  }
+}
+
+@layer componentes {
+  .boton {
+    background: gold;
+  }
+}
+
+@layer utilidades {
+  .oculto {
+    display: none;
+  }
+}
+</code></pre>
+        <p>
+          En este ejemplo, si hay conflicto entre estilos, ganará el que esté en
+          la capa declarada más a la derecha en la lista inicial (<code
+            >utilidades</code
+          >
+          &gt; <code>componentes</code> &gt; <code>base</code> &gt;
+          <code>reset</code>).
+        </p>
+      </section>
+      <section>
+        <h2>Recursos y documentación oficial</h2>
+        <ul>
+          <li>
+            <a
+              href="https://developer.mozilla.org/es/docs/Web/CSS/@layer"
+              target="_blank"
+              >Guía de @layer en MDN</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://css-tricks.com/css-layers-and-layer-order/"
+              target="_blank"
+              >Artículo sobre CSS Layers en CSS-Tricks</a
+            >
+          </li>
+        </ul>
+      </section>
+      <footer class="pie-pagina light" role="contentinfo">
+        <p>
+          &copy; <span id="year"></span> Mielma Developer. Todos los derechos
+          reservados.
+        </p>
+        <p>
+          <a href="paginas/aviso-legal.html">Aviso legal</a> |
+          <a href="paginas/politica-privacidad.html">Política de privacidad</a>
+        </p>
+      </footer>
+      <script src="../script/centrar-foco-tabulador.js"></script>
+      <script src="../script/visor-pdf.js"></script>
+      <script src="../script/year.js"></script>
+      <script src="../script/menu-hamburguesa.js"></script>
+    </main>
+  </body>
+</html>
