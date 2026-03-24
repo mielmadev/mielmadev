@@ -34,6 +34,13 @@
     <link rel="stylesheet" href="../estilos/globales.css" />
     <link rel="stylesheet" href="../estilos/personalizados.css" />
     <link rel="stylesheet" href="../estilos/menu-hamburguesa.css" />
+    <link rel="stylesheet" href="../estilos/iconos-redes-sociales.css" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
     <!-- [SEO][UX]: Preconnect optimiza la carga de fuentes externas, mejorando el rendimiento y la experiencia de usuario. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -104,19 +111,61 @@
           <p>
             Si deseas ponerte en contacto conmigo, puedes hacerlo a través de
             los siguientes medios:
-          <ul class="footer-links">
-            <li><a href="aviso-legal.html" class="btn-enlaces">Aviso legal</a></li>
-            <li><a href="politica-privacidad.html" class="btn-enlaces">Política de privacidad</a></li>
-          </ul>
-              <a href="mailto:mielma@ejemplo.com">mielma@ejemplo.com</a>
-            </li>
-            <li>
-              <strong>LinkedIn:</strong>
+          </p>
+
+          <ul>
+            <li class="iconos-contacto-lista">
+              <a
+                href="mailto:mielma@ejemplo.com"
+                class="icon-link email"
+                aria-label="Email"
+                title="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
               <a
                 href="https://www.linkedin.com/in/mielma"
+                class="icon-link linkedin"
                 target="_blank"
-                rel="noopener noreferrer">
-                linkedin.com/in/mielma
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://lnk.bio/MielmaDev"
+                class="icon-link link-bio"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Bio Link"
+                title="Bio Link">
+                <i class="fas fa-link"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/mielmadev"
+                class="icon-link instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                title="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/mielmadev"
+                class="icon-link facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                title="Facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="https://t.me/MielmaDev"
+                class="icon-link telegram"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Telegram"
+                title="Telegram">
+                <i class="fab fa-telegram"></i>
               </a>
             </li>
           </ul>
@@ -130,12 +179,14 @@
         &copy; <span id="year"></span> Mielma Developer. Todos los derechos
         reservados.
       </p>
-      <p>
-        <a href="aviso-legal.html" class="btn-enlaces">Aviso legal</a> |
-        <a href="politica-privacidad.html" class="btn-enlaces"
-          >Política de privacidad</a
-        >
-      </p>
+      <ul class="footer-links">
+        <li><a href="aviso-legal.html" class="btn-enlaces">Aviso legal</a></li>
+        <li>
+          <a href="politica-privacidad.html" class="btn-enlaces"
+            >Política de privacidad</a
+          >
+        </li>
+      </ul>
     </footer>
     <script src="../script/centrar-foco-tabulador.js"></script>
     <script src="../script/year.js"></script>

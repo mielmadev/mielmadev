@@ -38,7 +38,7 @@ a.btn-enlaces {
 a.btn-enlaces:hover,
 a.btn-enlaces:focus {
     background: var(--rosita);
-    color: #f00000;
+    color: var(--blanco);
     box-shadow: 0 4px 16px rgba(196, 91, 212, 0.15);
     outline: none;
 }
@@ -105,16 +105,15 @@ a.btn-enlaces:focus {
     background: var(--rosa-muy-claro);
 }
 
-/* Efecto solo si NO hay foco visible */
-.tarjeta:hover {
-    transform: scale(1.03) translateY(-4px);
-    box-shadow: 0 8px 32px 0 rgba(167, 139, 250, 0.25), 0 1.5px 8px 0 rgba(244, 114, 182, 0.15);
-    z-index: 2;
-}
-
+/*
+    :focus-visible aplica el efecto cuando la tarjeta recibe foco de teclado (por accesibilidad, por ejemplo al usar Tab).
+    :focus-within aplica el efecto si la tarjeta o cualquier elemento hijo recibe el foco (por ejemplo, un botón dentro de la tarjeta).
+    Así, el efecto visual es igual para usuarios de ratón y teclado.
+*/
+.tarjeta:hover,
 .tarjeta:focus-within,
 .tarjeta:focus-visible {
-    transform: scale(1.03) translateY(-4px);
-    box-shadow: 0 8px 32px 0 rgba(167, 139, 250, 0.25), 0 1.5px 8px 0 rgba(244, 114, 182, 0.15);
-    z-index: 2;
+        transform: scale(1.03) translateY(-4px);
+        box-shadow: 0 8px 32px 0 rgba(167, 139, 250, 0.25), 0 1.5px 8px 0 rgba(244, 114, 182, 0.15);
+        z-index: 2;
 }

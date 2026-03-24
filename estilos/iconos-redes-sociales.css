@@ -1,0 +1,56 @@
+/* Iconos de redes sociales - estilos y efectos accesibles y modernos */
+
+.iconos-contacto-lista {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+	justify-content: center;
+}
+
+.icon-link {
+	width: 3.2rem;
+	height: 3.2rem;
+	border-radius: 50%;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.7rem;
+	box-shadow: 0 2px 8px #bdbdbd22;
+	filter: drop-shadow(0 0 6px #fff);
+	transition: transform 0.18s cubic-bezier(.4,0,.2,1), box-shadow 0.18s cubic-bezier(.4,0,.2,1), filter 0.18s;
+	outline: none;
+	border: none;
+	color: #444;
+	position: relative;
+	cursor: pointer;
+}
+
+.icon-link:focus, .icon-link:hover {
+	transform: scale(1.15) rotate(-6deg);
+	box-shadow: 0 4px 16px #bdbdbd55;
+	filter: brightness(1.15) drop-shadow(0 0 18px currentcolor);
+	z-index: 2;
+}
+
+/* Colores oficiales de cada red social */
+.icon-link.email { color: #c71610; }
+.icon-link.linkedin { color: #0077b5; }
+.icon-link.instagram { color: #e4405f; }
+.icon-link.facebook { color: #1877f3; }
+.icon-link.telegram { color: #229ed9; }
+.icon-link.link-bio { color: #6c63ff; }
+
+.icon-link i {
+	pointer-events: none;
+}
+
+@media (max-width: 600px) {
+	.icon-link {
+		width: 2.3rem;
+		height: 2.3rem;
+		font-size: 1.2rem;
+	}
+}
