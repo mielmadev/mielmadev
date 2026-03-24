@@ -134,7 +134,17 @@ footer {
 }
 
 /* Botones de enlaces en el footer: tamaño reducido */
-footer .btn-enlaces {
-  padding: 0.2em 0.7em;
-  margin: 0 0.3rem;
+
+/* Enlaces legales del footer en línea y con separación */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+}
+
+.footer-links li {
+  display: inline;
 }

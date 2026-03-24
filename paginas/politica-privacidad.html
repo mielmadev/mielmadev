@@ -29,6 +29,7 @@
       name="twitter:description"
       content="Política de privacidad de MielmaDev: protección de datos, derechos del usuario, cookies y seguridad." />
     <meta name="twitter:image" content="../images/mielma_logo.webp" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
     <link rel="stylesheet" href="../estilos/base.css" />
     <link rel="stylesheet" href="../estilos/header-footer.css" />
     <link rel="stylesheet" href="../estilos/globales.css" />
@@ -52,24 +53,26 @@
           ============================================ -->
     <header class="light encabezado-principal">
       <!-- [SEO][UX]: El logo enlazado ayuda a la navegación, refuerza la marca y previene saltos de diseño (CLS). -->
-      <div class="logo">
-        <a href="../index.html" aria-label="Mielma Developer - Ir al inicio">
-          <!-- [A11y][AA]: alt descriptivo para logo, esencial para usuarios de lectores de pantalla. Cumple WCAG 2.2 AA para imágenes. -->
-          <img
-            src="../images/mielma_logo.webp"
-            alt="Logo Mielma Developer"
-            width="150"
-            height="150" />
-        </a>
-      </div>
-
+      <a
+        href="../index.html"
+        aria-label="Mielma Developer - Ir al inicio"
+        class="logo">
+        <!-- [A11y][AA]: alt descriptivo para logo, esencial para usuarios de lectores de pantalla. Cumple WCAG 2.2 AA para imágenes. -->
+        <img
+          src="../images/mielma_logo.webp"
+          alt="Logo Mielma Developer"
+          width="150"
+          height="150"
+          fetchpriority="high" />
+        <!-- [SEO][UX]: fetchpriority="high" indica al navegador que debe cargar esta imagen lo antes posible. Mejora el LCP (Largest Contentful Paint), una métrica clave de Core Web Vitals, y ayuda a Google a valorar mejor el rendimiento y posicionamiento SEO de la página. -->
+      </a>
       <div class="encabezado-contenido">
         <!-- [SEO][A11y][AA]: Solo un H1 por página, define el tema principal. Mejora la jerarquía para buscadores y lectores de pantalla. Cumple WCAG 2.2 AA. -->
         <h1>
           Política de Privacidad<br />
           <span class="h1-segundo-trozo">MielmaDev</span>
         </h1>
-
+        <!-- [A11y][AA]: Botón nativo para menú, ARIA solo cuando la semántica nativa es insuficiente. Cumple WCAG 2.2 AA para controles interactivos. -->
         <div class="hamburguesa-contenedor">
           <button
             class="menu-hamburguesa"
@@ -81,18 +84,22 @@
             <span class="linea"></span>
           </button>
         </div>
-
+        <!-- [A11y][AA]: <nav> ya tiene rol implícito, no añadir role extra. aria-label solo si hay varios menús. Mejora landmarks para navegación accesible. Cumple WCAG 2.2 AA. -->
         <nav
+          id="menu-principal"
           class="menu-principal"
-          aria-label="Menú principal"
-          id="menu-principal">
+          aria-label="Menú principal">
           <ul>
-            <!-- [A11y][AA]: aria-current="page" indica la página actual a lectores de pantalla. Cumple WCAG 2.2 AA para navegación. -->
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="proyectos.html">Proyectos</a></li>
             <li><a href="titulaciones.html">Titulaciones</a></li>
             <li><a href="contacto.html">Contacto</a></li>
             <li><a href="desarrolladores.html">Desarrolladores</a></li>
+            <li>
+              <a href="politica-privacidad.html" aria-current="page"
+                >Política de privacidad</a
+              >
+            </li>
           </ul>
         </nav>
       </div>
@@ -191,26 +198,30 @@
         </p>
       </section>
     </main>
-    <footer>
+    <footer class="light">
       <!-- [A11y][AA][UX]: <footer> proporciona información legal y enlaces clave, accesible para todos los usuarios. Cumple WCAG 2.2 AA. -->
 
       <p class="footer-copyright">
         &copy; <span id="year"></span> Mielma Developer. Todos los derechos
         reservados.
       </p>
-      <p>
-        <a href="../paginas/aviso-legal.html" class="btn-enlaces"
-          >Aviso legal</a
-        >
-        |
-        <a href="../paginas/politica-privacidad.html" class="btn-enlaces"
-          >Política de privacidad</a
-        >
-      </p>
+      <ul class="footer-links">
+        <li>
+          <a href="../paginas/aviso-legal.html" class="btn-enlaces"
+            >Aviso legal</a
+          >
+        </li>
+        <li>
+          <a href="../paginas/politica-privacidad.html" class="btn-enlaces"
+            >Política de privacidad</a
+          >
+        </li>
+      </ul>
     </footer>
     <!-- ============================================
          SCRIPTS
          ============================================ -->
+    <script src="../script/centrar-foco-tabulador.js"></script>
     <script src="../script/year.js"></script>
     <script src="../script/menu-hamburguesa.js"></script>
   </body>

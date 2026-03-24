@@ -19,13 +19,10 @@
     gap: 1.2rem;
 }
 
-/* Margen superior para el botón bio link */
-.btn-enlaces {
-    margin-top: 1rem;
-}
 
 /* Botón accesible para bio link */
-.btn-enlaces {
+a.btn-enlaces {
+        margin-top: 1rem;
     display: inline-block;
     background: var(--rosa-muy-claro);
     color: var(--morado);
@@ -38,21 +35,14 @@
     transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
-.btn-enlaces:hover,
-.btn-enlaces:focus {
+a.btn-enlaces:hover,
+a.btn-enlaces:focus {
     background: var(--rosita);
-    color: var(--negro);
+    color: #f00000;
     box-shadow: 0 4px 16px rgba(196, 91, 212, 0.15);
     outline: none;
 }
 
-/* Botones de enlaces en el footer: tamaño reducido */
-footer .btn-enlaces {
-    font-size: 0.85em;
-    padding: 0.15em 0.6em;
-    margin: 0 0.2rem;
-    border-radius: 6px;
-}
 
 .contenido-principal {
     padding-top: 3rem;

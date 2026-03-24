@@ -3,13 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Buenas Prácticas -MielmaDev</title>
+    <!-- [SEO]: Meta descripción y autor para mejorar posicionamiento y atribución. -->
+    <meta
+      name="description"
+      content="Recursos, documentación y buenas prácticas para desarrolladores web en MielmaDev." />
+    <meta name="author" content="Miren Elizabeth Marañón" />
+    <title>
+      Desarrolladores | MielmaDev - Portfolio de Desarrollo Web y Marketing
+      Digital
+    </title>
+    <!-- [SEO][Social]: Open Graph y Twitter Cards para mejorar la visibilidad en redes sociales y buscadores. -->
+    <meta
+      property="og:title"
+      content="Desarrolladores | MielmaDev - Portfolio de Desarrollo Web y Marketing Digital" />
+    <meta
+      property="og:description"
+      content="Recursos, documentación y buenas prácticas para desarrolladores web en MielmaDev." />
+    <meta property="og:image" content="../images/mielma_logo.webp" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Desarrolladores | MielmaDev - Portfolio de Desarrollo Web y Marketing Digital" />
+    <meta
+      name="twitter:description"
+      content="Recursos, documentación y buenas prácticas para desarrolladores web en MielmaDev." />
+    <meta name="twitter:image" content="../images/mielma_logo.webp" />
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
     <link rel="stylesheet" href="../estilos/base.css" />
     <link rel="stylesheet" href="../estilos/header-footer.css" />
     <link rel="stylesheet" href="../estilos/globales.css" />
     <link rel="stylesheet" href="../estilos/personalizados.css" />
     <link rel="stylesheet" href="../estilos/menu-hamburguesa.css" />
+    <!-- [SEO][UX]: Preconnect optimiza la carga de fuentes externas, mejorando el rendimiento y la experiencia de usuario. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,26 +43,35 @@
       rel="stylesheet" />
   </head>
   <body>
+    <!-- [A11y][AA]: Skip link permite a usuarios de teclado saltar directamente al contenido principal, cumpliendo WCAG 2.2 AA. Visible solo al usar Tab. -->
+    <a href="#contenido-desarrolladores" class="skip-link"
+      >Saltar al contenido principal</a
+    >
     <!-- ============================================
          HEADER PRINCIPAL
          ============================================ -->
     <header class="light encabezado-principal">
-      <div class="logo">
-        <a href="../index.html" aria-label="Mielma Developer - Ir al inicio">
-          <img
-            src="../images/mielma_logo.webp"
-            alt="Logo Mielma Developer"
-            width="150"
-            height="150" />
-        </a>
-      </div>
-
+      <!-- [SEO][UX]: El logo enlazado ayuda a la navegación, refuerza la marca y previene saltos de diseño (CLS). -->
+      <a
+        href="../index.html"
+        aria-label="Mielma Developer - Ir al inicio"
+        class="logo">
+        <!-- [A11y][AA]: alt descriptivo para logo, esencial para usuarios de lectores de pantalla. Cumple WCAG 2.2 AA para imágenes. -->
+        <img
+          src="../images/mielma_logo.webp"
+          alt="Logo Mielma Developer"
+          width="150"
+          height="150"
+          fetchpriority="high" />
+        <!-- [SEO][UX]: fetchpriority="high" indica al navegador que debe cargar esta imagen lo antes posible. Mejora el LCP (Largest Contentful Paint), una métrica clave de Core Web Vitals, y ayuda a Google a valorar mejor el rendimiento y posicionamiento SEO de la página. -->
+      </a>
       <div class="encabezado-contenido">
+        <!-- [SEO][A11y][AA]: Solo un H1 por página, define el tema principal. Mejora la jerarquía para buscadores y lectores de pantalla. Cumple WCAG 2.2 AA. -->
         <h1>
           Mielma<br />
           <span class="h1-segundo-trozo">Desarrolladora Web</span>
         </h1>
-
+        <!-- [A11y][AA]: Botón nativo para menú, ARIA solo cuando la semántica nativa es insuficiente. Cumple WCAG 2.2 AA para controles interactivos. -->
         <div class="hamburguesa-contenedor">
           <button
             class="menu-hamburguesa"
@@ -48,47 +83,62 @@
             <span class="linea"></span>
           </button>
         </div>
-
+        <!-- [A11y][AA]: <nav> ya tiene rol implícito, no añadir role extra. aria-label solo si hay varios menús. Mejora landmarks para navegación accesible. Cumple WCAG 2.2 AA. -->
         <nav
+          id="menu-principal"
           class="menu-principal"
-          aria-label="Menú principal"
-          id="menu-principal">
+          aria-label="Menú principal">
           <ul>
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="proyectos.html">Proyectos</a></li>
             <li><a href="titulaciones.html">Titulaciones</a></li>
             <li><a href="contacto.html">Contacto</a></li>
             <li>
-              <a href="desarrolladores.html" class="active">Desarrolladores</a>
+              <a href="desarrolladores.html" aria-current="page"
+                >Desarrolladores</a
+              >
             </li>
           </ul>
         </nav>
       </div>
     </header>
-    <main class="contenido-principal">
+    <main id="contenido-desarrolladores" class="contenido-principal">
       <section>
         <h2>Documentación y buenas prácticas</h2>
         <ul>
           <li>
-            <a href="../documentacion/layer.html">@layer: organización de archivos CSS</a>
+            <a href="../documentacion/layer.html"
+              >@layer: organización de archivos CSS</a
+            >
           </li>
           <li>
-            <a href="../documentacion/role-aria.html">Roles ARIA: mejora la accesibilidad</a>
+            <a href="../documentacion/role-aria.html"
+              >Roles ARIA: mejora la accesibilidad</a
+            >
           </li>
         </ul>
         <p>
-          Esta sección irá creciendo con más recursos y documentación útil para desarrolladores.
-        </p>
-      </section>
-    </main>
-
-    <footer>
-        <p class="footer-copyright">&copy; <span id="year"></span> Mielma Developer. Todos los derechos reservados.</p>
-        <p>
-          <a href="aviso-legal.html" class="btn-enlaces">Aviso legal</a> |
-          <a href="politica-privacidad.html" class="btn-enlaces">Política de privacidad</a>
-        </p>
-
-        </div>
+          Esta sección irá creciendo con más recursos y documentación útil para
+          desarrolladores.
+        <ul class="footer-links">
+          <li><a href="aviso-legal.html" class="btn-enlaces">Aviso legal</a></li>
+          <li><a href="politica-privacidad.html" class="btn-enlaces">Política de privacidad</a></li>
+        </ul>
+    <footer class="light">
+      <!-- [A11y][AA][UX]: <footer> proporciona información legal y enlaces clave, accesible para todos los usuarios. Cumple WCAG 2.2 AA. -->
+      <p class="footer-copyright">
+        &copy; <span id="year"></span> Mielma Developer. Todos los derechos
+        reservados.
+      </p>
+      <p>
+        <a href="aviso-legal.html" class="btn-enlaces">Aviso legal</a> |
+        <a href="politica-privacidad.html" class="btn-enlaces"
+          >Política de privacidad</a
+        >
+      </p>
+    </footer>
+    <script src="../script/centrar-foco-tabulador.js"></script>
+    <script src="../script/year.js"></script>
+    <script src="../script/menu-hamburguesa.js"></script>
   </body>
 </html>
