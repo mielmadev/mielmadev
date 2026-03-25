@@ -26,7 +26,7 @@ document.querySelectorAll('.visor-imagen').forEach(function(visorImagen) {
     visorAviso.className = 'visor-aviso light'; 
     visorAviso.innerText = 'Haz clic para ver PDF';
     // Busca el encabezado del diploma para posicionar el aviso
-    const encabezado = visorImagen.closest('header');
+    const encabezado = visorImagen.closest('article');
     encabezado.style.position = 'relative';
     encabezado.appendChild(visorAviso);
     // Posiciona el aviso justo debajo de la imagen

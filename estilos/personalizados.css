@@ -1,3 +1,23 @@
+/* Alineación horizontal de h3 y mini imagen en diplomas */
+.diploma-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.diploma-header .diploma-nombre {
+    margin: 0;
+    font-weight: 700;
+}
+
+.diploma-header .diploma-imagen {
+    width: 48px;
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 6px;
+    box-shadow: 0 1px 6px #0001;
+}
 /* Mejor separación del título en tarjetas */
 .tarjeta h3 {
     margin-bottom: 2rem;
