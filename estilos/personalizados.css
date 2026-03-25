@@ -174,7 +174,7 @@ a.btn-enlaces:focus {
     cursor: pointer;
     margin-bottom: 2.5rem;
     border-radius: 12px;
-    padding: 2rem 1.5rem;
+    padding: 2rem 5%;
     background: var(--rosa-muy-claro);
 }
 
