@@ -173,3 +173,44 @@ a.btn-enlaces:focus {
     box-shadow: 0 8px 32px 0 rgba(167, 139, 250, 0.25), 0 1.5px 8px 0 rgba(244, 114, 182, 0.15);
     z-index: 2;
 }
+
+.contacto-directo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5.5rem auto;
+    padding: 3rem;
+    max-width: 800px;
+    border: 2.5px solid var(--morado);
+    border-radius: 8px 32px;
+    background: transparent;
+    box-shadow:
+        0 4px 24px 0 rgba(120, 39, 139, 0.15),
+        0 1.5px 0 0 var(--morado) inset;
+    text-align: center;
+    transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.contacto-directo a.icon-link.email {
+    font-weight: 600;
+    text-decoration: underline dotted;
+    transition: color 0.2s;
+}
+
+.contacto-directo:hover,
+.contacto-directo:focus-within {
+    background: var(--morado);
+    color: #fff;
+    box-shadow:
+        0 4px 24px 0 rgba(120, 39, 139, 0.25),
+        0 1.5px 0 0 var(--morado) inset;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.contacto-directo:hover a.icon-link.email,
+.contacto-directo:focus-within a.icon-link.email {
+    color: #fff;
+    text-decoration: underline wavy;
+}
+

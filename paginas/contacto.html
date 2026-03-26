@@ -33,7 +33,6 @@
     <link rel="stylesheet" href="../estilos/personalizados.css" />
     <link rel="stylesheet" href="../estilos/menu-hamburguesa.css" />
     <link rel="stylesheet" href="../estilos/iconos-redes-sociales.css" />
-      <link rel="stylesheet" href="../estilos/formulario.css" />
     <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
@@ -97,7 +96,11 @@
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="proyectos.html">Proyectos</a></li>
             <li><a href="titulaciones.html">Titulaciones</a></li>
-            <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+            <li>
+              <a href="contacto.html" class="active" aria-current="page"
+                >Contacto</a
+              >
+            </li>
             <li><a href="desarrolladores.html">Desarrolladores</a></li>
           </ul>
         </nav>
@@ -167,29 +170,11 @@
               </a>
             </li>
           </ul>
-            <form class="formulario-email-mielmadev">
-              <div class="formulario-email-mielmadev-inner">
-                <div class="formulario-email-mielmadev-col izq">
-                  <label class="campo-nombre">
-                    Tu nombre
-                    <input type="text" name="user_name" required />
-                  </label>
-                  <label class="campo-email">
-                    Tu correo
-                    <input type="email" name="user_email" required />
-                  </label>
-                </div>
-                <div class="formulario-email-mielmadev-col der">
-                  <label class="campo-mensaje">
-                    ¿En qué podemos ayudarte?
-                    <textarea name="message" required style="overflow: hidden; resize: none;"></textarea>
-                  </label>
-                </div>
-              </div>
-              <div class="formulario-email-mielmadev-boton">
-                <button type="submit">Enviar mensaje</button>
-              </div>
-            </form>
+          <a
+            href="mailto:mielmadev@gmail.com"
+            class="icon-link email contacto-directo"
+            >mielmadev@gmail.com</a
+          >
         </article>
       </section>
     </main>

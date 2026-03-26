@@ -37,7 +37,8 @@
 
 /* Colores oficiales de cada red social */
 .icon-link.email {
-  color: #c71610;
+  color: var(--morado);
+  --icono-color: var(--morado);
 }
 
 .icon-link.linkedin {
