@@ -55,6 +55,8 @@
     border-radius: 2px;
     display: block;
     transition: all 0.3s;
+    font-size: 0.5rem;
+
   }
 
   .menu-hamburguesa.activo .linea:nth-child(1) {
@@ -81,10 +83,14 @@
     width: 100%;
     background: var(--blanco);
     /* Mejora accesibilidad visual */
-    border: 2px solid var(--azul-accesible, #0057b8);
-    box-shadow: 0 0 12px 2px rgba(0, 87, 184, 0.15);
-    outline: 3px solid var(--azul-accesible, #0057b8);
+    box-shadow: 0 0 12px 2px rgba(120, 39, 139, 0.15);
+    border: 1px solid var(--morado);
+    border-radius: 15px 0 15px 0;
     outline-offset: -2px;
+  }
+
+  .menu-principal.abierto a {
+    font-size: 1rem;
   }
 
   .encabezado-contenido {
