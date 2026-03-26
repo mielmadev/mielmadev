@@ -17,41 +17,31 @@
       rel="stylesheet" />
   </head>
   <body>
-    <!-- [A11y][AA]: Skip link permite a usuarios de teclado saltar directamente al contenido principal, cumpliendo WCAG 2.2 AA. Visible solo al usar Tab. -->
     <a href="#contenido-principal" class="skip-link"
       >Saltar al contenido principal</a
     >
 
-    <!-- [A11y][SEO]: <header> define el encabezado principal, aporta semántica nativa y mejora la estructura para buscadores. -->
-    <!-- [A11y][AA]: Skip link permite a usuarios de teclado saltar directamente al contenido principal, cumpliendo WCAG 2.2 AA. Visible solo al usar Tab. -->
     <a href="#contenido-principal" class="skip-link"
       >Saltar al contenido principal</a
     >
-    <!-- ============================================
-         HEADER PRINCIPAL
-         ============================================ -->
+
     <header class="light encabezado-principal">
-      <!-- [SEO][UX]: El logo enlazado ayuda a la navegación, refuerza la marca y previene saltos de diseño (CLS). -->
       <a
         href="../index.html"
         aria-label="Mielma Developer - Ir al inicio"
         class="logo">
-        <!-- [A11y][AA]: alt descriptivo para logo, esencial para usuarios de lectores de pantalla. Cumple WCAG 2.2 AA para imágenes. -->
         <img
           src="../images/mielma_logo.webp"
           alt="Logo Mielma Developer"
           width="150"
           height="150"
           fetchpriority="high" />
-        <!-- [SEO][UX]: fetchpriority="high" indica al navegador que debe cargar esta imagen lo antes posible. Mejora el LCP (Largest Contentful Paint), una métrica clave de Core Web Vitals, y ayuda a Google a valorar mejor el rendimiento y posicionamiento SEO de la página. -->
       </a>
       <div class="encabezado-contenido">
-        <!-- [SEO][A11y][AA]: Solo un H1 por página, define el tema principal. Mejora la jerarquía para buscadores y lectores de pantalla. Cumple WCAG 2.2 AA. -->
         <h1>
           MielmaDev<br />
           <span class="h1-segundo-trozo">Titulaciones</span>
         </h1>
-        <!-- [A11y][AA]: Botón nativo para menú, ARIA solo cuando la semántica nativa es insuficiente. Cumple WCAG 2.2 AA para controles interactivos. -->
         <div class="hamburguesa-contenedor">
           <button
             class="menu-hamburguesa"
@@ -63,7 +53,6 @@
             <span class="linea"></span>
           </button>
         </div>
-        <!-- [A11y][AA]: <nav> ya tiene rol implícito, no añadir role extra. aria-label solo si hay varios menús. Mejora landmarks para navegación accesible. Cumple WCAG 2.2 AA. -->
         <nav
           id="menu-principal"
           class="menu-principal"
@@ -83,7 +72,6 @@
       </div>
     </header>
     <main id="contenido-principal" class="contenido-principal">
-      <!-- [A11y][AA]: aria-labelledby referencia el ID del h2 para navegación por landmarks. Permite a los lectores de pantalla identificar y saltar directamente a la sección por su título, mejorando la accesibilidad y cumpliendo WCAG 2.2 AA. -->
       <section aria-labelledby="titulo-titulaciones">
         <h2 id="titulo-titulaciones">Titulaciones y Certificados</h2>
 

@@ -3,13 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- [SEO]: Meta descripción y autor para mejorar posicionamiento y atribución. -->
     <meta
       name="description"
       content="Proyectos realizados por MielmaDev: desarrollo web, marketing digital y soluciones creativas para negocios locales." />
     <meta name="author" content="Miren Elizabeth Marañón" />
     <title>MielmaDev | Proyectos</title>
-    <!-- [SEO][Social]: Open Graph y Twitter Cards para mejorar la visibilidad en redes sociales y buscadores. -->
     <meta
       property="og:title"
       content="Proyectos | MielmaDev - Portfolio de Desarrollo Web y Marketing Digital" />
@@ -32,7 +30,6 @@
     <link rel="stylesheet" href="../estilos/globales.css" />
     <link rel="stylesheet" href="../estilos/personalizados.css" />
     <link rel="stylesheet" href="../estilos/menu-hamburguesa.css" />
-    <!-- [SEO][UX]: Preconnect optimiza la carga de fuentes externas, mejorando el rendimiento y la experiencia de usuario. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -40,43 +37,32 @@
       rel="stylesheet" />
   </head>
   <body>
+    <a href="#contenido-proyectos" class="skip-link"
+      >Saltar al contenido principal</a
+    >
+
     <!-- [A11y][AA]: Skip link permite a usuarios de teclado saltar directamente al contenido principal, cumpliendo WCAG 2.2 AA. Visible solo al usar Tab. -->
     <a href="#contenido-proyectos" class="skip-link"
       >Saltar al contenido principal</a
     >
 
-    <!-- ============================================
-          HEADER PRINCIPAL
-          ============================================ -->
-    <!-- [A11y][AA]: Skip link permite a usuarios de teclado saltar directamente al contenido principal, cumpliendo WCAG 2.2 AA. Visible solo al usar Tab. -->
-    <a href="#contenido-proyectos" class="skip-link"
-      >Saltar al contenido principal</a
-    >
-    <!-- ============================================
-         HEADER PRINCIPAL
-         ============================================ -->
     <header class="light encabezado-principal">
-      <!-- [SEO][UX]: El logo enlazado ayuda a la navegación, refuerza la marca y previene saltos de diseño (CLS). -->
       <a
         href="../index.html"
         aria-label="Mielma Developer - Ir al inicio"
         class="logo">
-        <!-- [A11y][AA]: alt descriptivo para logo, esencial para usuarios de lectores de pantalla. Cumple WCAG 2.2 AA para imágenes. -->
         <img
           src="../images/mielma_logo.webp"
           alt="Logo Mielma Developer"
           width="150"
           height="150"
           fetchpriority="high" />
-        <!-- [SEO][UX]: fetchpriority="high" indica al navegador que debe cargar esta imagen lo antes posible. Mejora el LCP (Largest Contentful Paint), una métrica clave de Core Web Vitals, y ayuda a Google a valorar mejor el rendimiento y posicionamiento SEO de la página. -->
       </a>
       <div class="encabezado-contenido">
-        <!-- [SEO][A11y][AA]: Solo un H1 por página, define el tema principal. Mejora la jerarquía para buscadores y lectores de pantalla. Cumple WCAG 2.2 AA. -->
         <h1>
           MielmaDev<br />
           <span class="h1-segundo-trozo">Proyectos realizados</span>
         </h1>
-        <!-- [A11y][AA]: Botón nativo para menú, ARIA solo cuando la semántica nativa es insuficiente. Cumple WCAG 2.2 AA para controles interactivos. -->
         <div class="hamburguesa-contenedor">
           <button
             class="menu-hamburguesa"
@@ -88,7 +74,6 @@
             <span class="linea"></span>
           </button>
         </div>
-        <!-- [A11y][AA]: <nav> ya tiene rol implícito, no añadir role extra. aria-label solo si hay varios menús. Mejora landmarks para navegación accesible. Cumple WCAG 2.2 AA. -->
         <nav
           id="menu-principal"
           class="menu-principal"
@@ -108,22 +93,18 @@
       </div>
     </header>
     <main class="contenido-principal">
-      <!-- [A11y][AA]: aria-labelledby referencia el ID del h1 para navegación por landmarks. Permite a los lectores de pantalla identificar y saltar directamente a la sección por su título, mejorando la accesibilidad y cumpliendo WCAG 2.2 AA. -->
       <section
         class="proyectos-lista"
         aria-labelledby="proyectos-titulo"
         id="contenido-proyectos">
         <h2 id="proyectos-titulo">Proyectos realizados</h2>
-        <!-- [SEO][UX]: Introducción breve que explica el enfoque y valor de los proyectos. Mejora la confianza y la conversión. -->
         <p class="intro-proyectos">
           Estos son algunos de mis trabajos recientes en desarrollo web y
           soluciones digitales. Cada proyecto está orientado a mejorar la
           presencia online, la experiencia de usuario y los resultados de
           negocio de mis clientes.
         </p>
-        <!-- [A11y][AA]: <article> aporta estructura semántica y mejora la navegación por landmarks. Cumple WCAG 2.2 AA. -->
         <article class="tarjeta light" tabindex="0">
-          <!-- [A11y][UX][SEO]: El bloque <details><summary> se usa para mostrar los detalles técnicos del proyecto en un acordeón accesible y nativo. Mejora la experiencia de usuario al ocultar información avanzada hasta que se solicite, mantiene la página limpia y rápida de leer, y es óptimo para SEO y accesibilidad. El summary solo ocupa el ancho necesario, el fondo y sombra destacan el bloque expandido. -->
           <h3>🥝 Frutería Mejía — Web y Community Manager</h3>
           <p>
             Se desarrolló una página web moderna y fácil de usar para Frutería
@@ -176,7 +157,6 @@
           </a>
         </article>
         <article class="tarjeta light" tabindex="0">
-          <!-- [A11y][UX][SEO]: Se usa <details><summary> para mostrar los detalles técnicos del proyecto en un acordeón accesible y nativo. Mejora la experiencia de usuario y la limpieza visual, y es óptimo para SEO y accesibilidad. -->
           <h3>🌐 KOBA - Web interactiva</h3>
           <p>
             KOBA es una web interactiva pensada para ofrecer una experiencia
@@ -224,7 +204,6 @@
           >
         </article>
         <article class="tarjeta light" tabindex="0">
-          <!-- [A11y][UX][SEO]: Se usa <details><summary> para mostrar los detalles técnicos del proyecto en un acordeón accesible y nativo. Mejora la experiencia de usuario y la limpieza visual, y es óptimo para SEO y accesibilidad. -->
           <h3>📄 CV Demo (html, css, js)</h3>
           <p>
             CV Demo es una herramienta pensada para que cualquier persona pueda
@@ -269,8 +248,6 @@
       </section>
     </main>
     <footer class="light">
-      <!-- [A11y][AA][UX]: <footer class="light"> proporciona información legal y enlaces clave, accesible para todos los usuarios. Cumple WCAG 2.2 AA. -->
-
       <p class="footer-copyright">
         &copy; <span id="year"></span> Mielma Developer. Todos los derechos
         reservados.
@@ -284,9 +261,7 @@
         </li>
       </ul>
     </footer>
-    <!-- ============================================
-          SCRIPTS
-          ============================================ -->
+    SCRIPTS ============================================ -->
     <script src="../script/centrar-foco-tabulador.js"></script>
     <script src="../script/year.js"></script>
     <script src="../script/menu-hamburguesa.js"></script>
