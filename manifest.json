@@ -1,0 +1,24 @@
+{
+  "name": "MielmaDev Portfolio",
+  "short_name": "MielmaDev",
+  "description": "Portfolio accesible y SEO de Miren Elizabeth Marañón (MielmaDev), desarrolladora web.",
+  "lang": "es",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fffbe6",
+  "theme_color": "#f7c948",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "images/mielma_logo.webp",
+      "sizes": "150x150",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48 32x32 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}

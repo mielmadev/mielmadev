@@ -1,0 +1,9 @@
+# robots.txt para MielmaDev Portfolio
+# Accesibilidad: Permite a todos los bots indexar el sitio
+# Usabilidad: Bloquea carpetas de backup y temporales
+# SEO: Permite indexar todas las páginas relevantes
+
+User-agent: *
+Disallow: /backup/
+Allow: /
+Sitemap: https://mielmadev.github.io/sitemap.xml
