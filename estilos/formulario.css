@@ -1,0 +1,136 @@
+/* Estilos del formulario de contacto de MielmaDev, adaptados desde Koba */
+
+.formulario-email-mielmadev {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  margin-bottom: 0.7rem;
+  border: 2.5px solid #5a189a;
+  border-radius: 8px 32px;
+  background: transparent;
+  transition:
+    box-shadow 0.2s,
+    border-color 0.2s,
+    background 0.2s;
+  box-shadow:
+    0 4px 24px 0 rgba(90, 24, 154, 0.25),
+    0 1.5px 0 0 #5a189a inset;
+  overflow: visible;
+  padding: 2rem 1rem;
+  max-width: 600px;
+  width: 100%;
+}
+
+.formulario-email-mielmadev-inner {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.formulario-email-mielmadev-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.formulario-email-mielmadev-col.izq {
+  max-width: 320px;
+  flex: 1 1 320px;
+}
+
+.formulario-email-mielmadev-col.der {
+  flex: 2 1 340px;
+  min-width: 220px;
+  max-width: 100%;
+}
+
+.formulario-email-mielmadev label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  gap: 0.5rem;
+  color: #5a189a;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: text-shadow 0.2s;
+}
+.formulario-email-mielmadev label:hover {
+  text-shadow:
+    0 0 6px #5a189a,
+    1px 1px 2px #222;
+}
+
+.formulario-email-mielmadev input,
+.formulario-email-mielmadev textarea {
+  border: 1.5px solid #5a189a;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fff;
+  color: #222;
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+
+.formulario-email-mielmadev input:focus,
+.formulario-email-mielmadev textarea:focus {
+  border-color: #9d4edd;
+  outline: none;
+}
+
+.formulario-email-mielmadev-boton {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.formulario-email-mielmadev button[type="submit"] {
+  background: #5a189a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.formulario-email-mielmadev button[type="submit"]:hover {
+  background: #7b2ff2;
+}
+
+@media (max-width: 700px) {
+  .formulario-email-mielmadev-inner {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+.formulario-email-mielmadev .exito {
+  color: #388e3c;
+  font-weight: bold;
+  margin-top: 0.7em;
+}
+.formulario-email-mielmadev .error {
+  color: #d32f2f;
+  font-weight: bold;
+  margin-top: 0.7em;
+}
+.formulario-email-mielmadev label,
+.formulario-email-mielmadev input,
+.formulario-email-mielmadev textarea,
+.formulario-email-mielmadev button {
+  box-sizing: border-box;
+}

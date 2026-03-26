@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="../estilos/personalizados.css" />
     <link rel="stylesheet" href="../estilos/menu-hamburguesa.css" />
     <link rel="stylesheet" href="../estilos/iconos-redes-sociales.css" />
+      <link rel="stylesheet" href="../estilos/formulario.css" />
     <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
@@ -166,7 +167,29 @@
               </a>
             </li>
           </ul>
-          <!-- Aquí irá el formulario de contacto en el futuro -->
+            <form class="formulario-email-mielmadev">
+              <div class="formulario-email-mielmadev-inner">
+                <div class="formulario-email-mielmadev-col izq">
+                  <label class="campo-nombre">
+                    Tu nombre
+                    <input type="text" name="user_name" required />
+                  </label>
+                  <label class="campo-email">
+                    Tu correo
+                    <input type="email" name="user_email" required />
+                  </label>
+                </div>
+                <div class="formulario-email-mielmadev-col der">
+                  <label class="campo-mensaje">
+                    ¿En qué podemos ayudarte?
+                    <textarea name="message" required style="overflow: hidden; resize: none;"></textarea>
+                  </label>
+                </div>
+              </div>
+              <div class="formulario-email-mielmadev-boton">
+                <button type="submit">Enviar mensaje</button>
+              </div>
+            </form>
         </article>
       </section>
     </main>
