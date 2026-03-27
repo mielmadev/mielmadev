@@ -3,7 +3,6 @@
    ======================================== */
 
 :root {
-
   /* ===== COLORES BASE (Logo) ===== */
   --negro: #120813;
   --morado: #78278b;
@@ -34,7 +33,9 @@
 
   /* ===== FOCUS Y TRANSICIÓN ===== */
   --focus-color: var(--morado);
-  --link-transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --link-transition:
+    color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
   /* ===== TIPOGRAFÍA ===== */
   --font-main: "Montserrat", sans-serif;
@@ -89,9 +90,8 @@ body {
 
 main {
   padding: 0 10%;
-  margin-top: 150px;;
+  margin-top: 150px;
 }
-
 
 /* ===== Tema Claro - Variables ===== */
 .light {
@@ -105,7 +105,6 @@ main {
   box-shadow: 0 4px 20px rgba(167, 139, 250, 0.3);
   border: none;
 }
-
 
 *:focus {
   outline: var(--border-width-focus) solid var(--focus-color);
@@ -438,7 +437,6 @@ select:active {
     line-height: 1.3;
   }
 }
-
 
 /* ===== Móvil ===== */
 @media (max-width: 480px) {

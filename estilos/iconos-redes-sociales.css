@@ -16,7 +16,10 @@
   font-size: 5rem;
   /* Sin sombra ni borde externo */
   filter: drop-shadow(0 0 18px #fff) drop-shadow(0 0 8px #fff);
-  transition: transform 0.18s cubic-bezier(.4, 0, .2, 1), box-shadow 0.18s cubic-bezier(.4, 0, .2, 1), filter 0.18s;
+  transition:
+    transform 0.18s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.18s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.18s;
   outline: none;
   border: none !important;
   position: relative;
@@ -27,7 +30,9 @@
 .icon-link:hover {
   background: transparent;
   /* Sin fondo, solo sombra del icono */
-  transition: transform 0.18s cubic-bezier(.4, 0, .2, 1), filter 0.18s;
+  transition:
+    transform 0.18s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.18s;
   transform: scale(1.15) rotate(-6deg);
   color: #fff;
   filter: drop-shadow(0 0 28px var(--icono-color, currentColor));

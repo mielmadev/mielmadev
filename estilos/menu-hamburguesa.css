@@ -56,7 +56,6 @@
     display: block;
     transition: all 0.3s;
     font-size: 0.5rem;
-
   }
 
   .menu-hamburguesa.activo .linea:nth-child(1) {
