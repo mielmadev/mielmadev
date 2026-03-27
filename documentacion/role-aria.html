@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../estilos/globales.css" />
     <link rel="stylesheet" href="../estilos/personalizados.css" />
     <link rel="stylesheet" href="../estilos/menu-hamburguesa.css" />
-        <link rel="stylesheet" href="../estilos/header-footer.css" />
+    <link rel="stylesheet" href="../estilos/header-footer.css" />
     <link rel="stylesheet" href="../estilos/documentacion.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -105,7 +105,9 @@
           <tbody>
             <tr>
               <td>&lt;header&gt;</td>
-              <td><code>&lt;header role="banner"&gt;...&lt;/header&gt;</code></td>
+              <td>
+                <code>&lt;header role="banner"&gt;...&lt;/header&gt;</code>
+              </td>
               <td>banner</td>
               <td>✔️</td>
               <td>No es necesario, salvo casos especiales (varios headers).</td>
@@ -126,28 +128,36 @@
             </tr>
             <tr>
               <td>&lt;footer&gt;</td>
-              <td><code>&lt;footer role="contentinfo"&gt;...&lt;/footer&gt;</code></td>
+              <td>
+                <code>&lt;footer role="contentinfo"&gt;...&lt;/footer&gt;</code>
+              </td>
               <td>contentinfo</td>
               <td>✔️</td>
               <td>No es necesario, salvo varios footers.</td>
             </tr>
             <tr>
               <td>&lt;section&gt;</td>
-              <td><code>&lt;section role="region"&gt;...&lt;/section&gt;</code></td>
+              <td>
+                <code>&lt;section role="region"&gt;...&lt;/section&gt;</code>
+              </td>
               <td>region</td>
               <td>✔️</td>
               <td>No es necesario, salvo que la sección no tenga título.</td>
             </tr>
             <tr>
               <td>&lt;article&gt;</td>
-              <td><code>&lt;article role="article"&gt;...&lt;/article&gt;</code></td>
+              <td>
+                <code>&lt;article role="article"&gt;...&lt;/article&gt;</code>
+              </td>
               <td>article</td>
               <td>✔️</td>
               <td>No es necesario.</td>
             </tr>
             <tr>
               <td>&lt;aside&gt;</td>
-              <td><code>&lt;aside role="complementary"&gt;...&lt;/aside&gt;</code></td>
+              <td>
+                <code>&lt;aside role="complementary"&gt;...&lt;/aside&gt;</code>
+              </td>
               <td>complementary</td>
               <td>✔️</td>
               <td>No es necesario.</td>
@@ -176,7 +186,12 @@
           </tbody>
         </table>
         <p class="nota-roles-aria">
-          <strong>Nota:</strong> Los roles marcados como  <span class="texto-correcto">implícitos</span> ya están presentes en la etiqueta HTML y no es necesario añadir el atributo <code>role</code>, salvo casos especiales. Los roles <span class="texto-incorrecto">no implícitos</span> deben añadirse manualmente.
+          <strong>Nota:</strong> Los roles marcados como
+          <span class="texto-correcto">implícitos</span> ya están presentes en
+          la etiqueta HTML y no es necesario añadir el atributo
+          <code>role</code>, salvo casos especiales. Los roles
+          <span class="texto-incorrecto">no implícitos</span> deben añadirse
+          manualmente.
         </p>
       </section>
       <section>
@@ -208,15 +223,31 @@
           <tbody>
             <tr>
               <td><strong>alert</strong></td>
-              <td>Mensaje urgente que requiere atención inmediata (errores, advertencias).</td>
+              <td>
+                Mensaje urgente que requiere atención inmediata (errores,
+                advertencias).
+              </td>
               <td><code>&lt;div role="alert"&gt;¡Error!&lt;/div&gt;</code></td>
-              <td>Para mostrar mensajes importantes que deben ser leídos por tecnologías de asistencia.</td>
+              <td>
+                Para mostrar mensajes importantes que deben ser leídos por
+                tecnologías de asistencia.
+              </td>
             </tr>
             <tr>
               <td><strong>tooltip</strong></td>
-              <td>Información contextual que aparece al pasar el cursor o enfocar un elemento.</td>
-              <td><code>&lt;div role="tooltip"&gt;Ayuda contextual&lt;/div&gt;</code></td>
-              <td>Para mostrar ayudas o explicaciones breves sobre elementos interactivos.</td>
+              <td>
+                Información contextual que aparece al pasar el cursor o enfocar
+                un elemento.
+              </td>
+              <td>
+                <code
+                  >&lt;div role="tooltip"&gt;Ayuda contextual&lt;/div&gt;</code
+                >
+              </td>
+              <td>
+                Para mostrar ayudas o explicaciones breves sobre elementos
+                interactivos.
+              </td>
             </tr>
             <tr>
               <td><strong>tablist</strong></td>
@@ -246,12 +277,16 @@
               <td><strong>menu</strong></td>
               <td>Menú de opciones, normalmente en aplicaciones o widgets.</td>
               <td><code>&lt;ul role="menu"&gt;...&lt;/ul&gt;</code></td>
-              <td>Para menús personalizados fuera de la navegación principal.</td>
+              <td>
+                Para menús personalizados fuera de la navegación principal.
+              </td>
             </tr>
           </tbody>
         </table>
         <p class="nota-roles-aria">
-          <strong>Nota:</strong> Los roles avanzados se usan para interfaces ricas e interactivas, y ayudan a tecnologías de asistencia a interpretar correctamente la función de cada elemento.
+          <strong>Nota:</strong> Los roles avanzados se usan para interfaces
+          ricas e interactivas, y ayudan a tecnologías de asistencia a
+          interpretar correctamente la función de cada elemento.
         </p>
       </section>
       <section>
@@ -274,22 +309,26 @@
     </main>
     <footer class="light">
       <p class="footer-copyright">
-        &copy; <span id="year"></span> Mielma Developer. Todos los derechos reservados.
+        &copy; <span id="year"></span> Mielma Developer. Todos los derechos
+        reservados.
       </p>
       <ul class="footer-links">
         <li>
-          <a href="../paginas/aviso-legal.html" class="btn-enlaces">Aviso legal</a>
+          <a href="../paginas/aviso-legal.html" class="btn-enlaces"
+            >Aviso legal</a
+          >
         </li>
         <li>
-          <a href="../paginas/politica-privacidad.html" class="btn-enlaces">Política de privacidad</a>
+          <a href="../paginas/politica-privacidad.html" class="btn-enlaces"
+            >Política de privacidad</a
+          >
         </li>
       </ul>
     </footer>
 
-      <script src="../script/centrar-foco-tabulador.js"></script>
-      <script src="../script/visor-pdf.js"></script>
-      <script src="../script/year.js"></script>
-      <script src="../script/menu-hamburguesa.js"></script>
-    </main>
+    <script src="../script/centrar-foco-tabulador.js"></script>
+    <script src="../script/visor-pdf.js"></script>
+    <script src="../script/year.js"></script>
+    <script src="../script/menu-hamburguesa.js"></script>
   </body>
 </html>
