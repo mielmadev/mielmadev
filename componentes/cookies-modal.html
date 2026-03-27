@@ -1,0 +1,51 @@
+<!-- Modal de configuración de cookies accesible -->
+<div
+  id="cookies-modal"
+  class="cookies-modal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="cookies-modal-titulo"
+  tabindex="-1"
+  hidden>
+  <div class="cookies-modal__contenido">
+    <h2 id="cookies-modal-titulo">Configuración de cookies</h2>
+    <form id="cookies-form">
+      <fieldset style="border: none; padding: 0; margin: 0">
+        <div class="cookies-modal__opcion">
+          <input
+            type="checkbox"
+            id="cookies-tecnicas"
+            name="cookies-tecnicas"
+            checked
+            disabled />
+          <label for="cookies-tecnicas" style="font-weight: 600">
+            Cookies técnicas necesarias (siempre activas)
+            <a href="#" class="btn-enlaces" id="ver-cookies-tecnicas">
+              Ver detalle
+            </a>
+          </label>
+        </div>
+        <div class="cookies-modal__opcion">
+          <input
+            type="checkbox"
+            id="cookies-no-tecnicas"
+            name="cookies-no-tecnicas" />
+          <label for="cookies-no-tecnicas">
+            Cookies de análisis y personalización
+          </label>
+        </div>
+      </fieldset>
+      <div class="cookies-modal__acciones">
+        <button type="button" id="cookies-guardar" class="btn-enlaces aceptar">
+          Guardar preferencias
+        </button>
+        <button
+          type="button"
+          id="cookies-cancelar"
+          class="btn-enlaces configurar">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

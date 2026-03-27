@@ -93,7 +93,7 @@ details.proyecto-detalles[open] summary:after {
 }
 
 /* Botón accesible para bio link */
-a.btn-enlaces {
+a.btn-enlaces, button.btn-enlaces {
   margin-top: 1rem;
   display: inline-block;
   background: var(--rosa-muy-claro);
@@ -111,11 +111,20 @@ a.btn-enlaces {
 }
 
 a.btn-enlaces:hover,
-a.btn-enlaces:focus {
+a.btn-enlaces:focus,
+button.btn-enlaces:hover,
+button.btn-enlaces:focus {
   background: var(--rosita);
   color: var(--blanco);
   box-shadow: 0 4px 16px rgba(196, 91, 212, 0.15);
   outline: none;
+}
+
+a.btn-enlaces:active,
+button.btn-enlaces:active {
+  background: var(--morado);
+  color: var(--blanco);
+  box-shadow: 0 2px 8px rgba(120, 39, 139, 0.18);
 }
 
 .contenido-principal {

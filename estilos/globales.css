@@ -82,7 +82,6 @@ body {
   position: relative;
   min-height: 100vh;
   font-size: var(--font-size);
-  text-align: justify;
   background: var(--fondo);
   color: var(--texto);
   overflow-x: hidden;
@@ -338,6 +337,36 @@ select:active {
 .light textarea:active,
 .light select:active {
   border-color: var(--active-color);
+}
+
+/* ===== Tablas ===== */
+table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: collapse;
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size);
+  background: var(--blanco);
+  color: var(--morado);
+  box-shadow: 0 2px 8px rgba(120, 39, 139, 0.07);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+
+table th,
+table td {
+  padding: 0.7em 1em;
+  border-bottom: 1px solid #e0c6e6;
+  text-align: left;
+}
+
+table th {
+  background: var(--rosa-muy-claro);
+  font-weight: var(--font-weight-bold);
+}
+
+table tr:last-child td {
+  border-bottom: none;
 }
 
 /* ===== Accesibilidad ===== */

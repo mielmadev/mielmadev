@@ -1,0 +1,109 @@
+/* cookies-modal.css - Estilos para el modal de configuración de cookies */
+.cookies-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(60, 16, 80, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+}
+
+.cookies-modal[hidden] {
+  display: none;
+}
+
+.cookies-modal__contenido {
+  background: var(--blanco);
+  color: var(--morado);
+  border-radius: 14px;
+  box-shadow: 0 6px 32px rgba(120, 39, 139, 0.18);
+  padding: 2.2rem 2.5rem 1.5rem 2.5rem;
+  max-width: 95vw;
+  margin: 0 auto;
+  outline: none;
+}
+
+.cookies-modal__opcion {
+  margin-bottom: 1.2em;
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  text-align: left;
+}
+
+.cookies-modal__opcion input[type="checkbox"] {
+  accent-color: var(--morado);
+  width: 1.3em;
+  height: 1.3em;
+  margin: 0;
+  vertical-align: middle;
+  box-shadow: 0 0 0 2px var(--morado) inset;
+}
+
+.cookies-modal__opcion input[type="checkbox"]:checked {
+  accent-color: var(--rosa);
+  box-shadow: 0 0 0 2px var(--rosa) inset;
+}
+
+.cookies-modal__opcion label {
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.cookies-modal__acciones {
+  display: flex;
+  gap: 1.2em;
+  justify-content: flex-end;
+  margin-top: 1.5em;
+}
+
+#cookies-modal-titulo {
+  margin-top: 0;
+  margin-bottom: 1.2em;
+  font-size: 1.3em;
+}
+
+/* Ajuste tabla dentro de modales de cookies */
+.cookies-modal__contenido .tabla-cookies {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1.5em;
+  border-radius: 8px;
+  box-shadow: none;
+  background: var(--blanco);
+  color: var(--morado);
+}
+
+.cookies-modal__contenido .tabla-cookies th,
+.cookies-modal__contenido .tabla-cookies td {
+  padding: 0.6em 0.7em;
+  border-bottom: 1px solid #e0c6e6;
+  font-size: 1em;
+}
+
+.cookies-modal__contenido .tabla-cookies th {
+  background: var(--rosa-muy-claro);
+  font-weight: 600;
+}
+
+.cookies-modal__contenido .tabla-cookies tr:last-child td {
+  border-bottom: none;
+}
+
+/* Cambios para que el modal ocupe todo el ancho en móviles */
+@media (max-width: 700px) {
+  .cookies-modal__contenido {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    padding-left: 10vw !important;
+    padding-right: 10vw !important;
+    box-sizing: border-box;
+    margin: 0;
+  }
+}
