@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Node.js, nvm y Chocolatey en Windows | Mielma Developer</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../estilos/base.css" />
+    <link rel="stylesheet" href="../estilos/globales.css" />
+    <link rel="stylesheet" href="../estilos/personalizados.css" />
+    <link rel="stylesheet" href="../estilos/menu-hamburguesa.css" />
+    <link rel="stylesheet" href="../estilos/header-footer.css" />
+    <link rel="stylesheet" href="../estilos/documentacion.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Cinzel:wght@400..900&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <header class="light encabezado-principal">
+      <div class="logo">
+        <a href="../index.html" aria-label="Mielma Developer - Ir al inicio">
+          <img
+            src="../images/mielma_logo.webp"
+            alt="Logo Mielma Developer"
+            width="150"
+            height="150" />
+        </a>
+      </div>
+      <div class="encabezado-contenido">
+        <h1>
+          Mielma<br />
+          <span class="h1-segundo-trozo">Desarrolladora Web</span>
+        </h1>
+        <div class="hamburguesa-contenedor">
+          <button
+            class="menu-hamburguesa"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="menu-principal">
+            <span class="linea"></span>
+            <span class="linea"></span>
+            <span class="linea"></span>
+          </button>
+        </div>
+        <nav
+          class="menu-principal"
+          role="navigation"
+          aria-label="Menú principal"
+          id="menu-principal">
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../paginas/proyectos.html">Proyectos</a></li>
+            <li><a href="../paginas/titulaciones.html">Titulaciones</a></li>
+            <li><a href="../paginas/contacto.html">Contacto</a></li>
+            <li>
+              <a href="../paginas/desarrolladores.html" class="active"
+                >Desarrolladores</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="contenido-documentacion">
+      <section>
+        <h2>Node.js, nvm y Chocolatey en Windows</h2>
+        <p>
+          Pasos y comandos esenciales para instalar, actualizar y gestionar
+          Node.js y sus herramientas en Windows.
+        </p>
+      </section>
+      <section>
+        <h2>1. Instalar Chocolatey (opcional, recomendado)</h2>
+        <ul>
+          <li>
+            Abre PowerShell como administrador y ejecuta:<br />
+            <code
+              >Set-ExecutionPolicy Bypass -Scope Process -Force;
+              [System.Net.ServicePointManager]::SecurityProtocol =
+              [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex
+              ((New-Object
+              System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))</code
+            >
+          </li>
+          <li>Ver versión instalada: <code>choco --version</code></li>
+          <li>
+            Ver si hay actualización:
+            <code>choco upgrade chocolatey --noop</code>
+          </li>
+          <li>
+            Actualizar Chocolatey (como administrador):
+            <code>choco upgrade chocolatey</code>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>2. Instalar nvm (Node Version Manager)</h2>
+        <ul>
+          <li>Instalar con Chocolatey: <code>choco install nvm</code></li>
+          <li>
+            O descarga el instalador desde:
+            <a
+              href="https://github.com/coreybutler/nvm-windows/releases"
+              target="_blank"
+              >nvm-windows releases</a
+            >
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>3. Instalar y gestionar Node.js con nvm</h2>
+        <ul>
+          <li>Ver versiones disponibles: <code>nvm list available</code></li>
+          <li>
+            Instalar una versión específica (ejemplo, última LTS):
+            <code>nvm install 20.11.1</code>
+          </li>
+          <li>Ver versiones instaladas: <code>nvm list</code></li>
+          <li>Cambiar la versión activa: <code>nvm use 20.11.1</code></li>
+          <li>Ver la versión de Node.js en uso: <code>node --version</code></li>
+        </ul>
+      </section>
+      <section>
+        <h2>4. Actualizar Node.js</h2>
+        <ul>
+          <li>
+            Instala la nueva versión: <code>nvm install &lt;versión&gt;</code>
+          </li>
+          <li>Activa: <code>nvm use &lt;versión&gt;</code></li>
+        </ul>
+      </section>
+      <section>
+        <h2>5. Instalación directa de Node.js (sin nvm)</h2>
+        <ul>
+          <li>
+            Descarga el instalador desde:
+            <a href="https://nodejs.org/" target="_blank">nodejs.org</a>
+          </li>
+          <li>Ejecuta el instalador y sigue los pasos.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Consejos</h2>
+        <ul>
+          <li>Usar nvm es lo más flexible para desarrolladores.</li>
+          <li>
+            Chocolatey facilita la gestión y actualización de muchos programas.
+          </li>
+          <li>
+            Ejecuta la terminal como administrador para evitar problemas de
+            permisos.
+          </li>
+        </ul>
+        <p style="font-size: 0.9em; color: #888">
+          Última actualización: 27/03/2026
+        </p>
+      </section>
+    </main>
+    <footer class="light">
+      <p class="footer-copyright">
+        &copy; <span id="year"></span> Mielma Developer. Todos los derechos
+        reservados.
+      </p>
+      <ul class="footer-links">
+        <li>
+          <a href="../paginas/aviso-legal.html" class="btn-enlaces"
+            >Aviso legal</a
+          >
+        </li>
+        <li>
+          <a href="../paginas/politica-privacidad.html" class="btn-enlaces"
+            >Política de privacidad</a
+          >
+        </li>
+      </ul>
+    </footer>
+    <script src="../script/centrar-foco-tabulador.js"></script>
+    <script src="../script/visor-pdf.js"></script>
+    <script src="../script/year.js"></script>
+    <script src="../script/menu-hamburguesa.js"></script>
+  </body>
+</html>
