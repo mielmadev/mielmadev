@@ -28,7 +28,11 @@
     btnAceptar?.addEventListener("click", function () {
       localStorage.setItem(consentKey, "aceptado");
       banner.remove();
-      // Aquí puedes activar cookies no técnicas si las tienes
+      // FUTURO: Aquí puedes activar cookies no técnicas (analítica, publicidad, personalización, etc.)
+      // Por ejemplo:
+      // activarCookiesAnaliticas();
+      // activarCookiesPublicidad();
+      // activarCookiesPersonalizacion();
     });
 
     btnConfigurar?.addEventListener("click", function () {
