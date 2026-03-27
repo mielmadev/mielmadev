@@ -1,4 +1,45 @@
-/* cookies-modal.css - Estilos para el modal de configuración de cookies */
+/* cookies.css - Estilos unificados para banner y modales de cookies */
+
+/* === Banner de cookies === */
+.cookies-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--rosa-muy-claro, #f8d8f0);
+  color: var(--morado, #78278b);
+  padding: 1.5em 1em;
+  box-shadow: 0 -4px 24px rgba(120, 39, 139, 0.15);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 3px solid var(--morado, #78278b);
+}
+
+.cookies-banner__acciones {
+  display: flex;
+  gap: 1.5em;
+}
+
+@media (max-width: 600px) {
+  .cookies-banner {
+    font-size: 1.05rem;
+  }
+
+  .cookies-banner__acciones {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.7em;
+  }
+
+  .btn-cookies {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* === Modales de cookies (configuración y técnicas) === */
 .cookies-modal {
   position: fixed;
   top: 0;
@@ -19,14 +60,18 @@
 .cookies-modal__contenido {
   background: var(--blanco);
   color: var(--morado);
-  border-radius: 14px;
+  border-radius: 25px 0 25px 0;
+  border-top: 3px solid var(--morado, #78278b);
+  border-bottom: 3px solid var(--morado, #78278b);
   box-shadow: 0 6px 32px rgba(120, 39, 139, 0.18);
   padding: 2.2rem 2.5rem 1.5rem 2.5rem;
   max-width: 95vw;
   margin: 0 auto;
   outline: none;
+  overflow-x: auto;
 }
 
+/* Opciones del modal de configuración */
 .cookies-modal__opcion {
   margin-bottom: 1.2em;
   display: flex;
@@ -69,8 +114,9 @@
   font-size: 1.3em;
 }
 
-/* Ajuste tabla dentro de modales de cookies */
-.cookies-modal__contenido .tabla-cookies {
+/* Tablas dentro de los modales */
+.cookies-modal__contenido .tabla-cookies,
+.cookies-modal__contenido table {
   width: 100%;
   max-width: 100%;
   margin-bottom: 1.5em;
@@ -78,32 +124,47 @@
   box-shadow: none;
   background: var(--blanco);
   color: var(--morado);
+  font-size: 1em;
+  word-break: break-word;
+  display: block;
+  overflow-x: auto;
 }
 
 .cookies-modal__contenido .tabla-cookies th,
-.cookies-modal__contenido .tabla-cookies td {
+.cookies-modal__contenido .tabla-cookies td,
+.cookies-modal__contenido table th,
+.cookies-modal__contenido table td {
   padding: 0.6em 0.7em;
   border-bottom: 1px solid #e0c6e6;
-  font-size: 1em;
 }
 
-.cookies-modal__contenido .tabla-cookies th {
+.cookies-modal__contenido .tabla-cookies th,
+.cookies-modal__contenido table th {
   background: var(--rosa-muy-claro);
   font-weight: 600;
 }
 
-.cookies-modal__contenido .tabla-cookies tr:last-child td {
+.cookies-modal__contenido .tabla-cookies tr:last-child td,
+.cookies-modal__contenido table tr:last-child td {
   border-bottom: none;
 }
 
-/* Cambios para que el modal ocupe todo el ancho en móviles */
 @media (max-width: 700px) {
   .cookies-modal__contenido {
     width: 100vw !important;
     max-width: 100vw !important;
-    padding-left: 10vw !important;
-    padding-right: 10vw !important;
+    padding-left: 4vw !important;
+    padding-right: 4vw !important;
     box-sizing: border-box;
     margin: 0;
+    font-size: 0.98em;
+  }
+
+  .cookies-modal__contenido table {
+    font-size: 0.95em;
+    word-break: break-word;
+    display: block;
+    overflow-x: auto;
+    max-width: 100%;
   }
 }
