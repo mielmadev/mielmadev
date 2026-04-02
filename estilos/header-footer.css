@@ -45,7 +45,8 @@
   overflow: visible;
 }
 
-.menu-principal {
+.menu-principal,
+.enlaces-footer {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -57,7 +58,8 @@
   padding-right: 1rem;
 }
 
-.menu-principal ul {
+.menu-principal ul,
+.enlaces-footer ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -68,19 +70,24 @@
   gap: 2rem;
 }
 
-.menu-principal li {
+.menu-principal li,
+.enlaces-footer li {
   display: flex;
   align-items: center;
   margin: 0;
   padding: 0;
+  
 }
 
-.menu-principal a {
+/* Unificado: enlaces principales de menú y footer */
+/* Unificar estilos de enlaces de menú y footer */
+.menu-principal a,
+.enlaces-footer a {
   color: var(--morado);
   font-weight: 500;
   font-size: 1.7rem;
-  padding: 0.5rem;
-  border-radius: 8px;
+  padding: 0.5rem 1rem ;
+  border-radius: 25px 0 25px 0;
   transition:
     background 0.3s,
     color 0.3s,
@@ -90,14 +97,19 @@
 }
 
 .menu-principal a:hover,
-.menu-principal a:focus {
+.menu-principal a:focus,
+.enlaces-footer a:hover,
+.enlaces-footer a:focus {
   background: var(--rosa-muy-claro);
   color: var(--morado);
   box-shadow: 0 4px 16px rgba(196, 91, 212, 0.15);
   outline: none;
 }
 
-.menu-principal a.active {
+.menu-principal a.active,
+.menu-principal a:active,
+.enlaces-footer a.active,
+.enlaces-footer a:active {
   color: var(--rosa);
   font-weight: bold;
   background: var(--rosa-muy-claro);
@@ -123,18 +135,11 @@ footer {
   color: var(--texto);
 }
 
-/* Botones de enlaces en el footer: tamaño reducido */
-
-/* Enlaces legales del footer en línea y con separación */
-.footer-links {
-  list-style: none;
-  padding: 0;
+footer .enlaces-footer {
   margin: 0;
-  display: flex;
-  gap: 0.5em;
+  padding: 0;
+  gap: 1.5rem;
+ display:flex;
+  flex-direction: row;
   justify-content: center;
-}
-
-.footer-links li {
-  display: inline;
-}
+  align-items: center;}

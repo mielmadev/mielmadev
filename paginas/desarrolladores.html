@@ -5,24 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Recursos, documentación y buenas prácticas para desarrolladores web en MielmaDev." />
+      content="Recursos, documentación y buenas prácticas para desarrolladores web en MielmaDev."
+    />
     <meta name="author" content="Miren Elizabeth Marañón" />
     <title>MielmaDev | Desarrolladores</title>
     <meta
       property="og:title"
-      content="Desarrolladores | MielmaDev - Portfolio de Desarrollo Web y Marketing Digital" />
+      content="Desarrolladores | MielmaDev - Portfolio de Desarrollo Web y Marketing Digital"
+    />
     <meta
       property="og:description"
-      content="Recursos, documentación y buenas prácticas para desarrolladores web en MielmaDev." />
+      content="Recursos, documentación y buenas prácticas para desarrolladores web en MielmaDev."
+    />
     <meta property="og:image" content="../images/mielma_logo.webp" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Desarrolladores | MielmaDev - Portfolio de Desarrollo Web y Marketing Digital" />
+      content="Desarrolladores | MielmaDev - Portfolio de Desarrollo Web y Marketing Digital"
+    />
     <meta
       name="twitter:description"
-      content="Recursos, documentación y buenas prácticas para desarrolladores web en MielmaDev." />
+      content="Recursos, documentación y buenas prácticas para desarrolladores web en MielmaDev."
+    />
     <meta name="twitter:image" content="../images/mielma_logo.webp" />
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
     <link rel="stylesheet" href="../estilos/base.css" />
@@ -35,7 +40,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Cinzel:wght@400..900&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
   </head>
   <body>
     <a href="#contenido-desarrolladores" class="skip-link"
@@ -46,13 +52,15 @@
       <a
         href="../index.html"
         aria-label="Mielma Developer - Ir al inicio"
-        class="logo">
+        class="logo"
+      >
         <img
           src="../images/mielma_logo.webp"
           alt="Logo Mielma Developer"
           width="150"
           height="150"
-          fetchpriority="high" />
+          fetchpriority="high"
+        />
       </a>
       <div class="encabezado-contenido">
         <h1>
@@ -64,7 +72,8 @@
             class="menu-hamburguesa"
             aria-label="Abrir menú"
             aria-expanded="false"
-            aria-controls="menu-principal">
+            aria-controls="menu-principal"
+          >
             <span class="linea"></span>
             <span class="linea"></span>
             <span class="linea"></span>
@@ -73,7 +82,8 @@
         <nav
           id="menu-principal"
           class="menu-principal"
-          aria-label="Menú principal">
+          aria-label="Menú principal"
+        >
           <ul>
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="proyectos.html">Proyectos</a></li>
@@ -89,52 +99,430 @@
       </div>
     </header>
     <main id="contenido-desarrolladores" class="contenido-principal">
-      <section>
-        <h2>Documentación y buenas prácticas</h2>
-        <ul>
-          <li>
-            <a href="../documentacion/layer.html"
-              >@layer: organización de archivos CSS</a
-            >
-            >
-          </li>
-          <li>
-            <a href="../documentacion/role-aria.html"
-              >Roles ARIA: mejora la accesibilidad</a
-            >
-            >
-          </li>
-          <li>
-            <a href="../documentacion/node-nvm-chocolatey.html"
-              >Node.js, nvm y Chocolatey en Windows</a
-            >
-            >
-          </li>
-        </ul>
-        <p>
-          Esta sección irá creciendo con más recursos y documentación útil para
-          desarrolladores.
-        </p>
-      </section>
+      <h2>Documentación y buenas prácticas</h2>
+      <p class="intro-desarrolladores">
+        Recopilación de recursos, guías y buenas prácticas para desarrollo web.
+        Haz clic en cada sección para expandir su contenido.
+      </p>
+
+      <!-- @layer CSS -->
+      <details class="light">
+        <summary class="btn">@layer: organización de archivos CSS</summary>
+        <article>
+          <header>
+            <h3>¿Qué es <code>@layer</code>?</h3>
+            <p>
+              <code>@layer</code> es una regla de CSS que permite definir
+              <strong>prioridades entre archivos o bloques de estilos</strong>
+              de forma explícita y organizada.
+            </p>
+          </header>
+          <section>
+            <h4>¿Para qué sirve?</h4>
+            <ul>
+              <li>
+                <strong>Controlar qué estilo gana:</strong> Tú decides qué capa
+                tiene más peso, sin depender del orden de carga ni de la
+                especificidad del selector.
+              </li>
+              <li>
+                <strong>Eliminar <code>!important</code>:</strong> Evita tener
+                que usar esa regla "tramposa" para sobrescribir estilos.
+              </li>
+              <li>
+                <strong>Prevenir conflictos:</strong> Funciona como un "seguro"
+                para que, si el proyecto crece o entran más personas, los
+                estilos no se rompan accidentalmente.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h4>¿Lo necesitas?</h4>
+            <p>
+              Si tu método actual (orden de carga + selectores específicos) te
+              funciona y no tienes conflictos,
+              <strong>no es obligatorio</strong>. Es una herramienta útil para
+              escalar, pero no cambia la funcionalidad visual de tu web.
+            </p>
+            <p>
+              <strong>En resumen:</strong> Es un organizador de prioridades para
+              CSS a prueba de errores. 🛡️
+            </p>
+          </section>
+          <section>
+            <h4>Ejemplo básico de uso</h4>
+            <pre><code>@layer reset, base, componentes, utilidades;
+
+@layer reset {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@layer base {
+  body {
+    font-family: system-ui;
+  }
+}
+
+@layer componentes {
+  .boton {
+    background: gold;
+  }
+}
+
+@layer utilidades {
+  .oculto {
+    display: none;
+  }
+}</code></pre>
+            <p>
+              En este ejemplo, si hay conflicto entre estilos, ganará el que
+              esté en la capa declarada más a la derecha en la lista inicial
+              (<code>utilidades</code> &gt; <code>componentes</code> &gt;
+              <code>base</code> &gt; <code>reset</code>).
+            </p>
+          </section>
+          <section>
+            <h4>Recursos y documentación oficial</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/es/docs/Web/CSS/@layer"
+                  target="_blank"
+                  >Guía de @layer en MDN</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://css-tricks.com/css-layers-and-layer-order/"
+                  target="_blank"
+                  >Artículo sobre CSS Layers en CSS-Tricks</a
+                >
+              </li>
+            </ul>
+          </section>
+        </article>
+      </details>
+
+      <!-- Roles ARIA -->
+      <details class="light">
+        <summary class="btn">Roles ARIA: mejora la accesibilidad</summary>
+        <article>
+          <header>
+            <h3>¿Qué es ARIA?</h3>
+            <p>
+              ARIA (Accessible Rich Internet Applications) es un conjunto de
+              atributos que mejoran la accesibilidad web, permitiendo que
+              tecnologías de asistencia (como lectores de pantalla) comprendan
+              mejor la función y estructura de los elementos HTML.
+            </p>
+          </header>
+          <section>
+            <h4>¿Por qué usar roles ARIA?</h4>
+            <ul>
+              <li>Mejora la accesibilidad para personas con discapacidad.</li>
+              <li>
+                Facilita la navegación y comprensión de la estructura de la web
+                por tecnologías de asistencia.
+              </li>
+              <li>
+                Refuerza la semántica y compatibilidad en navegadores y lectores
+                de pantalla antiguos.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h4>Roles ARIA más utilizados</h4>
+            <table class="tabla-roles-aria">
+              <thead>
+                <tr>
+                  <th>Etiqueta HTML</th>
+                  <th>Ejemplo</th>
+                  <th>Rol ARIA</th>
+                  <th>¿Implícito?</th>
+                  <th>¿Cuándo usar role?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>&lt;header&gt;</td>
+                  <td>
+                    <code>&lt;header role="banner"&gt;...&lt;/header&gt;</code>
+                  </td>
+                  <td>banner</td>
+                  <td>✔️</td>
+                  <td>
+                    No es necesario, salvo casos especiales (varios headers).
+                  </td>
+                </tr>
+                <tr>
+                  <td>&lt;nav&gt;</td>
+                  <td>
+                    <code>&lt;nav role="navigation"&gt;...&lt;/nav&gt;</code>
+                  </td>
+                  <td>navigation</td>
+                  <td>✔️</td>
+                  <td>No es necesario, salvo casos especiales.</td>
+                </tr>
+                <tr>
+                  <td>&lt;main&gt;</td>
+                  <td><code>&lt;main role="main"&gt;...&lt;/main&gt;</code></td>
+                  <td>main</td>
+                  <td>✔️</td>
+                  <td>No es necesario, salvo compatibilidad o varios main.</td>
+                </tr>
+                <tr>
+                  <td>&lt;footer&gt;</td>
+                  <td>
+                    <code
+                      >&lt;footer role="contentinfo"&gt;...&lt;/footer&gt;</code
+                    >
+                  </td>
+                  <td>contentinfo</td>
+                  <td>✔️</td>
+                  <td>No es necesario, salvo varios footers.</td>
+                </tr>
+                <tr>
+                  <td>&lt;section&gt;</td>
+                  <td>
+                    <code
+                      >&lt;section role="region"&gt;...&lt;/section&gt;</code
+                    >
+                  </td>
+                  <td>region</td>
+                  <td>✔️</td>
+                  <td>
+                    No es necesario, salvo que la sección no tenga título.
+                  </td>
+                </tr>
+                <tr>
+                  <td>&lt;article&gt;</td>
+                  <td>
+                    <code
+                      >&lt;article role="article"&gt;...&lt;/article&gt;</code
+                    >
+                  </td>
+                  <td>article</td>
+                  <td>✔️</td>
+                  <td>No es necesario.</td>
+                </tr>
+                <tr>
+                  <td>&lt;aside&gt;</td>
+                  <td>
+                    <code
+                      >&lt;aside role="complementary"&gt;...&lt;/aside&gt;</code
+                    >
+                  </td>
+                  <td>complementary</td>
+                  <td>✔️</td>
+                  <td>No es necesario.</td>
+                </tr>
+                <tr>
+                  <td>&lt;form&gt;</td>
+                  <td><code>&lt;form role="form"&gt;...&lt;/form&gt;</code></td>
+                  <td>form</td>
+                  <td>✔️</td>
+                  <td>No es necesario.</td>
+                </tr>
+                <tr>
+                  <td>&lt;div&gt;</td>
+                  <td><code>&lt;div role="dialog"&gt;...&lt;/div&gt;</code></td>
+                  <td>dialog</td>
+                  <td>❌</td>
+                  <td>Sí, siempre que sea un diálogo/modal.</td>
+                </tr>
+                <tr>
+                  <td>&lt;form&gt;</td>
+                  <td>
+                    <code>&lt;form role="search"&gt;...&lt;/form&gt;</code>
+                  </td>
+                  <td>search</td>
+                  <td>❌</td>
+                  <td>Sí, para zonas de búsqueda.</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="nota-roles-aria">
+              <strong>Nota:</strong> Los roles marcados como implícitos ya están
+              presentes en la etiqueta HTML y no es necesario añadir el atributo
+              <code>role</code>, salvo casos especiales.
+            </p>
+          </section>
+          <section>
+            <h4>¿Cómo usar los roles ARIA?</h4>
+            <ul>
+              <li>
+                Puedes añadir el atributo <strong>role</strong> a las etiquetas
+                semánticas de HTML5 para reforzar la accesibilidad.
+              </li>
+              <li>
+                No hay problema en usar roles ARIA junto con etiquetas como
+                &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;footer&gt;,
+                &lt;section&gt;, &lt;article&gt;.
+              </li>
+              <li>
+                Ver ejemplos en la tabla de roles ARIA más utilizados arriba.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h4>Recursos y documentación oficial</h4>
+            <ul>
+              <li>
+                <a href="https://www.w3.org/TR/wai-aria/#roles" target="_blank"
+                  >Lista completa de roles ARIA (W3C)</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/es/docs/Web/Accessibility/ARIA/Roles"
+                  target="_blank"
+                  >Guía de roles ARIA en MDN</a
+                >
+              </li>
+            </ul>
+          </section>
+        </article>
+      </details>
+
+      <!-- Node.js, nvm y Chocolatey -->
+      <details class="light">
+        <summary class="btn">Node.js, nvm y Chocolatey en Windows</summary>
+        <article>
+          <header>
+            <h3>Node.js, nvm y Chocolatey en Windows</h3>
+            <p>
+              Pasos y comandos esenciales para instalar, actualizar y gestionar
+              Node.js y sus herramientas en Windows.
+            </p>
+          </header>
+          <section>
+            <h4>1. Instalar Chocolatey (opcional, recomendado)</h4>
+            <ul>
+              <li>
+                Abre PowerShell como administrador y ejecuta:<br />
+                <code
+                  >Set-ExecutionPolicy Bypass -Scope Process -Force;
+                  [System.Net.ServicePointManager]::SecurityProtocol =
+                  [System.Net.ServicePointManager]::SecurityProtocol -bor 3072;
+                  iex ((New-Object
+                  System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))</code
+                >
+              </li>
+              <li>Ver versión instalada: <code>choco --version</code></li>
+              <li>
+                Ver si hay actualización:
+                <code>choco upgrade chocolatey --noop</code>
+              </li>
+              <li>
+                Actualizar Chocolatey (como administrador):
+                <code>choco upgrade chocolatey</code>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h4>2. Instalar nvm (Node Version Manager)</h4>
+            <ul>
+              <li>Instalar con Chocolatey: <code>choco install nvm</code></li>
+              <li>
+                O descarga el instalador desde:
+                <a
+                  href="https://github.com/coreybutler/nvm-windows/releases"
+                  target="_blank"
+                  >nvm-windows releases</a
+                >
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h4>3. Instalar y gestionar Node.js con nvm</h4>
+            <ul>
+              <li>
+                Ver versiones disponibles: <code>nvm list available</code>
+              </li>
+              <li>
+                Instalar una versión específica (ejemplo, última LTS):
+                <code>nvm install 20.11.1</code>
+              </li>
+              <li>Ver versiones instaladas: <code>nvm list</code></li>
+              <li>Cambiar la versión activa: <code>nvm use 20.11.1</code></li>
+              <li>
+                Ver la versión de Node.js en uso: <code>node --version</code>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h4>4. Actualizar Node.js</h4>
+            <ul>
+              <li>
+                Instala la nueva versión:
+                <code>nvm install &lt;versión&gt;</code>
+              </li>
+              <li>Activa: <code>nvm use &lt;versión&gt;</code></li>
+            </ul>
+          </section>
+          <section>
+            <h4>5. Instalación directa de Node.js (sin nvm)</h4>
+            <ul>
+              <li>
+                Descarga el instalador desde:
+                <a href="https://nodejs.org/" target="_blank">nodejs.org</a>
+              </li>
+              <li>Ejecuta el instalador y sigue los pasos.</li>
+            </ul>
+          </section>
+          <section>
+            <h4>Consejos</h4>
+            <ul>
+              <li>Usar nvm es lo más flexible para desarrolladores.</li>
+              <li>
+                Chocolatey facilita la gestión y actualización de muchos
+                programas.
+              </li>
+              <li>
+                Ejecuta la terminal como administrador para evitar problemas de
+                permisos.
+              </li>
+            </ul>
+          </section>
+        </article>
+      </details>
+
+      <p class="nota-final">
+        Esta sección irá creciendo con más recursos y documentación útil para
+        desarrolladores.
+      </p>
     </main>
     <footer class="light">
       <p class="footer-copyright">
         &copy; <span id="year"></span> Mielma Developer. Todos los derechos
         reservados.
       </p>
-      <ul class="footer-links">
-        <li><a href="aviso-legal.html" class="btn-enlaces">Aviso legal</a></li>
-        <li>
-          <a href="politica-privacidad.html" class="btn-enlaces"
-            >Política de privacidad</a
-          >
-        </li>
-        <li>
-          <a href="cookies.html" class="btn-enlaces"
-            >Cookies<span class="sr-only"> (abre información cookies)</span></a
-          >
-        </li>
-      </ul>
+      <nav class="enlaces-footer" id="footer-navegacion" aria-label="Enlaces legales y cookies">
+        <ul>
+          <li>
+            <a href="aviso-legal.html"
+              >Aviso legal<span class="sr-only">
+                (abre información legal)</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="politica-privacidad.html"
+              >Política de privacidad<span class="sr-only">
+                (abre información legal)</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="cookies.html"
+              >Cookies<span class="sr-only"> (abre información cookies)</span></a
+            >
+          </li>
+        </ul>
+      </nav>
     </footer>
     <script src="../script/centrar-foco-tabulador.js"></script>
     <script src="../script/year.js"></script>
