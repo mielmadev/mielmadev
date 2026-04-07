@@ -79,7 +79,6 @@
 }
 
 /* Unificado: enlaces principales de menú y footer */
-/* Unificar estilos de enlaces de menú y footer */
 .menu-principal a,
 .enlaces-footer a {
   color: var(--morado);

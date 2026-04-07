@@ -118,3 +118,12 @@
   flex-direction: column;
   gap: 1rem;
 }
+
+.tabla-responsive {
+  overflow-x: auto;
+  width: 100%;
+}
+.tabla-responsive table {
+  min-width: 400px;
+  width: 100%;
+}

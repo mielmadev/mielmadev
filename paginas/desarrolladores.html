@@ -235,117 +235,120 @@
           </section>
           <section>
             <h4>Roles ARIA más utilizados</h4>
-            <table class="tabla-roles-aria">
-              <thead>
-                <tr>
-                  <th>Etiqueta HTML</th>
-                  <th>Ejemplo</th>
-                  <th>Rol ARIA</th>
-                  <th>¿Implícito?</th>
-                  <th>¿Cuándo usar role?</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>&lt;header&gt;</td>
-                  <td>
-                    <code>&lt;header role="banner"&gt;...&lt;/header&gt;</code>
-                  </td>
-                  <td>banner</td>
-                  <td>✔️</td>
-                  <td>
-                    No es necesario, salvo casos especiales (varios headers).
-                  </td>
-                </tr>
-                <tr>
-                  <td>&lt;nav&gt;</td>
-                  <td>
-                    <code>&lt;nav role="navigation"&gt;...&lt;/nav&gt;</code>
-                  </td>
-                  <td>navigation</td>
-                  <td>✔️</td>
-                  <td>No es necesario, salvo casos especiales.</td>
-                </tr>
-                <tr>
-                  <td>&lt;main&gt;</td>
-                  <td><code>&lt;main role="main"&gt;...&lt;/main&gt;</code></td>
-                  <td>main</td>
-                  <td>✔️</td>
-                  <td>No es necesario, salvo compatibilidad o varios main.</td>
-                </tr>
-                <tr>
-                  <td>&lt;footer&gt;</td>
-                  <td>
-                    <code
-                      >&lt;footer role="contentinfo"&gt;...&lt;/footer&gt;</code
-                    >
-                  </td>
-                  <td>contentinfo</td>
-                  <td>✔️</td>
-                  <td>No es necesario, salvo varios footers.</td>
-                </tr>
-                <tr>
-                  <td>&lt;section&gt;</td>
-                  <td>
-                    <code
-                      >&lt;section role="region"&gt;...&lt;/section&gt;</code
-                    >
-                  </td>
-                  <td>region</td>
-                  <td>✔️</td>
-                  <td>
-                    No es necesario, salvo que la sección no tenga título.
-                  </td>
-                </tr>
-                <tr>
-                  <td>&lt;article&gt;</td>
-                  <td>
-                    <code
-                      >&lt;article role="article"&gt;...&lt;/article&gt;</code
-                    >
-                  </td>
-                  <td>article</td>
-                  <td>✔️</td>
-                  <td>No es necesario.</td>
-                </tr>
-                <tr>
-                  <td>&lt;aside&gt;</td>
-                  <td>
-                    <code
-                      >&lt;aside role="complementary"&gt;...&lt;/aside&gt;</code
-                    >
-                  </td>
-                  <td>complementary</td>
-                  <td>✔️</td>
-                  <td>No es necesario.</td>
-                </tr>
-                <tr>
-                  <td>&lt;form&gt;</td>
-                  <td><code>&lt;form role="form"&gt;...&lt;/form&gt;</code></td>
-                  <td>form</td>
-                  <td>✔️</td>
-                  <td>No es necesario.</td>
-                </tr>
-                <tr>
-                  <td>&lt;div&gt;</td>
-                  <td><code>&lt;div role="dialog"&gt;...&lt;/div&gt;</code></td>
-                  <td>dialog</td>
-                  <td>❌</td>
-                  <td>Sí, siempre que sea un diálogo/modal.</td>
-                </tr>
-                <tr>
-                  <td>&lt;form&gt;</td>
-                  <td>
-                    <code>&lt;form role="search"&gt;...&lt;/form&gt;</code>
-                  </td>
-                  <td>search</td>
-                  <td>❌</td>
-                  <td>Sí, para zonas de búsqueda.</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="tabla-responsive">
+              <table class="tabla-roles-aria">
+                <thead>
+                  <tr>
+                    <th>Etiqueta HTML</th>
+                    <th>Ejemplo</th>
+                    <th>Rol ARIA</th>
+                    <th>¿Cuándo usar role?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>&lt;header&gt;</td>
+                    <td>
+                      <code
+                        >&lt;header role="banner"&gt;...&lt;/header&gt;</code
+                      >
+                    </td>
+                    <td>banner</td>
+                    <td>
+                      No es necesario, salvo casos especiales (varios headers).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>&lt;nav&gt;</td>
+                    <td>
+                      <code>&lt;nav role="navigation"&gt;...&lt;/nav&gt;</code>
+                    </td>
+                    <td>navigation</td>
+                    <td>No es necesario, salvo casos especiales.</td>
+                  </tr>
+                  <tr>
+                    <td>&lt;main&gt;</td>
+                    <td>
+                      <code>&lt;main role="main"&gt;...&lt;/main&gt;</code>
+                    </td>
+                    <td>main</td>
+                    <td>
+                      No es necesario, salvo compatibilidad o varios main.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>&lt;footer&gt;</td>
+                    <td>
+                      <code
+                        >&lt;footer
+                        role="contentinfo"&gt;...&lt;/footer&gt;</code
+                      >
+                    </td>
+                    <td>contentinfo</td>
+                    <td>No es necesario, salvo varios footers.</td>
+                  </tr>
+                  <tr>
+                    <td>&lt;section&gt;</td>
+                    <td>
+                      <code
+                        >&lt;section role="region"&gt;...&lt;/section&gt;</code
+                      >
+                    </td>
+                    <td>region</td>
+                    <td>
+                      No es necesario, salvo que la sección no tenga título.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>&lt;article&gt;</td>
+                    <td>
+                      <code
+                        >&lt;article role="article"&gt;...&lt;/article&gt;</code
+                      >
+                    </td>
+                    <td>article</td>
+                    <td>No es necesario.</td>
+                  </tr>
+                  <tr>
+                    <td>&lt;aside&gt;</td>
+                    <td>
+                      <code
+                        >&lt;aside
+                        role="complementary"&gt;...&lt;/aside&gt;</code
+                      >
+                    </td>
+                    <td>complementary</td>
+                    <td>No es necesario.</td>
+                  </tr>
+                  <tr>
+                    <td>&lt;form&gt;</td>
+                    <td>
+                      <code>&lt;form role="form"&gt;...&lt;/form&gt;</code>
+                    </td>
+                    <td>form</td>
+                    <td>No es necesario.</td>
+                  </tr>
+                  <tr>
+                    <td>&lt;div&gt;</td>
+                    <td>
+                      <code>&lt;div role="dialog"&gt;...&lt;/div&gt;</code>
+                    </td>
+                    <td>dialog</td>
+                    <td>Sí, siempre que sea un diálogo/modal.</td>
+                  </tr>
+                  <tr>
+                    <td>&lt;form&gt;</td>
+                    <td>
+                      <code>&lt;form role="search"&gt;...&lt;/form&gt;</code>
+                    </td>
+                    <td>search</td>
+                    <td>Sí, para zonas de búsqueda.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p class="nota-roles-aria">
-              <strong>Nota:</strong> Los roles marcados como implícitos ya están
+              <strong>Nota:</strong> Los roles implícitos ya están
               presentes en la etiqueta HTML y no es necesario añadir el atributo
               <code>role</code>, salvo casos especiales.
             </p>
