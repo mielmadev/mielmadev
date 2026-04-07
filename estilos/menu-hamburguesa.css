@@ -32,6 +32,8 @@
     justify-content: flex-end;
     background: transparent;
     z-index: 1100;
+    order: 3;
+    margin-left: 1rem;
   }
 
   .menu-hamburguesa {
@@ -72,6 +74,8 @@
 
   .menu-principal {
     display: none;
+    order: 2;
+    padding-right: 0;
   }
 
   .menu-principal.abierto {
@@ -90,7 +94,14 @@
 
   .menu-principal.abierto ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .menu-principal.abierto a {
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
   }
 
   .encabezado-contenido {
@@ -104,14 +115,5 @@
     margin-bottom: 0;
     text-align: center;
     font-size: 1.8rem;
-  }
-
-  .menu-principal {
-    order: 2;
-  }
-
-  .hamburguesa-contenedor {
-    order: 3;
-    margin-left: 1rem;
   }
 }
