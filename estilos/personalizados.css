@@ -1,6 +1,3 @@
-/* Estilos para acordeón de detalles técnicos en proyectos */
-/* ...existing code... */
-
 /* Alineación horizontal de h3 y mini imagen en diplomas */
 .diploma-header {
   display: flex;
@@ -105,9 +102,6 @@
   z-index: 2;
 }
 
-
-
-
 .btn-mailto {
   font-size: clamp(1.2rem, 4vw, 4rem);
   padding: 2rem 8rem;
@@ -126,4 +120,36 @@
 .tabla-responsive table {
   min-width: 400px;
   width: 100%;
+}
+
+/* filas imagenes */
+.fila {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.fila .texto,
+.fila .imagen {
+  flex: 1 1 50%;
+  max-width: 50%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .fila {
+    flex-direction: column;
+    gap: 0;
+  }
+  .fila .texto {
+    order: 1;
+  }
+  .fila .imagen {
+    order: 2;
+  }
+  .fila .texto,
+  .fila .imagen {
+    max-width: 100%;
+  }
 }

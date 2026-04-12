@@ -405,28 +405,35 @@ table tr:last-child td {
 /* === 11. DETAILS Y SUMMARY (Acordeón) ===================== */
 
 details,
-details[class] {
+details[class],
+.light details,
+.light details[class] {
   margin: var(--spacing-md) 0;
   border-radius: var(--border-radius-md);
   background: var(--rosa-muy-claro);
+  color: var(--gris);
   box-shadow: 10px 12px 8px #0001;
   padding: 0.5em 1em;
   transition: box-shadow 0.3s;
 }
 
 details[open],
-details[class][open] {
+details[class][open],
+.light details[open],
+.light details[class][open] {
   box-shadow: 10px 12px 8px #0001;
 }
 
 details summary,
-details[class] summary {
+details[class] summary,
+.light details summary,
+.light details[class] summary {
   cursor: pointer;
   font-weight: 600;
   color: var(--morado);
   outline: none;
   padding: 0.3em 0.8em;
-  transition: color 0.2s;
+  transition: color 0.2s, background 0.2s;
   list-style: none;
   display: inline-block;
   width: auto;
@@ -436,13 +443,23 @@ details[class] summary {
   border-radius: var(--border-radius-md);
 }
 
+details summary:hover,
+details summary:focus {
+  background: var(--rosita);
+  color: var(--negro);
+}
+
 details summary::-webkit-details-marker,
-details[class] summary::-webkit-details-marker {
+details[class] summary::-webkit-details-marker,
+.light details summary::-webkit-details-marker,
+.light details[class] summary::-webkit-details-marker {
   display: none;
 }
 
 details summary:after,
-details[class] summary:after {
+details[class] summary:after,
+.light details summary:after,
+.light details[class] summary:after {
   content: " +";
   font-weight: bold;
   margin-left: 0.5em;
@@ -450,11 +467,12 @@ details[class] summary:after {
 }
 
 details[open] summary:after,
-details[class][open] summary:after {
+details[class][open] summary:after,
+.light details[open] summary:after,
+.light details[class][open] summary:after {
   content: " −";
 }
 
-.proyecto-detalles-contenido,
 details>*:not(summary) {
   margin-top: 0.7em;
   padding-left: 0.5em;
