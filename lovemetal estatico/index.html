@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Calendario de festivales y conciertos de música metal. Descubre los mejores eventos de metal en España y el mundo."
+    />
+    <meta
+      name="keywords"
+      content="metal, conciertos, festivales, calendario, música, eventos"
+    />
+    <meta name="author" content="MielmaDev" />
+    <title>Love Metal - Calendario de Festivales y Conciertos</title>
+    <!-- Open Graph para compartir en redes sociales -->
+    <meta
+      property="og:title"
+      content="Love Metal - Calendario de Festivales y Conciertos"
+    />
+    <meta
+      property="og:description"
+      content="Descubre los mejores eventos de metal en España y el mundo."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="URL_DE_TU_IMAGEN.jpg" />
+    <meta property="og:url" content="https://tusitio.com" />
+    <link rel="stylesheet" href="estilos/base.css" />
+    <link rel="stylesheet" href="estilos/globales.css" />
+    <link rel="stylesheet" href="estilos/header-footer.css" />
+    <link rel="stylesheet" href="estilos/personalizados.css" />
+    <link rel="stylesheet" href="estilos/menu-hamburguesa.css" />
+  </head>
+  <body>
+    <header class="encabezado-principal light">
+      <!-- [SEO][UX]: El logo enlazado ayuda a la navegación, refuerza la marca y previene saltos de diseño (CLS). -->
+      <a href="index.html" aria-label="Love Metal - Ir al inicio" class="logo">
+        <!-- [A11y][AA]: alt descriptivo para logo, esencial para usuarios de lectores de pantalla. Cumple WCAG 2.2 AA para imágenes. -->
+        <img
+          src="images/lovemetal_logo.webp"
+          alt="Logo Love Metal"
+          width="150"
+          height="150"
+          fetchpriority="high"
+        />
+        <!-- [SEO][UX]: fetchpriority="high" indica al navegador que debe cargar esta imagen lo antes posible. Mejora el LCP (Largest Contentful Paint). -->
+      </a>
+
+      <div class="encabezado-contenido">
+        <!-- [SEO][A11y][AA]: Solo un H1 por página, define el tema principal. Mejora la jerarquía para buscadores y lectores de pantalla. Cumple WCAG 2.2 AA. -->
+        <h1>
+          Love Metal<br />
+          <span class="h1-segundo-trozo">Festivales y Conciertos</span>
+        </h1>
+
+        <!-- [A11y][AA]: Botón nativo para menú, ARIA solo cuando la semántica nativa es insuficiente. Cumple WCAG 2.2 AA para controles interactivos. -->
+        <div class="hamburguesa-contenedor">
+          <button
+            class="menu-hamburguesa"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="menu-principal"
+          >
+            <span class="linea"></span>
+            <span class="linea"></span>
+            <span class="linea"></span>
+          </button>
+        </div>
+
+        <!-- [A11y][AA]: <nav> ya tiene rol implícito, no añadir role extra. aria-label solo si hay varios menús. Mejora landmarks para navegación accesible. Cumple WCAG 2.2 AA. -->
+        <nav
+          id="menu-principal"
+          class="menu-principal"
+          aria-label="Menú principal"
+        >
+          <ul>
+            <!-- [A11y][AA]: aria-current="page" indica la página actual a lectores de pantalla. Cumple WCAG 2.2 AA para navegación. -->
+            <li>
+              <a href="index.html" class="active" aria-current="page">Inicio</a>
+            </li>
+            <li><a href="calendario.html">Calendario</a></li>
+            <li><a href="#sobre">Sobre el proyecto</a></li>
+            <!-- Puedes añadir más enlaces aquí -->
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <nav aria-label="Navegación principal">
+        <a href="calendario.html" class="btn-calendario"
+          >Ver el calendario de eventos</a
+        >
+      </nav>
+      <section aria-labelledby="sobre">
+        <h2 id="sobre">¿Qué es Love Metal?</h2>
+        <p>
+          Love Metal es un proyecto personal para recopilar y compartir los
+          festivales y conciertos de metal más importantes. ¡Si eres fan del
+          metal, este es tu sitio!
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>
+        &copy; <span id="year"></span> Love Metal. Hecho con pasión por el metal
+        🤘
+      </p>
+      <nav>
+        <a href="paginas/aviso-legal.html" class="btn-enlace">Aviso legal</a>
+        <a href="paginas/politica-privacidad.html" class="btn-enlace"
+          >Política de privacidad</a
+        >
+      </nav>
+    </footer>
+  </body>
+</html>
