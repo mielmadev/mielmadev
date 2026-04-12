@@ -105,6 +105,9 @@
 .btn-mailto {
   font-size: clamp(1.2rem, 4vw, 4rem);
   padding: 2rem 8rem;
+  display: block;
+  text-align: center;
+  margin-top: 6rem;
 }
 
 .documentacion {
@@ -140,6 +143,12 @@
   flex: 1 1 50%;
   max-width: 50%;
   box-sizing: border-box;
+}
+
+/* Centrado horizontal para elementos como enlaces */
+.btn-mailto {
+  display: block;
+  text-align: center;
 }
 
 @media (max-width: 600px) {
