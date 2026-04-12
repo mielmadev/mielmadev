@@ -1,21 +1,33 @@
 // cookies.js - Lógica para el banner de cookies
 (function () {
   // Ruta al banner (ajusta si cambias la estructura)
-  const bannerPath = "componentes/cookies-banner.html";
+  const bannerPath = "/componentes/cookies-banner.html";
   const consentKey = "cookies_consentimiento";
-  const modalPath = "componentes/cookies-modal.html";
-  const tecnicasModalPath = "componentes/cookies-tecnicas.html";
+  const modalPath = "/componentes/cookies-modal.html";
+  const tecnicasModalPath = "/componentes/cookies-tecnicas.html";
 
-  // Cargar el banner dinámicamente si no hay consentimiento
-  function loadBanner() {
-    fetch(bannerPath)
-      .then((res) => res.text())
+  // Función reutilizable para cargar y añadir contenido HTML al DOM
+  function loadHTML(path, callback) {
+    fetch(path)
+      .then((res) => {
+        if (!res.ok) throw new Error(`Error al cargar ${path}: ${res.status}`);
+        return res.text();
+      })
       .then((html) => {
         const temp = document.createElement("div");
         temp.innerHTML = html;
         document.body.appendChild(temp.firstElementChild);
-        addBannerListeners();
-      });
+        callback?.();
+      })
+      .catch((err) => console.error("Error al cargar contenido:", err));
+  }
+
+  // Cargar el banner dinámicamente si no hay consentimiento
+  function loadBanner() {
+    loadHTML(bannerPath, () => {
+      addBannerListeners();
+      ajustarEspaciadoParaBanner();
+    });
   }
 
   // Añadir listeners a los botones del banner
@@ -28,89 +40,126 @@
     btnAceptar?.addEventListener("click", function () {
       localStorage.setItem(consentKey, "aceptado");
       banner.remove();
-      // FUTURO: Aquí puedes activar cookies no técnicas (analítica, publicidad, personalización, etc.)
-      // Por ejemplo:
-      // activarCookiesAnaliticas();
-      // activarCookiesPublicidad();
-      // activarCookiesPersonalizacion();
+      restaurarEspaciado();
+      mostrarNotificacion("Preferencias guardadas correctamente.");
     });
 
     btnConfigurar?.addEventListener("click", function () {
       banner.remove();
+      restaurarEspaciado();
       showCookiesModal();
     });
-    // Cargar y mostrar el modal de configuración de cookies
-    function showCookiesModal() {
-      fetch(modalPath)
-        .then((res) => res.text())
-        .then((html) => {
-          const temp = document.createElement("div");
-          temp.innerHTML = html;
-          document.body.appendChild(temp.firstElementChild);
-          addModalListeners();
-          // Enfocar el modal para accesibilidad
-          const modal = document.getElementById("cookies-modal");
-          modal?.removeAttribute("hidden");
-          modal?.focus();
-        });
-    }
+  }
 
-    // Añadir listeners a los botones del modal
-    function addModalListeners() {
+  // Ajustar el espaciado del contenido para que el banner no bloquee el pie de página
+  function ajustarEspaciadoParaBanner() {
+    const banner = document.getElementById("cookies-banner");
+    if (banner) {
+      const bannerHeight = banner.offsetHeight;
+      document.body.style.paddingBottom = `${bannerHeight}px`;
+    }
+  }
+
+  // Restaurar el espaciado del contenido cuando se elimina el banner
+  function restaurarEspaciado() {
+    document.body.style.paddingBottom = "";
+  }
+
+  // Cargar y mostrar el modal de configuración de cookies
+  function showCookiesModal() {
+    loadHTML(modalPath, () => {
+      addModalListeners();
       const modal = document.getElementById("cookies-modal");
-      if (!modal) return;
-      const btnGuardar = document.getElementById("cookies-guardar");
-      const btnCancelar = document.getElementById("cookies-cancelar");
-      const chkNoTecnicas = document.getElementById("cookies-no-tecnicas");
-      const linkTecnicas = document.getElementById("ver-cookies-tecnicas");
+      modal?.removeAttribute("hidden");
+      modal?.setAttribute("role", "dialog");
+      modal?.setAttribute("aria-labelledby", "cookies-modal-title");
+      modal?.focus();
 
-      btnGuardar?.addEventListener("click", function () {
-        // Guardar preferencias
-        const valor = chkNoTecnicas?.checked
-          ? "personalizadas"
-          : "solo_tecnicas";
-        localStorage.setItem(consentKey, valor);
-        modal.remove();
-        // Aquí puedes activar/desactivar cookies no técnicas según valor
+      // Listener para cerrar el modal con la tecla Escape
+      document.addEventListener("keydown", function handleEscape(e) {
+        if (e.key === "Escape") {
+          modal.remove();
+          document.removeEventListener("keydown", handleEscape);
+          loadBanner();
+        }
       });
+    });
+  }
 
-      btnCancelar?.addEventListener("click", function () {
-        modal.remove();
-        loadBanner();
-      });
+  // Añadir listeners a los botones del modal
+  function addModalListeners() {
+    const modal = document.getElementById("cookies-modal");
+    if (!modal) return;
+    const btnGuardar = document.getElementById("cookies-guardar");
+    const btnCancelar = document.getElementById("cookies-cancelar");
+    const chkNoTecnicas = document.getElementById("cookies-no-tecnicas");
+    const linkTecnicas = document.getElementById("ver-cookies-tecnicas");
 
-      linkTecnicas?.addEventListener("click", function (e) {
-        e.preventDefault();
-        modal.remove();
-        showTecnicasModal();
-      });
-    }
+    btnGuardar?.addEventListener("click", function () {
+      const valor = chkNoTecnicas?.checked ? "personalizadas" : "solo_tecnicas";
+      localStorage.setItem(consentKey, valor);
+      modal.remove();
+      mostrarNotificacion("Preferencias guardadas correctamente.");
+    });
 
-    // Mostrar modal de cookies técnicas
-    function showTecnicasModal() {
-      fetch(tecnicasModalPath)
-        .then((res) => res.text())
-        .then((html) => {
-          const temp = document.createElement("div");
-          temp.innerHTML = html;
-          document.body.appendChild(temp.firstElementChild);
-          addTecnicasModalListeners();
-          const modal = document.getElementById("cookies-tecnicas-modal");
-          modal?.removeAttribute("hidden");
-          modal?.focus();
-        });
-    }
+    btnCancelar?.addEventListener("click", function () {
+      modal.remove();
+      loadBanner();
+    });
 
-    // Listeners para el modal de cookies técnicas
-    function addTecnicasModalListeners() {
+    linkTecnicas?.addEventListener("click", function (e) {
+      e.preventDefault();
+      modal.remove();
+      showTecnicasModal();
+    });
+  }
+
+  // Mostrar modal de cookies técnicas
+  function showTecnicasModal() {
+    loadHTML(tecnicasModalPath, () => {
+      addTecnicasModalListeners();
       const modal = document.getElementById("cookies-tecnicas-modal");
-      if (!modal) return;
-      const btnVolver = document.getElementById("cookies-tecnicas-volver");
-      btnVolver?.addEventListener("click", function () {
-        modal.remove();
-        showCookiesModal();
+      modal?.removeAttribute("hidden");
+      modal?.setAttribute("role", "dialog");
+      modal?.setAttribute("aria-labelledby", "cookies-tecnicas-title");
+      modal?.focus();
+
+      // Listener para cerrar el modal con la tecla Escape
+      document.addEventListener("keydown", function handleEscape(e) {
+        if (e.key === "Escape") {
+          modal.remove();
+          document.removeEventListener("keydown", handleEscape);
+          showCookiesModal();
+        }
       });
-    }
+    });
+  }
+
+  // Listeners para el modal de cookies técnicas
+  function addTecnicasModalListeners() {
+    const modal = document.getElementById("cookies-tecnicas-modal");
+    if (!modal) return;
+    const btnVolver = document.getElementById("cookies-tecnicas-volver");
+    btnVolver?.addEventListener("click", function () {
+      modal.remove();
+      showCookiesModal();
+    });
+  }
+
+  // Función para mostrar notificaciones accesibles
+  function mostrarNotificacion(mensaje) {
+    const notif = document.createElement("div");
+    notif.setAttribute("role", "status");
+    notif.setAttribute("aria-live", "polite");
+    notif.style.cssText = `
+      position: fixed; bottom: 20px; right: 20px;
+      background: #22c55e; color: white; padding: 12px 20px;
+      border-radius: 8px; z-index: 9999; font-weight: 500;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    `;
+    notif.textContent = mensaje;
+    document.body.appendChild(notif);
+    setTimeout(() => notif.remove(), 3000);
   }
 
   // Comprobar si ya hay consentimiento
