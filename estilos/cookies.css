@@ -23,9 +23,6 @@
 }
 
 @media (max-width: 600px) {
-  .cookies-banner {
-    font-size: 1.05rem;
-  }
 
   .cookies-banner__acciones {
     flex-direction: column;
@@ -95,7 +92,6 @@
 }
 
 .cookies-modal__opcion label {
-  font-size: 1em;
   font-weight: 500;
   line-height: 1.5;
   text-align: left;
@@ -111,7 +107,6 @@
 #cookies-modal-titulo {
   margin-top: 0;
   margin-bottom: 1.2em;
-  font-size: 1.3em;
 }
 
 /* Tablas dentro de los modales */
@@ -124,7 +119,6 @@
   box-shadow: none;
   background: var(--blanco);
   color: var(--morado);
-  font-size: 1em;
   word-break: break-word;
   display: block;
   overflow-x: auto;
@@ -157,7 +151,6 @@
     padding-right: 4vw !important;
     box-sizing: border-box;
     margin: 0;
-    font-size: 0.98em;
   }
 
   .cookies-modal__contenido table {
@@ -184,7 +177,6 @@
     width: 100%;
     border: none;
     padding: 0.5em 0.7em;
-    font-size: 1em;
     background: var(--blanco);
   }
 

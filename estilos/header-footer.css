@@ -83,7 +83,6 @@
 .enlaces-footer a {
   color: var(--morado);
   font-weight: 500;
-  font-size: 1.7rem;
   padding: 0.5rem 1rem;
   border-radius: 25px 0 25px 0;
   transition:
@@ -129,7 +128,7 @@ footer {
 
 .footer-copyright {
   margin: 0 0 0.5rem 0;
-  font-size: 1.3rem;
+  font-size: var(--h4-size);
   color: var(--texto);
 }
 
@@ -144,7 +143,7 @@ footer .enlaces-footer {
 
 @media (max-width: 768px) {
   .enlaces-footer a {
-    font-size: 1.3rem;
+    font-size: var(--h4-size);
   }
   footer .enlaces-footer ul {
     display: flex;
