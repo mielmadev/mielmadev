@@ -45,8 +45,10 @@
   --font-weight-medium: 500;
   --font-weight-bold: 700;
 
-  --font-size-root: 62.5%; /*html*/
-  --font-size: 1.8rem; /*body*/
+  --font-size-root: 62.5%;
+  /*html*/
+  --font-size: 1.8rem;
+  /*body*/
 
   --h1-size: 3rem;
   --h1-size-movil: 2rem;
@@ -77,8 +79,8 @@
   --border-width: 1px;
   --border-width-focus: 2px;
   --outline-offset: 2px;
-  --border-radius-sm: 4px;
-  --border-radius-md: 25px 0 25px 0;
+  --borde-radio-peq: 10px 0 10px 0;
+  --borde-radio-grande: 25px 0 25px 0;
 
 }
 
@@ -254,7 +256,7 @@ a:active {
   background: var(--morado);
   color: var(--blanco);
   border: none;
-  border-radius: 25px 0 25px 0;
+  border-radius: var(--borde-radio-peq);
   font-weight: var(--font-weight-bold);
   font-size: var(--btn-size);
   cursor: pointer;
@@ -301,7 +303,7 @@ select {
   width: 100%;
   padding: var(--spacing-sm);
   border: var(--border-width) solid var(--rosita);
-  border-radius: var(--border-radius-sm, 4px);
+  border-radius: var(--borde-radio-peq, 4px);
   background: var(--fondo);
   color: var(--texto);
   font-family: var(--font-main);
@@ -364,7 +366,7 @@ table {
   background: var(--blanco);
   color: var(--morado);
   box-shadow: 0 2px 8px rgba(120, 39, 139, 0.07);
-  border-radius: var(--border-radius-md);
+  border-radius: var(--borde-radio-grande);
   overflow: hidden;
 }
 
@@ -428,7 +430,7 @@ details[class],
 .light details,
 .light details[class] {
   margin: var(--spacing-md) 0;
-  border-radius: var(--border-radius-md);
+  border-radius: var(--borde-radio-grande);
   background: var(--rosa-muy-claro);
   color: var(--gris);
   box-shadow: 10px 12px 8px #0001;
@@ -459,7 +461,7 @@ details[class] summary,
   min-width: 0;
   max-width: 100%;
   background: transparent;
-  border-radius: var(--border-radius-md);
+  border-radius: var(--borde-radio-grande);
 }
 
 details summary:hover,

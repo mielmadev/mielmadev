@@ -57,7 +57,7 @@
 .cookies-modal__contenido {
   background: var(--blanco);
   color: var(--morado);
-  border-radius: 25px 0 25px 0;
+  border-radius: var(--borde-radio-grande);
   border-top: 3px solid var(--morado, #78278b);
   border-bottom: 3px solid var(--morado, #78278b);
   box-shadow: 0 6px 32px rgba(120, 39, 139, 0.18);
@@ -115,7 +115,7 @@
   width: 100%;
   max-width: 100%;
   margin-bottom: 1.5em;
-  border-radius: 8px;
+  border-radius: var(--borde-radio-peq);
   box-shadow: none;
   background: var(--blanco);
   color: var(--morado);
@@ -182,7 +182,7 @@
 
   .cookies-modal__contenido tr {
     margin-bottom: 1.2em;
-    border-radius: 10px;
+    border-radius: var(--borde-radio-peq);
     box-shadow: 0 2px 10px rgba(120, 39, 139, 0.08);
     background: var(--rosa-muy-claro, #f8d8f0);
     padding: 0.5em 0.5em 0.3em 0.5em;

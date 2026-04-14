@@ -15,7 +15,7 @@
   width: 48px;
   height: auto;
   flex-shrink: 0;
-  border-radius: 6px;
+  border-radius: var(--borde-radio-peq);
   box-shadow: 0 1px 6px #0001;
 }
 
@@ -65,7 +65,7 @@
 .visor-aviso {
   position: absolute;
   padding: 0.4em 1em;
-  border-radius: 6px;
+  border-radius: var(--borde-radio-peq);
   font-size: 1rem;
   box-shadow: 0 2px 8px #0002;
   white-space: nowrap;
@@ -82,7 +82,7 @@
   box-shadow: 0 2px 12px rgba(167, 139, 250, 0.1);
   cursor: pointer;
   margin-bottom: 2.5rem;
-  border-radius: 12px;
+  border-radius: var(--borde-radio-grande);
   padding: 2rem 5%;
   background: var(--rosa-muy-claro);
 }
@@ -111,7 +111,7 @@
 }
 
 .documentacion {
-  display:flex;
+  display: flex;
   flex-direction: column;
   gap: 1rem;
 }
@@ -120,6 +120,7 @@
   overflow-x: auto;
   width: 100%;
 }
+
 .tabla-responsive table {
   min-width: 400px;
   width: 100%;
@@ -152,12 +153,15 @@
     flex-direction: column;
     gap: 0;
   }
+
   .fila .texto {
     order: 1;
   }
+
   .fila .imagen {
     order: 2;
   }
+
   .fila .texto,
   .fila .imagen {
     max-width: 100%;
@@ -165,7 +169,9 @@
 }
 
 @media (min-width: 601px) {
-/* Alterna el orden visual en filas pares */
+
+  /* Alterna el orden visual en filas pares */
   .fila:nth-child(even) {
     flex-direction: row-reverse;
-  }}
+  }
+}

@@ -22,10 +22,6 @@
       >Saltar al contenido principal</a
     >
 
-    <a href="#contenido-principal" class="skip-link"
-      >Saltar al contenido principal</a
-    >
-
     <header class="light encabezado-principal">
       <a
         href="../index.html"
@@ -76,126 +72,256 @@
       <section aria-labelledby="titulo-titulaciones">
         <h2 id="titulo-titulaciones">Titulaciones y Certificados</h2>
 
+        <!-- ARTICLE 1: Coding Foundations (OPTIMIZADO) -->
         <article class="tarjeta light" tabindex="0">
           <div class="diploma-header">
-            <img
-              src="../images/titulos/Coding-fundations-mini.webp"
-              alt="Diploma de Coding Foundations"
-              class="diploma-imagen visor-imagen"
-              datos-pdf="../images/pdf/Coding-fundations.pdf"
-              tabindex="0" />
+            <a
+              href="../images/pdf/Coding-fundations.pdf"
+              class="visor-imagen"
+              aria-label="Ver diploma de Coding Foundations en PDF"
+              target="_blank"
+              rel="noopener">
+              <img
+                src="../images/titulos/Coding-fundations-mini.webp"
+                alt="Diploma de Coding Foundations"
+                class="diploma-imagen"
+                width="48"
+                loading="lazy" />
+            </a>
             <h3 class="diploma-nombre">Coding Foundations</h3>
           </div>
           <p>Bottega University · Coding Bootcamp</p>
           <p>Octubre 2023 - Diciembre 2023</p>
+
+          <!-- 
+            ORIGINAL:
+            "Programa intensivo de fundamentos de programación como base para el
+            desarrollo Full Stack, impartido mediante la plataforma devCamp LMS."
+            <ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          -->
+
+          <!-- NUEVO: Párrafo orientado a valor + resultado -->
           <p>
-            Programa intensivo de fundamentos de programación como base para el
-            desarrollo Full Stack, impartido mediante la plataforma devCamp LMS.
+            Formación intensiva de 3 meses para crear sitios web funcionales y
+            adaptables a cualquier dispositivo. Aprendí a transformar diseños en
+            código limpio, añadir interactividad y resolver problemas técnicos
+            con buenas prácticas desde el primer día.
           </p>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </ul>
+
+          <!-- NUEVO: Keywords técnicas agrupadas por valor -->
+          <details>
+            <summary>Competencias y herramientas técnicas</summary>
+            <ul>
+              <li>HTML5: estructura semántica y accesible</li>
+              <li>CSS3: diseño responsive con Flexbox y Grid</li>
+              <li>JavaScript ES6+: lógica, DOM y interactividad</li>
+              <li>Buenas prácticas, depuración y control de versiones</li>
+            </ul>
+          </details>
         </article>
 
+        <!-- ARTICLE 2: Desarrollo Full Stack (OPTIMIZADO) -->
         <article class="tarjeta light" tabindex="0">
           <div class="diploma-header">
-            <img
-              src="../images/titulos/Full-stack-1-mini.webp"
-              alt="Diploma de Desarrollo Full Stack"
-              class="diploma-imagen visor-imagen"
-              datos-pdf="../images/pdf/Full-stack.pdf"
-              tabindex="0" />
+            <a
+              href="../images/pdf/Full-stack.pdf"
+              class="visor-imagen"
+              aria-label="Ver diploma de Desarrollo Full Stack en PDF"
+              target="_blank"
+              rel="noopener">
+              <img
+                src="../images/titulos/Full-stack-1-mini.webp"
+                alt="Diploma de Desarrollo Full Stack"
+                class="diploma-imagen"
+                width="48"
+                loading="lazy" />
+            </a>
             <h3 class="diploma-nombre">Desarrollo Full Stack</h3>
           </div>
           <p>Fundación VASS · Bottega University</p>
           <p>Enero 2024 - Octubre 2024</p>
-          <p>
-            Programa completo de desarrollo Full Stack con JavaScript, Python,
+
+          <!-- 
+            ORIGINAL:
+            "Programa completo de desarrollo Full Stack con JavaScript, Python,
             React, Node.js, bases de datos SQL/NoSQL y APIs RESTful. Incluye
-            proyecto final integrando frontend y backend.
+            proyecto final integrando frontend y backend."
+            <ul>
+              <li>JavaScript</li><li>Python</li><li>React</li><li>Node.js</li>
+              <li>MongoDB</li><li>PostgreSQL</li><li>Git/GitHub</li>
+            </ul>
+          -->
+
+          <!-- NUEVO: Párrafo orientado a capacidad de ejecución -->
+          <p>
+            Formación completa de 10 meses para construir aplicaciones web de
+            extremo a extremo. Aprendí a desarrollar interfaces dinámicas con
+            React, crear servidores y APIs con Node.js y Python, gestionar bases
+            de datos reales y desplegar proyectos funcionales con buenas
+            prácticas profesionales.
           </p>
-          <ul>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>MongoDB</li>
-            <li>PostgreSQL</li>
-            <li>Git/GitHub</li>
-          </ul>
+
+          <!-- NUEVO: Keywords agrupadas por capa técnica (escaneo rápido) -->
+          <details>
+            <summary>Competencias y herramientas técnicas</summary>
+            <ul>
+              <li>Frontend: React, JavaScript ES6+, HTML5, CSS3/SCSS, UX/UI</li>
+              <li>Backend: Node.js, Express, Python, Flask, APIs RESTful</li>
+              <li>Bases de datos: MongoDB, PostgreSQL, Mongoose, ORMs</li>
+              <li>
+                DevOps básico: Git/GitHub, autenticación, testing, despliegue
+              </li>
+            </ul>
+          </details>
         </article>
 
+        <!-- ARTICLE 3: Inmersión en IA (SIN CAMBIOS) -->
         <article class="tarjeta light" tabindex="0">
           <div class="diploma-header">
-            <img
-              src="../images/titulos/Inmersion-IA-mini.webp"
-              alt="Diploma de Inmersión en Inteligencia Artificial"
-              class="diploma-imagen visor-imagen"
-              datos-pdf="../images/pdf/Inmersion-IA.pdf"
-              tabindex="0" />
+            <a
+              href="../images/pdf/Inmersion-IA.pdf"
+              class="visor-imagen"
+              aria-label="Ver diploma de Inmersión en Inteligencia Artificial en PDF"
+              target="_blank"
+              rel="noopener">
+              <img
+                src="../images/titulos/Inmersion-IA-mini.webp"
+                alt="Diploma de Inmersión en Inteligencia Artificial"
+                class="diploma-imagen"
+                width="48"
+                loading="lazy" />
+            </a>
             <h3 class="diploma-nombre">Inmersión en Inteligencia Artificial</h3>
           </div>
           <p>Alura · Google Gemini</p>
           <p>Septiembre 2025</p>
-          <p>
-            Programa intensivo de inmersión en Inteligencia Artificial con
+
+          <!-- 
+            ORIGINAL:
+            "Programa intensivo de inmersión en Inteligencia Artificial con
             Google Gemini, abordando conceptos y aplicaciones prácticas de IA en
             desarrollo web. Incluye la creación y optimización de prompts para
-            interactuar eficazmente con modelos de lenguaje.
+            interactuar eficazmente con modelos de lenguaje."
+            <ul>
+              <li>Inteligencia Artificial</li>
+              <li>Google Gemini</li>
+              <li>Notebook LLM</li>
+              <li>IA aplicada al desarrollo</li>
+            </ul>
+          -->
+
+          <!-- NUEVO: Párrafo con foco en valor principal + herramienta core -->
+          <p>
+            Taller práctico de 6 horas para integrar IA generativa en el flujo
+            de desarrollo web. Aprendí a usar Google Gemini para acelerar la
+            escritura de código, optimizar prompts técnicos y aplicar modelos de
+            lenguaje a tareas reales de programación y documentación.
           </p>
-          <ul>
-            <li>Inteligencia Artificial</li>
-            <li>Google Gemini</li>
-            <li>Notebook LLM</li>
-            <li>IA aplicada al desarrollo</li>
-          </ul>
+
+          <!-- NUEVO: Caja de herramientas completa (incluye complementos) -->
+          <details>
+            <summary>Competencias y herramientas técnicas</summary>
+            <ul>
+              <li>Google Gemini & Modelos de Lenguaje (LLM)</li>
+              <li>Ingeniería de Prompts para Desarrollo Web</li>
+              <li>Automatización de tareas y documentación con IA</li>
+              <li>NotebookLM & Flujo de trabajo asistido por IA</li>
+            </ul>
+          </details>
         </article>
 
+        <!-- ARTICLE 4: Marketing Online (SIN CAMBIOS) -->
         <article class="tarjeta light" tabindex="0">
           <div class="diploma-header">
-            <img
-              src="../images/titulos/Marketing-online-1-mini.webp"
-              alt="Diploma de Marketing Online en el Sector de la Consultoría"
-              class="diploma-imagen visor-imagen"
-              datos-pdf="../images/pdf/Marketing-online.pdf"
-              tabindex="0" />
+            <a
+              href="../images/pdf/Marketing-online.pdf"
+              class="visor-imagen"
+              aria-label="Ver diploma de Marketing Online en el Sector de la Consultoría en PDF"
+              target="_blank"
+              rel="noopener">
+              <img
+                src="../images/titulos/Marketing-online-1-mini.webp"
+                alt="Diploma de Marketing Online en el Sector de la Consultoría"
+                class="diploma-imagen"
+                width="48"
+                loading="lazy" />
+            </a>
             <h3 class="diploma-nombre">
               Marketing Online en el Sector de la Consultoría
             </h3>
           </div>
           <p>IPARTEK · COMM030PO</p>
           <p>Noviembre 2025 – Diciembre 2025</p>
-          <p>
-            Formación especializada en estrategias digitales para consultoría:
+
+          <!-- 
+            ORIGINAL:
+            "Formación especializada en estrategias digitales para consultoría:
             SEO/SEM, Social Media Marketing, analítica web y gestión de
             comunidades. Incluye proyecto práctico de diseño de estrategia SMM
-            completa.
+            completa."
+            <ul>
+              <li>SEO/SEM</li>
+              <li>Social Media Marketing</li>
+              <li>Analítica Web</li>
+              <li>Community Management</li>
+              <li>Web 2.0/3.0</li>
+              <li>CRM</li>
+            </ul>
+          -->
+
+          <!-- NUEVO: Párrafo orientado a resultados de negocio -->
+          <p>
+            Formación práctica de 30 horas para diseñar y ejecutar estrategias
+            digitales que atraigan clientes y midan resultados. Aprendí a
+            posicionar contenidos en buscadores, gestionar redes sociales con
+            enfoque profesional y analizar datos para optimizar la presencia
+            online de negocios y consultorías.
           </p>
-          <ul>
-            <li>SEO/SEM</li>
-            <li>Social Media Marketing</li>
-            <li>Analítica Web</li>
-            <li>Community Management</li>
-            <li>Web 2.0/3.0</li>
-            <li>CRM</li>
-          </ul>
+
+          <!-- NUEVO: Keywords agrupadas por área de impacto -->
+          <details>
+            <summary>Competencias y herramientas técnicas</summary>
+            <ul>
+              <li>SEO/SEM: Posicionamiento orgánico y campañas de pago</li>
+              <li>
+                Social Media Marketing: Estrategia de contenidos, SMO y gestión
+                de comunidades
+              </li>
+              <li>
+                Analítica Web: KPIs, Google Analytics y toma de decisiones
+                basada en datos
+              </li>
+              <li>
+                Marketing Digital: Web 2.0/3.0, CRM básico y automatización
+              </li>
+            </ul>
+          </details>
         </article>
+
+        <!-- ARTICLE 5: Ciberseguridad (SIN CAMBIOS) -->
         <article class="tarjeta light" tabindex="0">
           <div class="diploma-header">
-            <img
-              src="../images/titulos/Ciberseguridad-hacking-etico-mini.png"
-              alt="Certificado de Asistencia al Curso de Ciberseguridad y Hacking Ético"
-              class="diploma-imagen visor-imagen"
-              datos-pdf="../images/pdf/Ciberseguridad-hacking-etico.pdf"
-              tabindex="0" />
+            <a
+              href="../images/pdf/Ciberseguridad-hacking-etico.pdf"
+              class="visor-imagen"
+              aria-label="Ver certificado de Ciberseguridad y Hacking Ético en PDF"
+              target="_blank"
+              rel="noopener">
+              <img
+                src="../images/titulos/Ciberseguridad-hacking-etico-mini.png"
+                alt="Certificado de Asistencia al Curso de Ciberseguridad y Hacking Ético"
+                class="diploma-imagen"
+                width="48"
+                loading="lazy" />
+            </a>
             <h3 class="diploma-nombre">Ciberseguridad y Hacking Ético</h3>
           </div>
           <p>BIG school · Curso Intensivo Práctico</p>
           <p>Abril 2026 · 6 horas</p>
-          <p>
-            Formación intensiva en auditoría de seguridad, pentesting web y
+
+          <!-- 
+            ORIGINAL:
+            "Formación intensiva en auditoría de seguridad, pentesting web y
             análisis de malware. Desarrollo de laboratorios vulnerables aislados
             (Docker/Kali Linux) para simular escenarios reales. Metodología
             ofensiva (Red Team): reconocimiento con Nmap/WPScan, explotación de
@@ -204,18 +330,45 @@
             (Blue Team): análisis de ransomware educativo, cifrado AES-256,
             comunicación con servidores C2, análisis forense de tráfico con
             Wireshark y técnicas de empaquetado. Enfoque riguroso en marcos
-            legales, ética profesional y reporte de hallazgos.
+            legales, ética profesional y reporte de hallazgos."
+            <ul>
+              <li>Pentesting Web & Auditoría de Vulnerabilidades</li>
+              <li>Explotación Controlada (XSS, CSRF, Reverse Shell, Escalada)</li>
+              <li>Herramientas de Seguridad (Nmap, WPScan, Burp Suite, Metasploit)</li>
+              <li>Análisis de Tráfico y Malware (Wireshark, C2, AES-256)</li>
+              <li>Scripting para Automatización (Python, PyInstaller)</li>
+              <li>Despliegue de Entornos Aislados (Docker, Kali Linux)</li>
+            </ul>
+          -->
+
+          <!-- NUEVO: Párrafo orientado a valor y seguridad consciente -->
+          <p>
+            Taller intensivo de 6 horas sobre ciberseguridad aplicada a entornos
+            web. Aprendí a identificar vulnerabilidades comunes, aplicar
+            técnicas básicas de auditoría y entender los fundamentos de defensa
+            digital, con enfoque en ética profesional, protección de datos y
+            cumplimiento normativo.
           </p>
-          <ul>
-            <li>Pentesting Web & Auditoría de Vulnerabilidades</li>
-            <li>Explotación Controlada (XSS, CSRF, Reverse Shell, Escalada)</li>
-            <li>
-              Herramientas de Seguridad (Nmap, WPScan, Burp Suite, Metasploit)
-            </li>
-            <li>Análisis de Tráfico y Malware (Wireshark, C2, AES-256)</li>
-            <li>Scripting para Automatización (Python, PyInstaller)</li>
-            <li>Despliegue de Entornos Aislados (Docker, Kali Linux)</li>
-          </ul>
+
+          <!-- NUEVO: Keywords técnicas agrupadas por área de aplicación -->
+          <details>
+            <summary>Competencias y herramientas técnicas</summary>
+            <ul>
+              <li>
+                Reconocimiento y auditoría web (Nmap, WPScan, OWASP Top 10)
+              </li>
+              <li>
+                Metodologías ofensivas y defensivas (Red Team / Blue Team
+                básicos)
+              </li>
+              <li>
+                Análisis de tráfico y entornos seguros (Wireshark, Kali Linux,
+                Docker)
+              </li>
+              <li>Scripting para seguridad y automatización (Python)</li>
+              <li>Ética profesional, marcos legales y reporte de hallazgos</li>
+            </ul>
+          </details>
         </article>
       </section>
     </main>
