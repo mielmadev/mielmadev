@@ -151,12 +151,7 @@
     const notif = document.createElement("div");
     notif.setAttribute("role", "status");
     notif.setAttribute("aria-live", "polite");
-    notif.style.cssText = `
-      position: fixed; bottom: 20px; right: 20px;
-      background: #22c55e; color: white; padding: 12px 20px;
-      border-radius: 8px; z-index: 9999; font-weight: 500;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    `;
+    notif.className = "notificacion-cookies";
     notif.textContent = mensaje;
     document.body.appendChild(notif);
     setTimeout(() => notif.remove(), 3000);

@@ -79,8 +79,8 @@
   --border-width: 1px;
   --border-width-focus: 2px;
   --outline-offset: 2px;
-  --borde-radio-peq: 10px 0 10px 0;
-  --borde-radio-grande: 25px 0 25px 0;
+  --borde-radio-peq: 10px 10px 0px 10px;
+  --borde-radio-grande: 25px 25px 0 25px;
 
 }
 
@@ -130,7 +130,7 @@ img {
   color: var(--light-text);
   background: linear-gradient(135deg, var(--morado) 0%, var(--rosita) 100%);
   text-decoration: none;
-  border-radius: 25px 0 25px 0;
+  border-radius: var(--borde-radio-grande);
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(167, 139, 250, 0.3);
   border: none;
