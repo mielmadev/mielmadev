@@ -62,19 +62,6 @@
   z-index: 2;
 }
 
-.visor-aviso {
-  position: absolute;
-  padding: 0.4em 1em;
-  border-radius: var(--borde-radio-peq);
-  font-size: 1rem;
-  box-shadow: 0 2px 8px #0002;
-  white-space: nowrap;
-  pointer-events: none;
-  z-index: 10;
-  opacity: 0.98;
-  border: 1px solid #e0e0e0;
-}
-
 .tarjeta {
   transition:
     transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
@@ -143,10 +130,6 @@
 }
 
 /* Centrado horizontal para elementos como enlaces */
-.btn-mailto {
-  display: block;
-  text-align: center;
-}
 
 @media (max-width: 600px) {
   .fila {
