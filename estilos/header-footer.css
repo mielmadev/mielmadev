@@ -93,7 +93,6 @@
   background: var(--rosa-muy-claro);
   color: var(--morado);
   box-shadow: 0 4px 16px rgba(196, 91, 212, 0.15);
-  outline: none;
 }
 
 .menu-principal a.active,

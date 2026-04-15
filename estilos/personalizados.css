@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0;
 }
 
 .diploma-header .diploma-nombre {
@@ -17,6 +17,11 @@
   flex-shrink: 0;
   border-radius: var(--borde-radio-grande);
   box-shadow: 0 1px 6px #0001;
+}
+.diploma-header .visor-imagen {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 /* Mejor separación del título en tarjetas */
@@ -171,4 +176,12 @@
   .fila:nth-child(even) {
     flex-direction: row-reverse;
   }
+}
+
+#contenido-desarrolladores details {
+  margin: 5rem 0;
+}
+
+#contenido-desarrolladores details summary::after {
+  content: none;
 }

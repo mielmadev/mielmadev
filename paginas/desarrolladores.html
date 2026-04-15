@@ -5,29 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Recursos, documentación y buenas prácticas para desarrolladores web en MielmaDev."
-    />
+      content="Recursos, documentación y buenas prácticas para desarrolladores web en MielmaDev." />
     <meta name="author" content="Miren Elizabeth Marañón" />
     <title>MielmaDev | Desarrolladores</title>
     <meta
       property="og:title"
-      content="Desarrolladores | MielmaDev - Portfolio de Desarrollo Web y Marketing Digital"
-    />
+      content="Desarrolladores | MielmaDev - Portfolio de Desarrollo Web y Marketing Digital" />
     <meta
       property="og:description"
-      content="Recursos, documentación y buenas prácticas para desarrolladores web en MielmaDev."
-    />
+      content="Recursos, documentación y buenas prácticas para desarrolladores web en MielmaDev." />
     <meta property="og:image" content="../images/mielma_logo.webp" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Desarrolladores | MielmaDev - Portfolio de Desarrollo Web y Marketing Digital"
-    />
+      content="Desarrolladores | MielmaDev - Portfolio de Desarrollo Web y Marketing Digital" />
     <meta
       name="twitter:description"
-      content="Recursos, documentación y buenas prácticas para desarrolladores web en MielmaDev."
-    />
+      content="Recursos, documentación y buenas prácticas para desarrolladores web en MielmaDev." />
     <meta name="twitter:image" content="../images/mielma_logo.webp" />
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
     <link rel="stylesheet" href="../estilos/base.css" />
@@ -40,8 +35,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Cinzel:wght@400..900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
   </head>
   <body>
     <a href="#contenido-desarrolladores" class="skip-link"
@@ -52,15 +46,13 @@
       <a
         href="../index.html"
         aria-label="Mielma Developer - Ir al inicio"
-        class="logo"
-      >
+        class="logo">
         <img
           src="../images/mielma_logo.webp"
           alt="Logo Mielma Developer"
           width="150"
           height="150"
-          fetchpriority="high"
-        />
+          fetchpriority="high" />
       </a>
       <div class="encabezado-contenido">
         <h1>
@@ -72,8 +64,7 @@
             class="menu-hamburguesa"
             aria-label="Abrir menú"
             aria-expanded="false"
-            aria-controls="menu-principal"
-          >
+            aria-controls="menu-principal">
             <span class="linea"></span>
             <span class="linea"></span>
             <span class="linea"></span>
@@ -82,8 +73,7 @@
         <nav
           id="menu-principal"
           class="menu-principal"
-          aria-label="Menú principal"
-        >
+          aria-label="Menú principal">
           <ul>
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="proyectos.html">Proyectos</a></li>
@@ -104,13 +94,16 @@
         Recopilación de recursos, guías y buenas prácticas para desarrollo web.
         Haz clic en cada sección para expandir su contenido.
       </p>
+      <h3>HTML</h3>
+      <!-- Aquí pondrías detalles sobre buenas prácticas de HTML -->
 
+      <h3>CSS</h3>
       <!-- @layer CSS -->
       <details class="light">
         <summary class="btn">@layer: organización de archivos CSS</summary>
         <article class="documentacion">
           <header>
-            <h3>¿Qué es <code>@layer</code>?</h3>
+            <h4 class="titulo-bloque">¿Qué es <code>@layer</code>?</h4>
             <p>
               <code>@layer</code> es una regla de CSS que permite definir
               <strong>prioridades entre archivos o bloques de estilos</strong>
@@ -118,7 +111,7 @@
             </p>
           </header>
           <section>
-            <h4>¿Para qué sirve?</h4>
+            <h4 class="titulo-bloque">¿Para qué sirve?</h4>
             <ul>
               <li>
                 <strong>Controlar qué estilo gana:</strong> Tú decides qué capa
@@ -137,7 +130,7 @@
             </ul>
           </section>
           <section>
-            <h4>¿Lo necesitas?</h4>
+            <h4 class="titulo-bloque">¿Lo necesitas?</h4>
             <p>
               Si tu método actual (orden de carga + selectores específicos) te
               funciona y no tienes conflictos,
@@ -150,7 +143,7 @@
             </p>
           </section>
           <section>
-            <h4>Ejemplo básico de uso</h4>
+            <h4 class="titulo-bloque">Ejemplo básico de uso</h4>
             <pre><code>@layer reset, base, componentes, utilidades;
 
 @layer reset {
@@ -185,7 +178,7 @@
             </p>
           </section>
           <section>
-            <h4>Recursos y documentación oficial</h4>
+            <h4 class="titulo-bloque">Recursos y documentación oficial</h4>
             <ul>
               <li>
                 <a
@@ -206,6 +199,7 @@
         </article>
       </details>
 
+      <h3>Accesibilidad</h3>
       <!-- Roles ARIA -->
       <details class="light">
         <summary class="btn">Roles ARIA: mejora la accesibilidad</summary>
@@ -234,7 +228,7 @@
             </ul>
           </section>
           <section>
-            <h4>Roles ARIA más utilizados</h4>
+            <h4 class="titulo-bloque">Roles ARIA más utilizados</h4>
             <div class="tabla-responsive">
               <table class="tabla-roles-aria">
                 <thead>
@@ -348,8 +342,8 @@
               </table>
             </div>
             <p class="nota-roles-aria">
-              <strong>Nota:</strong> Los roles implícitos ya están
-              presentes en la etiqueta HTML y no es necesario añadir el atributo
+              <strong>Nota:</strong> Los roles implícitos ya están presentes en
+              la etiqueta HTML y no es necesario añadir el atributo
               <code>role</code>, salvo casos especiales.
             </p>
           </section>
@@ -390,12 +384,13 @@
         </article>
       </details>
 
+      <h3>Herramientas y entorno</h3>
       <!-- Node.js, nvm y Chocolatey -->
       <details class="light">
         <summary class="btn">Node.js, nvm y Chocolatey en Windows</summary>
         <article>
           <header>
-            <h3>Node.js, nvm y Chocolatey en Windows</h3>
+            <h4 class="titulo-bloque">Node.js, nvm y Chocolatey en Windows</h4>
             <p>
               Pasos y comandos esenciales para instalar, actualizar y gestionar
               Node.js y sus herramientas en Windows.
@@ -506,8 +501,7 @@
       <nav
         class="enlaces-footer"
         id="footer-navegacion"
-        aria-label="Enlaces legales y cookies"
-      >
+        aria-label="Enlaces legales y cookies">
         <ul>
           <li>
             <a href="aviso-legal.html"

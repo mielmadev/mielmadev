@@ -74,9 +74,8 @@
   --enlaces-size: 1.5rem;
   --btn-size: 1.5rem;
   --btn-size-escritorio: 1.75rem
-
-  /* ===== ESPACIADOS ===== */
-  --spacing-xs: 0.5rem;
+    /* ===== ESPACIADOS ===== */
+    --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
@@ -110,6 +109,7 @@ body {
 *:focus {
   outline: var(--border-width-focus) solid var(--focus-color);
   outline-offset: var(--outline-offset);
+  border-radius: var(--borde-radio-grande);
 }
 
 /* ===== Imágenes ===== */
@@ -463,12 +463,14 @@ details[class] summary,
   transition: color 0.2s, background 0.2s;
   list-style: none;
   display: block;
+  padding: 20px;
   width: 100%;
   min-width: 0;
   max-width: 100%;
   background: transparent;
   border-radius: var(--borde-radio-grande);
 }
+
 details summary.btn {
   border-radius: var(--borde-radio-grande);
 }
@@ -544,7 +546,8 @@ details>*:not(summary) {
     font-size: var(--h3-size-escritorio);
     line-height: 1.2;
   }
-  p  {
+
+  p {
     font-size: var(--p-escritorio);
   }
 
@@ -552,7 +555,7 @@ details>*:not(summary) {
     font-size: var(--btn-size-escritorio);
   }
 
-  img { 
+  img {
     max-width: 500px;
   }
 }
