@@ -51,15 +51,18 @@
   /*body*/
 
   --h1-size: 3rem;
+  --h1-size-tablet: 2.5rem;
   --h1-size-movil: 2rem;
   --h1-size-escritorio: 4.2rem;
 
   --h2-size: 2.5rem;
+  --h2-size-tablet: 2.25rem;
   --h2-size-movil: 2rem;
   --h2-size-escritorio: 3.2rem;
 
   --h3-size: 2rem;
-  --h3-size-movil: 2rem;
+  --h3-size: 2rem;
+  --h3-size-movil: 1.9rem;
   --h3-size-escritorio: 2.4rem;
 
   --h4-size: 1.25rem;
@@ -110,6 +113,7 @@ body {
 img {
   width: 100%;
   height: auto;
+  border-radius: var(--borde-radio-grande);
 }
 
 /* Logo fijo en encabezado */
@@ -434,7 +438,7 @@ details[class],
   background: var(--rosa-muy-claro);
   color: var(--gris);
   box-shadow: 10px 12px 8px #0001;
-  padding: 0.5em 1em;
+  padding: 1rem 1rem;
   transition: box-shadow 0.3s;
 }
 
@@ -453,14 +457,16 @@ details[class] summary,
   font-weight: 600;
   color: var(--morado);
   outline: none;
-  padding: 0.3em 0.8em;
   transition: color 0.2s, background 0.2s;
   list-style: none;
-  display: inline-block;
-  width: auto;
+  display: block;
+  width: 100%;
   min-width: 0;
   max-width: 100%;
   background: transparent;
+  border-radius: var(--borde-radio-grande);
+}
+details summary.btn {
   border-radius: var(--borde-radio-grande);
 }
 
@@ -538,6 +544,23 @@ details>*:not(summary) {
 }
 
 /* ===== Tableta ===== */
+@media (max-width: 768px) {
+  .encabezado-contenido h1 {
+    font-size: var(--h1-size-tablet);
+    line-height: 1.2;
+    word-break: break-word;
+  }
+
+  h2 {
+    font-size: var(--h2-size-tablet);
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: var(--h3-size-tablet);
+    line-height: 1.3;
+  }
+}
 
 /* ===== Móvil ===== */
 @media (max-width: 480px) {
