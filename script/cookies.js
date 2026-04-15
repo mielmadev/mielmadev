@@ -41,7 +41,7 @@
       localStorage.setItem(consentKey, "aceptado");
       banner.remove();
       restaurarEspaciado();
-      mostrarNotificacion("Preferencias guardadas correctamente.");
+      mostrarNotificacion("Has aceptado todas las cookies.");
     });
 
     btnConfigurar?.addEventListener("click", function () {
@@ -99,7 +99,7 @@
       const valor = chkNoTecnicas?.checked ? "personalizadas" : "solo_tecnicas";
       localStorage.setItem(consentKey, valor);
       modal.remove();
-      mostrarNotificacion("Preferencias guardadas correctamente.");
+      mostrarNotificacion("Tus preferencias de cookies se han guardado.");
     });
 
     btnCancelar?.addEventListener("click", function () {
