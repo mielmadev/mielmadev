@@ -13,7 +13,7 @@
 - Impacto: aumento de clientes, comunidad activa y mejor visibilidad online.
 - **Tecnologías:** HTML, CSS, JavaScript, PHP, MySQL
 
----
+---  
 
 ## 🌐 KOBA — Web interactiva
 
