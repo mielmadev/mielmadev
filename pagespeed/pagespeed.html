@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Informe PageSpeed Insights - Primer Escaneo</title>
+    <link rel="stylesheet" href="../estilos/base.css" />
+    <link rel="stylesheet" href="../estilos/globales.css" />
+    <link rel="stylesheet" href="../estilos/header-footer.css" />
+    <link rel="stylesheet" href="../estilos/personalizados.css" />
+    <link rel="icon" href="../images/titulos/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="pagespeed.css" />
+  </head>
+  <body>
+    <header class="light encabezado-principal">
+      <a
+        href="index.html"
+        aria-label="Mielma Developer - Ir al inicio"
+        class="logo">
+        <img
+          src="../images/mielma_logo.webp"
+          alt="Logo Mielma Developer"
+          width="150"
+          height="150"
+          fetchpriority="high" />
+      </a>
+      <div class="encabezado-contenido">
+        <h1>
+          MielmaDev<br />
+          <span class="h1-segundo-trozo">PageSpeed Insights</span>
+        </h1>
+      </div>
+    </header>
+
+    <main id="contenido-principal" class="contenido-principal" tabindex="-1">
+      <details open>
+        <summary>
+          <h2>Primer escaneo (19/04/2026)</h2>
+          <div class="ps-summary-metric-row">
+            <ul class="ps-summary-metric-list">
+              <li class="ps-summary-metric-title">Móvil</li>
+              <li>Rendimiento: <strong>92</strong></li>
+              <li>Accesibilidad: <strong>100</strong></li>
+              <li>Prácticas: <strong>96</strong></li>
+              <li>SEO: <strong>100</strong></li>
+            </ul>
+            <ul class="ps-summary-metric-list">
+              <li class="ps-summary-metric-title">Ordenador</li>
+              <li>Rendimiento: <strong>95</strong></li>
+              <li>Accesibilidad: <strong>95</strong></li>
+              <li>Prácticas: <strong>96</strong></li>
+              <li>SEO: <strong>100</strong></li>
+            </ul>
+          </div>
+        </summary>
+        <div class="ps-metric-columns">
+          <section class="ps-metric-col">
+            <h3>Móvil: Métricas clave de rendimiento</h3>
+            <ul>
+              <li><strong>First Contentful Paint (FCP):</strong> 2.4 s</li>
+              <li><strong>Total Blocking Time (TBT):</strong> 0 ms</li>
+              <li><strong>Speed Index:</strong> 4.2 s</li>
+              <li><strong>Largest Contentful Paint (LCP):</strong> 2.4 s</li>
+              <li><strong>Cumulative Layout Shift (CLS):</strong> 0.017</li>
+            </ul>
+          </section>
+          <section class="ps-metric-col">
+            <h3>Ordenador: Métricas clave de rendimiento</h3>
+            <ul>
+              <li><strong>First Contentful Paint (FCP):</strong> 0.7 s</li>
+              <li><strong>Total Blocking Time (TBT):</strong> 0 ms</li>
+              <li><strong>Speed Index:</strong> 0.7 s</li>
+              <li><strong>Largest Contentful Paint (LCP):</strong> 1.3 s</li>
+              <li><strong>Cumulative Layout Shift (CLS):</strong> 0.066</li>
+            </ul>
+          </section>
+        </div>
+        <div class="ps-metric-columns">
+          <section class="ps-metric-col">
+            <h3>Móvil: Problemas detectados y oportunidades de mejora</h3>
+            <ol>
+              <li>
+                <strong>Solicitudes que bloquean el renderizado</strong> —
+                Ahorro estimado: 1600 ms<br />Sugerencia: Minimiza o difiere los
+                scripts y CSS que bloquean el renderizado.
+              </li>
+              <li>
+                <strong>Redistribución forzada</strong><br />Sugerencia: Evita
+                cambios de layout innecesarios durante la carga.
+              </li>
+              <li>
+                <strong>Descubrimiento de solicitudes de LCP</strong
+                ><br />Sugerencia: Asegúrate de que el recurso principal del LCP
+                se cargue lo antes posible.
+              </li>
+              <li>
+                <strong>Árbol de dependencia de red</strong><br />Sugerencia:
+                Reduce dependencias críticas y optimiza el orden de carga de
+                recursos.
+              </li>
+              <li>
+                <strong>Usar tiempos de vida de caché eficientes</strong> —
+                Ahorro estimado: 3444 KiB<br />Sugerencia: Configura el caché de
+                recursos estáticos para que tengan una vida útil larga.
+              </li>
+              <li>
+                <strong>Mejorar la entrega de imágenes</strong> — Ahorro
+                estimado: 3516 KiB<br />Sugerencia: Usa formatos modernos (WebP,
+                AVIF), comprime imágenes y usa carga diferida (lazy loading).
+              </li>
+            </ol>
+          </section>
+          <section class="ps-metric-col">
+            <h3>Ordenador: Problemas detectados y oportunidades de mejora</h3>
+            <ol>
+              <li>
+                <strong>Usar tiempos de vida de caché eficientes</strong> —
+                Ahorro estimado: 3444 KiB<br />Sugerencia: Configura el caché de
+                recursos estáticos para que tengan una vida útil larga.
+              </li>
+              <li>
+                <strong>Mejorar la entrega de imágenes</strong> — Ahorro
+                estimado: 3513 KiB<br />Sugerencia: Usa formatos modernos (WebP,
+                AVIF), comprime imágenes y usa carga diferida (lazy loading).
+              </li>
+              <li>
+                <strong>Solicitudes que bloquean el renderizado</strong> —
+                Ahorro estimado: 460 ms<br />Sugerencia: Minimiza o difiere los
+                scripts y CSS que bloquean el renderizado.
+              </li>
+              <li>
+                <strong>Descubrimiento de solicitudes de LCP</strong
+                ><br />Sugerencia: Asegúrate de que el recurso principal del LCP
+                se cargue lo antes posible.
+              </li>
+              <li>
+                <strong>Árbol de dependencia de red</strong><br />Sugerencia:
+                Reduce dependencias críticas y optimiza el orden de carga de
+                recursos.
+              </li>
+              <li>
+                <strong>Causantes de los cambios de diseño</strong
+                ><br />Sugerencia: Identifica y corrige los elementos que
+                provocan cambios de layout inesperados.
+              </li>
+              <li>
+                <strong>Desglose de LCP</strong><br />Sugerencia: Analiza los
+                elementos que afectan al LCP y optimiza su carga.
+              </li>
+              <li>
+                <strong>Terceros</strong><br />Sugerencia: Reduce el impacto de
+                scripts y recursos de terceros en el rendimiento.
+              </li>
+            </ol>
+          </section>
+        </div>
+        <div class="ps-metric-columns">
+          <section class="ps-metric-col">
+            <h3>Móvil: Diagnósticos adicionales</h3>
+            <ul>
+              <li>
+                Imágenes sin <code>width</code> y
+                <code>height</code> explícitos. Añade estos atributos para
+                evitar cambios de layout.
+              </li>
+              <li>
+                Carga de recursos de gran tamaño. Optimiza y comprime recursos
+                grandes.
+              </li>
+            </ul>
+          </section>
+          <section class="ps-metric-col">
+            <h3>Ordenador: Diagnósticos adicionales</h3>
+            <ul>
+              <li>
+                Los elementos de imagen no tienen <code>width</code> y
+                <code>height</code> explícitos
+              </li>
+              <li>
+                Evita cargas útiles de red de gran tamaño — Tamaño total: 3794
+                KiB
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div class="ps-metric-columns">
+          <section class="ps-metric-col">
+            <h3>Móvil: Recomendaciones de acción</h3>
+            <ol>
+              <li>
+                <strong>Optimiza imágenes:</strong> Comprime y convierte
+                imágenes a formatos modernos. Usa atributos <code>width</code> y
+                <code>height</code> en todas las imágenes.
+              </li>
+              <li>
+                <strong>Optimiza el caché:</strong> Configura el servidor para
+                servir recursos estáticos con caché de largo plazo.
+              </li>
+              <li>
+                <strong>Minimiza recursos que bloquean el renderizado:</strong>
+                Usa <code>async</code> o <code>defer</code> en scripts JS.
+                Divide CSS crítico e inyecta solo lo necesario para el primer
+                renderizado.
+              </li>
+              <li>
+                <strong>Evita cambios de layout:</strong> Define siempre
+                dimensiones de imágenes y contenedores. Minimiza la manipulación
+                del DOM durante la carga.
+              </li>
+            </ol>
+          </section>
+          <section class="ps-metric-col">
+            <h3>Ordenador: Recomendaciones de acción</h3>
+            <ol>
+              <li>
+                <strong>Optimiza imágenes:</strong> Comprime y convierte
+                imágenes a formatos modernos. Usa atributos <code>width</code> y
+                <code>height</code> en todas las imágenes.
+              </li>
+              <li>
+                <strong>Optimiza el caché:</strong> Configura el servidor para
+                servir recursos estáticos con caché de largo plazo.
+              </li>
+              <li>
+                <strong>Minimiza recursos que bloquean el renderizado:</strong>
+                Usa <code>async</code> o <code>defer</code> en scripts JS.
+                Divide CSS crítico e inyecta solo lo necesario para el primer
+                renderizado.
+              </li>
+              <li>
+                <strong>Evita cambios de layout:</strong> Define siempre
+                dimensiones de imágenes y contenedores. Minimiza la manipulación
+                del DOM durante la carga.
+              </li>
+            </ol>
+          </section>
+        </div>
+      </details>
+      <footer>
+        <!-- Puedes incluir aquí el footer común del proyecto -->
+      </footer>
+    </main>
+  </body>
+</html>

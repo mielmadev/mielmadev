@@ -1,0 +1,33 @@
+/* Métricas resumen en summary */
+.ps-summary-metric-row {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  margin: 0.2em 0 0.2em 0;
+}
+
+.ps-summary-metric-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.ps-metric-columns {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+.ps-metric-col {
+  flex: 1 1 220px;
+}
+
+.ps-summary-metric-title {
+  font-weight: bold;
+}
+
+header.encabezado-principal h1 {
+  margin: 0;
+  text-align: center;
+  align-items: center;
+  font-weight: 700;
+  color: var(--color-principal, #4b2067);
+}
