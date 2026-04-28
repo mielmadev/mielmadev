@@ -161,4 +161,52 @@
   if (!localStorage.getItem(consentKey)) {
     window.addEventListener("DOMContentLoaded", loadBanner);
   }
+
+  // --- GTM dinámico según consentimiento ---
+  function cargarGTM() {
+    if (document.getElementById('gtm-script')) return;
+    var gtmScript = document.createElement('script');
+    gtmScript.id = 'gtm-script';
+    gtmScript.innerHTML = "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NT5VWK54');";
+    document.head.prepend(gtmScript);
+    var gtmNoscript = document.createElement('noscript');
+    gtmNoscript.id = 'gtm-noscript';
+    gtmNoscript.innerHTML = '<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NT5VWK54" height="0" width="0" style="display:none;visibility:hidden"></iframe>';
+    document.body.prepend(gtmNoscript);
+  }
+
+  function comprobarConsentimientoGTM() {
+    const valor = localStorage.getItem(consentKey);
+    if (valor === "personalizadas" || valor === "aceptado") {
+      cargarGTM();
+    }
+  }
+
+  // Hook de carga inicial
+  if (!localStorage.getItem(consentKey)) {
+    window.addEventListener("DOMContentLoaded", loadBanner);
+  } else {
+    window.addEventListener("DOMContentLoaded", comprobarConsentimientoGTM);
+  }
+
+  // Modificar listeners para cargar GTM tras consentimiento
+  const _oldAddBannerListeners = addBannerListeners;
+  addBannerListeners = function() {
+    _oldAddBannerListeners();
+    const btnAceptar = document.getElementById("cookies-aceptar");
+    btnAceptar?.addEventListener("click", function () {
+      cargarGTM();
+    });
+  };
+
+  const _oldAddModalListeners = addModalListeners;
+  addModalListeners = function() {
+    _oldAddModalListeners();
+    const btnGuardar = document.getElementById("cookies-guardar");
+    const chkNoTecnicas = document.getElementById("cookies-no-tecnicas");
+    btnGuardar?.addEventListener("click", function () {
+      const valor = chkNoTecnicas?.checked ? "personalizadas" : "solo_tecnicas";
+      if (valor === "personalizadas") cargarGTM();
+    });
+  };
 })();
