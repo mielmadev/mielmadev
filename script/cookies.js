@@ -1,10 +1,24 @@
 // cookies.js - Lógica para el banner de cookies
 (function () {
   // Ruta al banner (ajusta si cambias la estructura)
-  const bannerPath = "componentes/cookies-banner.html";
+  // Detectar ruta base automáticamente según la ubicación del HTML
+  function getBasePath() {
+    // Obtiene la ruta absoluta del archivo actual (sin query ni hash)
+    const path = window.location.pathname;
+    // Si estamos en /, base es ""
+    // Si estamos en /mielmadev/paginas/contacto.html => base es "/mielmadev/"
+    const parts = path.split("/");
+    // Si termina en .html, quitamos el último segmento
+    if (parts[parts.length - 1].endsWith(".html")) parts.pop();
+    // Si termina en /, lo dejamos
+    return parts.length > 1 ? parts.slice(0, -1).join("/") + "/" : "";
+  }
+
+  const basePath = getBasePath();
+  const bannerPath = basePath + "componentes/cookies-banner.html";
   const consentKey = "cookies_consentimiento";
-  const modalPath = "componentes/cookies-modal.html";
-  const tecnicasModalPath = "componentes/cookies-tecnicas.html";
+  const modalPath = basePath + "componentes/cookies-modal.html";
+  const tecnicasModalPath = basePath + "componentes/cookies-tecnicas.html";
 
   // Función reutilizable para cargar y añadir contenido HTML al DOM
   function loadHTML(path, callback) {
