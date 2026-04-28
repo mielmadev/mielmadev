@@ -1,24 +1,34 @@
 // cookies.js - Lógica para el banner de cookies
 (function () {
   // Ruta al banner (ajusta si cambias la estructura)
-  // Detectar ruta base automáticamente según la ubicación del HTML
-  function getBasePath() {
-    // Obtiene la ruta absoluta del archivo actual (sin query ni hash)
-    const path = window.location.pathname;
-    // Si estamos en /, base es ""
-    // Si estamos en /mielmadev/paginas/contacto.html => base es "/mielmadev/"
-    const parts = path.split("/");
-    // Si termina en .html, quitamos el último segmento
-    if (parts[parts.length - 1].endsWith(".html")) parts.pop();
-    // Si termina en /, lo dejamos
-    return parts.length > 1 ? parts.slice(0, -1).join("/") + "/" : "";
+  // Calcular ruta relativa a la raíz del proyecto
+  function getRelativePath(target) {
+    // Ejemplo: si estamos en /mielmadev/paginas/contacto.html y target es "componentes/cookies-banner.html"
+    // debe devolver "../componentes/cookies-banner.html"
+    const current = window.location.pathname;
+    const currentParts = current.split("/").filter(Boolean);
+    // Si termina en .html, quitar el archivo
+    if (
+      currentParts.length &&
+      currentParts[currentParts.length - 1].endsWith(".html")
+    )
+      currentParts.pop();
+    // Buscar la raíz del proyecto (donde está index.html)
+    // Suponemos que index.html está en la raíz del repo (después del usuario y repo)
+    // Buscar el segmento del repo en la URL
+    const repo = currentParts.length > 0 ? currentParts[0] : "";
+    // Calcular cuántos niveles hay que subir
+    let up = currentParts.length - 1;
+    let prefix = up > 0 ? "../".repeat(up) : "";
+    return prefix + target;
   }
 
-  const basePath = getBasePath();
-  const bannerPath = basePath + "componentes/cookies-banner.html";
+  const bannerPath = getRelativePath("componentes/cookies-banner.html");
   const consentKey = "cookies_consentimiento";
-  const modalPath = basePath + "componentes/cookies-modal.html";
-  const tecnicasModalPath = basePath + "componentes/cookies-tecnicas.html";
+  const modalPath = getRelativePath("componentes/cookies-modal.html");
+  const tecnicasModalPath = getRelativePath(
+    "componentes/cookies-tecnicas.html",
+  );
 
   // Función reutilizable para cargar y añadir contenido HTML al DOM
   function loadHTML(path, callback) {
