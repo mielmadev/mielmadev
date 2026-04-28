@@ -3,23 +3,19 @@
   // Ruta al banner (ajusta si cambias la estructura)
   // Calcular ruta relativa a la raíz del proyecto
   function getRelativePath(target) {
-    // Ejemplo: si estamos en /mielmadev/paginas/contacto.html y target es "componentes/cookies-banner.html"
-    // debe devolver "../componentes/cookies-banner.html"
-    const current = window.location.pathname;
-    const currentParts = current.split("/").filter(Boolean);
+    // Obtiene la ruta desde la página actual hasta la raíz del proyecto
+    // Ejemplo: /mielmadev/paginas/contacto.html -> '../componentes/cookies-banner.html'
+    const path = window.location.pathname;
+    // Quita el primer '/' y separa
+    const parts = path.replace(/^\//, '').split('/');
     // Si termina en .html, quitar el archivo
-    if (
-      currentParts.length &&
-      currentParts[currentParts.length - 1].endsWith(".html")
-    )
-      currentParts.pop();
-    // Buscar la raíz del proyecto (donde está index.html)
-    // Suponemos que index.html está en la raíz del repo (después del usuario y repo)
-    // Buscar el segmento del repo en la URL
-    const repo = currentParts.length > 0 ? currentParts[0] : "";
-    // Calcular cuántos niveles hay que subir
-    let up = currentParts.length - 1;
-    let prefix = up > 0 ? "../".repeat(up) : "";
+    if (parts.length && parts[parts.length - 1].endsWith('.html')) parts.pop();
+    // Si estamos en la raíz (index.html), no subimos
+    let prefix = '';
+    if (parts.length > 1) {
+      // Si hay subcarpetas, subimos una por cada nivel menos 1 (el repo)
+      prefix = '../'.repeat(parts.length - 1);
+    }
     return prefix + target;
   }
 
