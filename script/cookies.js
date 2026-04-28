@@ -1,10 +1,10 @@
 // cookies.js - Lógica para el banner de cookies
 (function () {
   // Ruta al banner (ajusta si cambias la estructura)
-  const bannerPath = "/componentes/cookies-banner.html";
+  const bannerPath = "componentes/cookies-banner.html";
   const consentKey = "cookies_consentimiento";
-  const modalPath = "/componentes/cookies-modal.html";
-  const tecnicasModalPath = "/componentes/cookies-tecnicas.html";
+  const modalPath = "componentes/cookies-modal.html";
+  const tecnicasModalPath = "componentes/cookies-tecnicas.html";
 
   // Función reutilizable para cargar y añadir contenido HTML al DOM
   function loadHTML(path, callback) {
