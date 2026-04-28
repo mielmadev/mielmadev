@@ -7,14 +7,14 @@
     // Ejemplo: /mielmadev/paginas/contacto.html -> '../componentes/cookies-banner.html'
     const path = window.location.pathname;
     // Quita el primer '/' y separa
-    const parts = path.replace(/^\//, '').split('/');
+    const parts = path.replace(/^\//, "").split("/");
     // Si termina en .html, quitar el archivo
-    if (parts.length && parts[parts.length - 1].endsWith('.html')) parts.pop();
+    if (parts.length && parts[parts.length - 1].endsWith(".html")) parts.pop();
     // Si estamos en la raíz (index.html), no subimos
-    let prefix = '';
+    let prefix = "";
     if (parts.length > 1) {
       // Si hay subcarpetas, subimos una por cada nivel menos 1 (el repo)
-      prefix = '../'.repeat(parts.length - 1);
+      prefix = "../".repeat(parts.length - 1);
     }
     return prefix + target;
   }
@@ -114,6 +114,7 @@
     const btnCancelar = document.getElementById("cookies-cancelar");
     const chkNoTecnicas = document.getElementById("cookies-no-tecnicas");
     const linkTecnicas = document.getElementById("ver-cookies-tecnicas");
+    const linkAnaliticas = document.getElementById("ver-cookies-analiticas");
 
     btnGuardar?.addEventListener("click", function () {
       const valor = chkNoTecnicas?.checked ? "personalizadas" : "solo_tecnicas";
@@ -131,6 +132,12 @@
       e.preventDefault();
       modal.remove();
       showTecnicasModal();
+    });
+
+    linkAnaliticas?.addEventListener("click", function (e) {
+      e.preventDefault();
+      modal.remove();
+      showAnaliticasModal();
     });
   }
 
@@ -160,6 +167,35 @@
     const modal = document.getElementById("cookies-tecnicas-modal");
     if (!modal) return;
     const btnVolver = document.getElementById("cookies-tecnicas-volver");
+    btnVolver?.addEventListener("click", function () {
+      modal.remove();
+      showCookiesModal();
+    });
+  }
+
+  // Mostrar modal de cookies analíticas
+  function showAnaliticasModal() {
+    loadHTML(getRelativePath("componentes/cookies-analiticas.html"), () => {
+      addAnaliticasModalListeners();
+      const modal = document.getElementById("cookies-analiticas-modal");
+      modal?.removeAttribute("hidden");
+      modal?.setAttribute("role", "dialog");
+      modal?.setAttribute("aria-labelledby", "cookies-analiticas-titulo");
+      modal?.focus();
+      document.addEventListener("keydown", function handleEscape(e) {
+        if (e.key === "Escape") {
+          modal.remove();
+          document.removeEventListener("keydown", handleEscape);
+          showCookiesModal();
+        }
+      });
+    });
+  }
+
+  function addAnaliticasModalListeners() {
+    const modal = document.getElementById("cookies-analiticas-modal");
+    if (!modal) return;
+    const btnVolver = document.getElementById("cookies-analiticas-volver");
     btnVolver?.addEventListener("click", function () {
       modal.remove();
       showCookiesModal();
