@@ -1,0 +1,94 @@
+:root {
+  --negro: #120813;
+  --morado: #78278b;
+  --rosa: #c45bd4;
+  --rosita: #e58df1;
+  --rosa-muy-claro: #f8d8f0;
+  --blanco: #e8e1e9;
+  --gris: #222;
+
+  --font-main: "Montserrat", sans-serif;
+  --font-titulo: "Cinzel", serif;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --line-height: 1.7;
+
+
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--blanco);
+  color: var(--blanco);
+  margin: 0;
+  line-height: var(--line-height);
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 32px 40px;
+  background: var(--negro);
+  box-shadow: 0 0 16px var(--rosa-muy-claro);
+  border-radius: 12px;
+}
+
+/* Mejora de espaciado y legibilidad */
+
+h1 {
+  font-family: var(--font-titulo);
+  font-weight: var(--font-weight-bold);
+  font-size: 1.8em;
+  margin-top: 0;
+  margin-bottom: 28px;
+  color: var(--rosa);
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-family: var(--font-titulo);
+  font-weight: var(--font-weight-medium);
+  font-size: 1.2em;
+  color: var(--rosa);
+  margin-top: 20px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--rosa-muy-claro);
+  padding-bottom: 4px;
+}
+
+ul {
+  margin-top: 0;
+  padding-left: 32px;
+}
+
+section {
+  margin-bottom: 24px;
+}
+
+header p {
+  margin-bottom: 0;
+  font-size: 1.1em;
+}
+
+a {
+  color: var(--morado);
+}
+
+a:hover {
+  color: var(--rosa);
+}
+
+@media print {
+
+  section,
+  ul,
+  ol {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  h2 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+}
