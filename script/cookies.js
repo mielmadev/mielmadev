@@ -1,10 +1,30 @@
 // cookies.js - Lógica para el banner de cookies
 (function () {
   // Ruta al banner (ajusta si cambias la estructura)
-  const bannerPath = "/componentes/cookies-banner.html";
+  // Calcular ruta relativa a la raíz del proyecto
+  function getRelativePath(target) {
+    // Obtiene la ruta desde la página actual hasta la raíz del proyecto
+    // Ejemplo: /mielmadev/paginas/contacto.html -> '../componentes/cookies-banner.html'
+    const path = window.location.pathname;
+    // Quita el primer '/' y separa
+    const parts = path.replace(/^\//, "").split("/");
+    // Si termina en .html, quitar el archivo
+    if (parts.length && parts[parts.length - 1].endsWith(".html")) parts.pop();
+    // Si estamos en la raíz (index.html), no subimos
+    let prefix = "";
+    if (parts.length > 1) {
+      // Si hay subcarpetas, subimos una por cada nivel menos 1 (el repo)
+      prefix = "../".repeat(parts.length - 1);
+    }
+    return prefix + target;
+  }
+
+  const bannerPath = getRelativePath("componentes/cookies-banner.html");
   const consentKey = "cookies_consentimiento";
-  const modalPath = "/componentes/cookies-modal.html";
-  const tecnicasModalPath = "/componentes/cookies-tecnicas.html";
+  const modalPath = getRelativePath("componentes/cookies-modal.html");
+  const tecnicasModalPath = getRelativePath(
+    "componentes/cookies-tecnicas.html",
+  );
 
   // Función reutilizable para cargar y añadir contenido HTML al DOM
   function loadHTML(path, callback) {
@@ -94,6 +114,7 @@
     const btnCancelar = document.getElementById("cookies-cancelar");
     const chkNoTecnicas = document.getElementById("cookies-no-tecnicas");
     const linkTecnicas = document.getElementById("ver-cookies-tecnicas");
+    const linkAnaliticas = document.getElementById("ver-cookies-analiticas");
 
     btnGuardar?.addEventListener("click", function () {
       const valor = chkNoTecnicas?.checked ? "personalizadas" : "solo_tecnicas";
@@ -111,6 +132,12 @@
       e.preventDefault();
       modal.remove();
       showTecnicasModal();
+    });
+
+    linkAnaliticas?.addEventListener("click", function (e) {
+      e.preventDefault();
+      modal.remove();
+      showAnaliticasModal();
     });
   }
 
@@ -146,6 +173,35 @@
     });
   }
 
+  // Mostrar modal de cookies analíticas
+  function showAnaliticasModal() {
+    loadHTML(getRelativePath("componentes/cookies-analiticas.html"), () => {
+      addAnaliticasModalListeners();
+      const modal = document.getElementById("cookies-analiticas-modal");
+      modal?.removeAttribute("hidden");
+      modal?.setAttribute("role", "dialog");
+      modal?.setAttribute("aria-labelledby", "cookies-analiticas-titulo");
+      modal?.focus();
+      document.addEventListener("keydown", function handleEscape(e) {
+        if (e.key === "Escape") {
+          modal.remove();
+          document.removeEventListener("keydown", handleEscape);
+          showCookiesModal();
+        }
+      });
+    });
+  }
+
+  function addAnaliticasModalListeners() {
+    const modal = document.getElementById("cookies-analiticas-modal");
+    if (!modal) return;
+    const btnVolver = document.getElementById("cookies-analiticas-volver");
+    btnVolver?.addEventListener("click", function () {
+      modal.remove();
+      showCookiesModal();
+    });
+  }
+
   // Función para mostrar notificaciones accesibles
   function mostrarNotificacion(mensaje) {
     const notif = document.createElement("div");
@@ -161,4 +217,54 @@
   if (!localStorage.getItem(consentKey)) {
     window.addEventListener("DOMContentLoaded", loadBanner);
   }
+
+  // --- GTM dinámico según consentimiento ---
+  function cargarGTM() {
+    if (document.getElementById("gtm-script")) return;
+    var gtmScript = document.createElement("script");
+    gtmScript.id = "gtm-script";
+    gtmScript.innerHTML =
+      "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NT5VWK54');";
+    document.head.prepend(gtmScript);
+    var gtmNoscript = document.createElement("noscript");
+    gtmNoscript.id = "gtm-noscript";
+    gtmNoscript.innerHTML =
+      '<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NT5VWK54" height="0" width="0" style="display:none;visibility:hidden"></iframe>';
+    document.body.prepend(gtmNoscript);
+  }
+
+  function comprobarConsentimientoGTM() {
+    const valor = localStorage.getItem(consentKey);
+    if (valor === "personalizadas" || valor === "aceptado") {
+      cargarGTM();
+    }
+  }
+
+  // Hook de carga inicial
+  if (!localStorage.getItem(consentKey)) {
+    window.addEventListener("DOMContentLoaded", loadBanner);
+  } else {
+    window.addEventListener("DOMContentLoaded", comprobarConsentimientoGTM);
+  }
+
+  // Modificar listeners para cargar GTM tras consentimiento
+  const _oldAddBannerListeners = addBannerListeners;
+  addBannerListeners = function () {
+    _oldAddBannerListeners();
+    const btnAceptar = document.getElementById("cookies-aceptar");
+    btnAceptar?.addEventListener("click", function () {
+      cargarGTM();
+    });
+  };
+
+  const _oldAddModalListeners = addModalListeners;
+  addModalListeners = function () {
+    _oldAddModalListeners();
+    const btnGuardar = document.getElementById("cookies-guardar");
+    const chkNoTecnicas = document.getElementById("cookies-no-tecnicas");
+    btnGuardar?.addEventListener("click", function () {
+      const valor = chkNoTecnicas?.checked ? "personalizadas" : "solo_tecnicas";
+      if (valor === "personalizadas") cargarGTM();
+    });
+  };
 })();
