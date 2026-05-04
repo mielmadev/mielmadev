@@ -180,8 +180,18 @@
 
 #contenido-desarrolladores details {
   margin: 5rem 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
+#contenido-desarrolladores details pre,
+#contenido-desarrolladores details code {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
 #contenido-desarrolladores details summary::after {
   content: none;
 }
