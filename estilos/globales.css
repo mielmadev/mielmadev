@@ -144,6 +144,65 @@ img {
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(167, 139, 250, 0.3);
   border: none;
+
+  a {
+    color: var(--light-link);
+
+    &:hover,
+    &:focus {
+      color: var(--light-link-hover);
+    }
+
+    &:active {
+      color: var(--light-active-color);
+      position: relative;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--light-titulo);
+  }
+
+  .btn {
+    background: var(--morado);
+    color: var(--blanco);
+
+
+    &:hover,
+    &:focus {
+      background: var(--light-btn-hover-bg);
+      color: var(--negro);
+    }
+
+    &:active {
+      background: var(--active-color);
+      color: var(--blanco);
+    }
+  }
+
+  input,
+  textarea,
+  select {
+    border-color: var(--negro);
+
+    &:hover {
+      border-color: var(--morado);
+    }
+
+    &:focus {
+      border-color: var(--focus-color);
+      box-shadow: 0 0 0 3px rgba(120, 39, 139, 0.2);
+    }
+
+    &:active {
+      border-color: var(--active-color);
+    }
+  }
 }
 
 /* === 4. TIPOGRAFÍA ======================================== */
@@ -159,15 +218,6 @@ h6 {
   padding: 0;
   hyphens: auto;
   /* Permite dividir palabras largas en móviles con guiones */
-}
-
-.light h1,
-.light h2,
-.light h3,
-.light h4,
-.light h5,
-.light h6 {
-  color: var(--light-titulo);
 }
 
 h1 {
@@ -232,31 +282,17 @@ a {
   font-size: var(--enlaces-size);
   transition: var(--link-transition);
   cursor: pointer;
-}
 
-a:hover,
-a:focus {
-  color: var(--link-hover-color);
-}
+  &:hover,
+  &:focus {
+    color: var(--link-hover-color);
+  }
 
-a:active {
-  color: var(--active-color);
-  position: relative;
-  top: 1px;
-}
-
-.light a {
-  color: var(--light-link);
-}
-
-.light a:hover,
-.light a:focus {
-  color: var(--light-link-hover);
-}
-
-.light a:active {
-  color: var(--light-active-color);
-  position: relative;
+  &:active {
+    color: var(--active-color);
+    position: relative;
+    top: 1px;
+  }
 }
 
 /* === 7. BOTONES =========================================== */
@@ -273,38 +309,23 @@ a:active {
   transition: var(--link-transition);
   text-align: center;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    background: var(--btn-hover-bg);
+    color: var(--negro);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    background: var(--active-color);
+    color: var(--blanco);
+    transform: translateY(0);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
 }
 
-.btn:hover,
-.btn:focus {
-  background: var(--btn-hover-bg);
-  color: var(--negro);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.btn:active {
-  background: var(--active-color);
-  color: var(--blanco);
-  transform: translateY(0);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.light .btn {
-  background: var(--morado);
-  color: var(--blanco);
-}
-
-.light .btn:hover,
-.light .btn:focus {
-  background: var(--light-btn-hover-bg);
-  color: var(--negro);
-}
-
-.light .btn:active {
-  background: var(--active-color);
-  color: var(--blanco);
-}
 
 /* === 8. FORMULARIOS ======================================= */
 input,
@@ -319,52 +340,22 @@ select {
   font-family: var(--font-main);
   font-size: var(--font-size);
   transition: var(--link-transition);
+
+  &:hover {
+    border-color: var(--rosa);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--focus-color);
+    box-shadow: 0 0 0 3px rgba(196, 91, 212, 0.2);
+  }
+
+  &:active {
+    border-color: var(--active-color);
+  }
 }
 
-input:hover,
-textarea:hover,
-select:hover {
-  border-color: var(--rosa);
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  border-color: var(--focus-color);
-  box-shadow: 0 0 0 3px rgba(196, 91, 212, 0.2);
-}
-
-input:active,
-textarea:active,
-select:active {
-  border-color: var(--active-color);
-}
-
-.light input,
-.light textarea,
-.light select {
-  border-color: var(--negro);
-}
-
-.light input:hover,
-.light textarea:hover,
-.light select:hover {
-  border-color: var(--morado);
-}
-
-.light input:focus,
-.light textarea:focus,
-.light select:focus {
-  border-color: var(--focus-color);
-  box-shadow: 0 0 0 3px rgba(120, 39, 139, 0.2);
-}
-
-.light input:active,
-.light textarea:active,
-.light select:active {
-  border-color: var(--active-color);
-}
 
 /* === 9. TABLAS ============================================ */
 table {
@@ -378,22 +369,23 @@ table {
   box-shadow: 0 2px 8px rgba(120, 39, 139, 0.07);
   border-radius: var(--borde-radio-grande);
   overflow: hidden;
-}
 
-table th,
-table td {
-  padding: 0.7em 1em;
-  border-bottom: 1px solid #e0c6e6;
-  text-align: left;
-}
 
-table th {
-  background: var(--rosa-muy-claro);
-  font-weight: var(--font-weight-bold);
-}
+  th,
+  td {
+    padding: 0.7em 1em;
+    border-bottom: 1px solid #e0c6e6;
+    text-align: left;
+  }
 
-table tr:last-child td {
-  border-bottom: none;
+  th {
+    background: var(--rosa-muy-claro);
+    font-weight: var(--font-weight-bold);
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
 }
 
 /* === 10. ACCESIBILIDAD Y UTILIDADES ======================= */
@@ -424,12 +416,15 @@ table tr:last-child td {
   text-decoration: none;
   font-weight: 600;
   transition: top 0.2s ease;
+
+  &:focus {
+    top: 0;
+    /* Visible al enfocar con Tab */
+  }
+
+
 }
 
-.skip-link:focus {
-  top: 0;
-  /* Visible al enfocar con Tab */
-}
 
 
 
