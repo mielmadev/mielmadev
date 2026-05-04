@@ -47,75 +47,75 @@
     border: none;
     cursor: pointer;
     z-index: 1101;
-  }
 
-  .menu-hamburguesa .linea {
-    width: 32px;
-    height: 4px;
-    margin: 5px 0;
-    background: #222;
-    border-radius: 2px;
-    display: block;
-    transition: all 0.3s;
-    font-size: 0.5rem;
-  }
+    .linea {
+      width: 32px;
+      height: 4px;
+      margin: 5px 0;
+      background: #222;
+      border-radius: 2px;
+      display: block;
+      transition: all 0.3s;
+      font-size: 0.5rem;
+    }
 
-  .menu-hamburguesa.activo .linea:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-  }
+    &.activo {
+      .linea:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+      }
 
-  .menu-hamburguesa.activo .linea:nth-child(2) {
-    opacity: 0;
-  }
+      .linea:nth-child(2) {
+        opacity: 0;
+      }
 
-  .menu-hamburguesa.activo .linea:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
+      .linea:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+      }
+    }
   }
 
   .menu-principal {
     display: none;
     order: 2;
     padding-right: 0;
-  }
 
-  .menu-principal.abierto {
-    display: flex;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    height:50px;
-    width: 100%;
-    align-items: center;
-    
-    background: var(--blanco);
-    /* Mejora accesibilidad visual */
-    box-shadow: 0 0 12px 2px rgba(120, 39, 139, 0.15);
-    border: 1px solid var(--morado);
-    border-radius: var(--borde-radio-grande);
-    outline-offset: -2px;
-  }
+    &.abierto {
+      display: flex;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 50px;
+      width: 100%;
+      align-items: center;
+      background: var(--blanco);
+      box-shadow: 0 0 12px 2px rgba(120, 39, 139, 0.15);
+      border: 1px solid var(--morado);
+      border-radius: var(--borde-radio-grande);
+      outline-offset: -2px;
 
-  .menu-principal.abierto ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-  }
+      ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+      }
 
-  .menu-principal.abierto a {
-    font-size: 1rem;
-    padding: 0.5rem 0.75rem;
+      a {
+        font-size: 1rem;
+        padding: 0.5rem 0.75rem;
+      }
+    }
   }
 
   .encabezado-contenido {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-  }
 
-  .encabezado-contenido h1 {
-    order: 1;
-    margin-bottom: 0;
-    text-align: center;
+    h1 {
+      order: 1;
+      margin-bottom: 0;
+      text-align: center;
+    }
   }
 }

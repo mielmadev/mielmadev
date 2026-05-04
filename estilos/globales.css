@@ -29,6 +29,9 @@
   --light-btn-hover-bg: var(--rosita);
   --active-color: var(--negro);
 
+  /*===== CODE =====*/
+  --code-color: var(--rosa);
+
   /* ===== FOCUS Y TRANSICIÓN ===== */
   --focus-color: var(--morado);
   --link-transition:
